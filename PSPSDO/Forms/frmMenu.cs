@@ -16,5 +16,13 @@ namespace PSPSDO.Forms
         {
             InitializeComponent();
         }
+
+        private void materiasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMaterias frmMat = new frmMaterias();
+            this.Hide();
+            frmMat.ShowDialog();
+            this.Show();
+        }
     }
 }
