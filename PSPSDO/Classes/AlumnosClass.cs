@@ -3,6 +3,7 @@ using PSPSDO.Models;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -34,6 +35,16 @@ namespace PSPSDO.Classes
                 return ex.Message;
             }
         }
+
+        public DataSet GetAlumnos()
+        {
+            ArrayList parametros = new ArrayList();
+            BDContext bd = new BDContext();
+            parametros.Add(new SqlParameter { ParameterName = "@pId", SqlDbType = System.Data.SqlDbType.VarChar, Value = 1 });
+            DataSet ds = bd.Fill("SP_SelectAlumnos", parametros);
+            return ds;
+        }
+
         public string ActualizarAlumnos(AlumnosModel Alumnos)
         {
             try
@@ -47,7 +58,7 @@ namespace PSPSDO.Classes
                 parametros.Add(new SqlParameter { ParameterName = "@pDirección", SqlDbType = System.Data.SqlDbType.VarChar, Value = Alumnos.Direccion });
 
                 bd.ExecuteNonQuery("SP_UpdateAlumnos", parametros);
-                return "Inserción correcta";
+                return "Actualización correcta";
             }
             catch (Exception ex)
             {
@@ -69,8 +80,8 @@ namespace PSPSDO.Classes
                 parametros.Add(new SqlParameter { ParameterName = "@pApMaterno", SqlDbType = System.Data.SqlDbType.VarChar, Value = Alumnos.ApellidoMaterno });
                 parametros.Add(new SqlParameter { ParameterName = "@pDirección", SqlDbType = System.Data.SqlDbType.VarChar, Value = Alumnos.Direccion });
 
-                bd.ExecuteNonQuery("SP_UpdateAlumnos", parametros);
-                return "Inserción correcta";
+                bd.ExecuteNonQuery("SP_DeleteAlumnos", parametros);
+                return "Eliminación correcta";
             }
             catch (Exception ex)
             {

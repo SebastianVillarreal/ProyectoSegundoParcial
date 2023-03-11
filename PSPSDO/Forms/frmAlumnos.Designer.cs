@@ -43,6 +43,7 @@
             this.txtApPaterAlumno = new System.Windows.Forms.TextBox();
             this.txtNombreAlumno = new System.Windows.Forms.TextBox();
             this.dgvAlumnos = new System.Windows.Forms.DataGridView();
+            this.btncargarAlumnos = new System.Windows.Forms.Button();
             this.gpbDatoPersoAlumno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +53,7 @@
             this.btnActualiAlumnos.Location = new System.Drawing.Point(359, 254);
             this.btnActualiAlumnos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnActualiAlumnos.Name = "btnActualiAlumnos";
-            this.btnActualiAlumnos.Size = new System.Drawing.Size(84, 29);
+            this.btnActualiAlumnos.Size = new System.Drawing.Size(111, 29);
             this.btnActualiAlumnos.TabIndex = 0;
             this.btnActualiAlumnos.Text = "Actualizar";
             this.btnActualiAlumnos.UseVisualStyleBackColor = true;
@@ -60,6 +61,7 @@
             // 
             // gpbDatoPersoAlumno
             // 
+            this.gpbDatoPersoAlumno.Controls.Add(this.btncargarAlumnos);
             this.gpbDatoPersoAlumno.Controls.Add(this.btnGuardarAlumno);
             this.gpbDatoPersoAlumno.Controls.Add(this.btnElimiAlumnos);
             this.gpbDatoPersoAlumno.Controls.Add(this.lblDirecciAlumno);
@@ -102,6 +104,7 @@
             this.btnElimiAlumnos.TabIndex = 10;
             this.btnElimiAlumnos.Text = "Eliminar";
             this.btnElimiAlumnos.UseVisualStyleBackColor = true;
+            this.btnElimiAlumnos.Click += new System.EventHandler(this.btnElimiAlumnos_Click);
             // 
             // lblDirecciAlumno
             // 
@@ -200,6 +203,16 @@
             this.dgvAlumnos.TabIndex = 2;
             this.dgvAlumnos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // btncargarAlumnos
+            // 
+            this.btncargarAlumnos.Location = new System.Drawing.Point(604, 18);
+            this.btncargarAlumnos.Name = "btncargarAlumnos";
+            this.btncargarAlumnos.Size = new System.Drawing.Size(125, 37);
+            this.btncargarAlumnos.TabIndex = 12;
+            this.btncargarAlumnos.Text = "Resfrescar";
+            this.btncargarAlumnos.UseVisualStyleBackColor = true;
+            this.btncargarAlumnos.Click += new System.EventHandler(this.btncargarAlumnos_Click);
+            // 
             // frmAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -234,5 +247,6 @@
         private System.Windows.Forms.TextBox txtApPaterAlumno;
         private System.Windows.Forms.TextBox txtNombreAlumno;
         private System.Windows.Forms.DataGridView dgvAlumnos;
+        private System.Windows.Forms.Button btncargarAlumnos;
     }
 }
