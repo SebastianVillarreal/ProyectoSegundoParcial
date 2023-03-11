@@ -16,5 +16,13 @@ namespace PSPSDO.Forms
         {
             InitializeComponent();
         }
+
+        private void alumnosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAlumnos frmAlumn = new frmAlumnos();
+            this.Hide();
+            frmAlumn.ShowDialog();
+            this.Show();
+        }
     }
 }
