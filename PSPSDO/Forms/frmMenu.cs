@@ -24,5 +24,13 @@ namespace PSPSDO.Forms
             frmAlumn.ShowDialog();
             this.Show();
         }
+
+        private void gruposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGrupos frmGrup = new frmGrupos();
+            this.Hide();
+            frmGrup.ShowDialog();
+            this.Show();
+        }
     }
 }

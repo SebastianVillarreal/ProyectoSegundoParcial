@@ -20,6 +20,7 @@ namespace PSPSDO.Classes
             {
                 ArrayList parametros = new ArrayList();
                 BDContext bd = new BDContext();
+
                 parametros.Add(new SqlParameter { ParameterName = "@pMatricula", SqlDbType = System.Data.SqlDbType.Int, Value = Alumnos.Matricula });
                 parametros.Add(new SqlParameter { ParameterName = "@pNombre", SqlDbType = System.Data.SqlDbType.VarChar, Value = Alumnos.Nombre });
                 parametros.Add(new SqlParameter { ParameterName = "@pApPaterno", SqlDbType = System.Data.SqlDbType.VarChar, Value = Alumnos.ApellidoPaterno });
@@ -51,6 +52,7 @@ namespace PSPSDO.Classes
             {
                 ArrayList parametros = new ArrayList();
                 BDContext bd = new BDContext();
+
                 parametros.Add(new SqlParameter { ParameterName = "@pMatricula", SqlDbType = System.Data.SqlDbType.Int, Value = Alumnos.Matricula });
                 parametros.Add(new SqlParameter { ParameterName = "@pNombre", SqlDbType = System.Data.SqlDbType.VarChar, Value = Alumnos.Nombre });
                 parametros.Add(new SqlParameter { ParameterName = "@pApPaterno", SqlDbType = System.Data.SqlDbType.VarChar, Value = Alumnos.ApellidoPaterno });
@@ -74,6 +76,7 @@ namespace PSPSDO.Classes
             {
                 ArrayList parametros = new ArrayList();
                 BDContext bd = new BDContext();
+
                 parametros.Add(new SqlParameter { ParameterName = "@pMatricula", SqlDbType = System.Data.SqlDbType.Int, Value = Alumnos.Matricula });
                 parametros.Add(new SqlParameter { ParameterName = "@pNombre", SqlDbType = System.Data.SqlDbType.VarChar, Value = Alumnos.Nombre });
                 parametros.Add(new SqlParameter { ParameterName = "@pApPaterno", SqlDbType = System.Data.SqlDbType.VarChar, Value = Alumnos.ApellidoPaterno });
