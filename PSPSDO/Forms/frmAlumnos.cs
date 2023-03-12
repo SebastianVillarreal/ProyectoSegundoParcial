@@ -32,7 +32,7 @@ namespace PSPSDO.Forms
             AlumnosModel Alumnos = new AlumnosModel();
             AlumnosClass Alumn = new AlumnosClass();
 
-            Alumnos.Matricula = int.Parse(txtMatriAlumno .Text);
+            Alumnos.Matricula = int.Parse(txtMatriAlumno.Text);
             Alumnos.Nombre = txtNombreAlumno.Text;
             Alumnos.ApellidoPaterno = txtApPaterAlumno.Text;
             Alumnos.ApellidoMaterno = txtApMaterAlumno.Text;
@@ -51,7 +51,6 @@ namespace PSPSDO.Forms
             AlumnosModel Alumnos = new AlumnosModel();
             AlumnosClass Alumn = new AlumnosClass();
 
-            Alumnos.Id = (int)dgvAlumnos.Rows[dgvAlumnos.CurrentCell.RowIndex].Cells[0].Value;
             Alumnos.Matricula = int.Parse(txtMatriAlumno.Text);
             Alumnos.Nombre = txtNombreAlumno.Text;
             Alumnos.ApellidoPaterno = txtApPaterAlumno.Text;
