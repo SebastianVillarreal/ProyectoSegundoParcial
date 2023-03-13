@@ -50,6 +50,7 @@
             this.btnCarreraAñadir.TabIndex = 0;
             this.btnCarreraAñadir.Text = "Agregar";
             this.btnCarreraAñadir.UseVisualStyleBackColor = true;
+            this.btnCarreraAñadir.Click += new System.EventHandler(this.btnCarreraAñadir_Click);
             // 
             // btnCarreraBorrar
             // 
@@ -59,6 +60,7 @@
             this.btnCarreraBorrar.TabIndex = 1;
             this.btnCarreraBorrar.Text = "Borrar";
             this.btnCarreraBorrar.UseVisualStyleBackColor = true;
+            this.btnCarreraBorrar.Click += new System.EventHandler(this.btnCarreraBorrar_Click);
             // 
             // btnCarreraEditar
             // 
@@ -77,6 +79,7 @@
             this.btnCarreraMostrar.TabIndex = 3;
             this.btnCarreraMostrar.Text = "Actualizar/Mostrar";
             this.btnCarreraMostrar.UseVisualStyleBackColor = true;
+            this.btnCarreraMostrar.Click += new System.EventHandler(this.btnCarreraMostrar_Click);
             // 
             // dgvListaCarreras
             // 

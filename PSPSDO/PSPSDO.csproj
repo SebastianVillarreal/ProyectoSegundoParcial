@@ -52,6 +52,7 @@
     <Compile Include="Classes\GrupoClass.cs" />
     <Compile Include="Classes\MateriasClass.cs" />
     <Compile Include="Classes\PersonasClass.cs" />
+    <Compile Include="Classes\CarreraClass.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +90,7 @@
       <DependentUpon>frmPersonas.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\AlumnosModel.cs" />
+    <Compile Include="Models\CarreraModel.cs" />
     <Compile Include="Models\GrupoModels.cs" />
     <Compile Include="Models\MateriasModel.cs" />
     <Compile Include="Models\PersonaModel.cs" />
