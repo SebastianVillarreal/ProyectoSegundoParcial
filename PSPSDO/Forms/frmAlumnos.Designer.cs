@@ -30,6 +30,7 @@
         {
             this.btnActualiAlumnos = new System.Windows.Forms.Button();
             this.gpbDatoPersoAlumno = new System.Windows.Forms.GroupBox();
+            this.btncargarAlumnos = new System.Windows.Forms.Button();
             this.btnGuardarAlumno = new System.Windows.Forms.Button();
             this.btnElimiAlumnos = new System.Windows.Forms.Button();
             this.lblDirecciAlumno = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.txtApPaterAlumno = new System.Windows.Forms.TextBox();
             this.txtNombreAlumno = new System.Windows.Forms.TextBox();
             this.dgvAlumnos = new System.Windows.Forms.DataGridView();
-            this.btncargarAlumnos = new System.Windows.Forms.Button();
             this.gpbDatoPersoAlumno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +83,16 @@
             this.gpbDatoPersoAlumno.TabIndex = 1;
             this.gpbDatoPersoAlumno.TabStop = false;
             this.gpbDatoPersoAlumno.Text = "Datos Personales";
+            // 
+            // btncargarAlumnos
+            // 
+            this.btncargarAlumnos.Location = new System.Drawing.Point(604, 18);
+            this.btncargarAlumnos.Name = "btncargarAlumnos";
+            this.btncargarAlumnos.Size = new System.Drawing.Size(125, 37);
+            this.btncargarAlumnos.TabIndex = 12;
+            this.btncargarAlumnos.Text = "Resfrescar";
+            this.btncargarAlumnos.UseVisualStyleBackColor = true;
+            this.btncargarAlumnos.Click += new System.EventHandler(this.btncargarAlumnos_Click);
             // 
             // btnGuardarAlumno
             // 
@@ -201,17 +211,8 @@
             this.dgvAlumnos.RowTemplate.Height = 24;
             this.dgvAlumnos.Size = new System.Drawing.Size(693, 266);
             this.dgvAlumnos.TabIndex = 2;
+            this.dgvAlumnos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dgvAlumnos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // btncargarAlumnos
-            // 
-            this.btncargarAlumnos.Location = new System.Drawing.Point(604, 18);
-            this.btncargarAlumnos.Name = "btncargarAlumnos";
-            this.btncargarAlumnos.Size = new System.Drawing.Size(125, 37);
-            this.btncargarAlumnos.TabIndex = 12;
-            this.btncargarAlumnos.Text = "Resfrescar";
-            this.btncargarAlumnos.UseVisualStyleBackColor = true;
-            this.btncargarAlumnos.Click += new System.EventHandler(this.btncargarAlumnos_Click);
             // 
             // frmAlumnos
             // 

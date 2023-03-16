@@ -12,11 +12,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace PSPSDO.Forms
 {
     public partial class frmAlumnos : Form
     {
+        int ubi;
+
         public frmAlumnos()
         {
             InitializeComponent();
@@ -24,6 +27,18 @@ namespace PSPSDO.Forms
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            //Si no funciona agregarle Content entre CellClick
+
+
+            //ubi = e.RowIndex;
+            //if (ubi != -1)
+            //{
+            //    txtMatriAlumno.Text = (string)dgvAlumnos[1, ubi].Value;
+            //    txtNombreAlumno.Text = (string)dgvAlumnos[2, ubi].Value;
+            //    txtApPaterAlumno.Text = (string)dgvAlumnos[3, ubi].Value;
+            //    txtApMaterAlumno.Text = (string)dgvAlumnos[4, ubi].Value;
+            //    txtDireccioAlumno.Text = (string)dgvAlumnos[5, ubi].Value;
+            //}
 
         }
 
@@ -51,6 +66,7 @@ namespace PSPSDO.Forms
             AlumnosModel Alumnos = new AlumnosModel();
             AlumnosClass Alumn = new AlumnosClass();
 
+            Alumnos.Id = (int)dgvAlumnos.Rows[dgvAlumnos.CurrentCell.RowIndex].Cells[0].Value;
             Alumnos.Matricula = int.Parse(txtMatriAlumno.Text);
             Alumnos.Nombre = txtNombreAlumno.Text;
             Alumnos.ApellidoPaterno = txtApPaterAlumno.Text;
@@ -79,11 +95,7 @@ namespace PSPSDO.Forms
             AlumnosModel Alumnos = new AlumnosModel();
             AlumnosClass Alumn = new AlumnosClass();
 
-            Alumnos.Matricula = int.Parse(txtMatriAlumno.Text);
-            Alumnos.Nombre = txtNombreAlumno.Text;
-            Alumnos.ApellidoPaterno = txtApPaterAlumno.Text;
-            Alumnos.ApellidoMaterno = txtApMaterAlumno.Text;
-            Alumnos.Direccion = txtDireccioAlumno.Text;
+            Alumnos.Id = (int)dgvAlumnos.Rows[dgvAlumnos.CurrentCell.RowIndex].Cells[0].Value;
 
             string resultados = Alumn.DeleteAlumnos(Alumnos);
             MessageBox.Show(resultados);
