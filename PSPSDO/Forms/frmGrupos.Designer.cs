@@ -33,7 +33,6 @@
             this.lblClaveGrupos = new System.Windows.Forms.Label();
             this.lblDescripcionGrupos = new System.Windows.Forms.Label();
             this.btnGuardarGrupos = new System.Windows.Forms.Button();
-            this.btnCargarGrupos = new System.Windows.Forms.Button();
             this.btnActualizarGrupos = new System.Windows.Forms.Button();
             this.txtUsuarioGrupo = new System.Windows.Forms.TextBox();
             this.txtClaveGrupos = new System.Windows.Forms.TextBox();
@@ -92,23 +91,12 @@
             this.btnGuardarGrupos.UseVisualStyleBackColor = true;
             this.btnGuardarGrupos.Click += new System.EventHandler(this.btnGuardarGrupos_Click);
             // 
-            // btnCargarGrupos
-            // 
-            this.btnCargarGrupos.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargarGrupos.Location = new System.Drawing.Point(142, 202);
-            this.btnCargarGrupos.Name = "btnCargarGrupos";
-            this.btnCargarGrupos.Size = new System.Drawing.Size(88, 39);
-            this.btnCargarGrupos.TabIndex = 5;
-            this.btnCargarGrupos.Text = "Cargar";
-            this.btnCargarGrupos.UseVisualStyleBackColor = true;
-            this.btnCargarGrupos.Click += new System.EventHandler(this.btnCargarGrupos_Click);
-            // 
             // btnActualizarGrupos
             // 
             this.btnActualizarGrupos.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizarGrupos.Location = new System.Drawing.Point(267, 205);
+            this.btnActualizarGrupos.Location = new System.Drawing.Point(156, 205);
             this.btnActualizarGrupos.Name = "btnActualizarGrupos";
-            this.btnActualizarGrupos.Size = new System.Drawing.Size(82, 31);
+            this.btnActualizarGrupos.Size = new System.Drawing.Size(82, 33);
             this.btnActualizarGrupos.TabIndex = 6;
             this.btnActualizarGrupos.Text = "Actualizar";
             this.btnActualizarGrupos.UseVisualStyleBackColor = true;
@@ -140,9 +128,9 @@
             // 
             this.btnEliminarGrupos.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.btnEliminarGrupos.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarGrupos.Location = new System.Drawing.Point(400, 207);
+            this.btnEliminarGrupos.Location = new System.Drawing.Point(289, 207);
             this.btnEliminarGrupos.Name = "btnEliminarGrupos";
-            this.btnEliminarGrupos.Size = new System.Drawing.Size(75, 29);
+            this.btnEliminarGrupos.Size = new System.Drawing.Size(75, 31);
             this.btnEliminarGrupos.TabIndex = 10;
             this.btnEliminarGrupos.Text = "Eliminar";
             this.btnEliminarGrupos.UseVisualStyleBackColor = true;
@@ -152,13 +140,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 574);
+            this.ClientSize = new System.Drawing.Size(558, 576);
             this.Controls.Add(this.btnEliminarGrupos);
             this.Controls.Add(this.txtDescripcionGrupos);
             this.Controls.Add(this.txtClaveGrupos);
             this.Controls.Add(this.txtUsuarioGrupo);
             this.Controls.Add(this.btnActualizarGrupos);
-            this.Controls.Add(this.btnCargarGrupos);
             this.Controls.Add(this.btnGuardarGrupos);
             this.Controls.Add(this.lblDescripcionGrupos);
             this.Controls.Add(this.lblClaveGrupos);
@@ -166,6 +153,7 @@
             this.Controls.Add(this.dgvGrupos);
             this.Name = "frmGrupos";
             this.Text = "frmGrupos";
+            this.Load += new System.EventHandler(this.frmGrupos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -179,7 +167,6 @@
         private System.Windows.Forms.Label lblClaveGrupos;
         private System.Windows.Forms.Label lblDescripcionGrupos;
         private System.Windows.Forms.Button btnGuardarGrupos;
-        private System.Windows.Forms.Button btnCargarGrupos;
         private System.Windows.Forms.Button btnActualizarGrupos;
         private System.Windows.Forms.TextBox txtUsuarioGrupo;
         private System.Windows.Forms.TextBox txtClaveGrupos;

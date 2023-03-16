@@ -91,5 +91,14 @@ namespace PSPSDO.Forms
 
             dgvGrupos.DataSource = ds.Tables[0];
         }
+
+        private void frmGrupos_Load(object sender, EventArgs e)
+        {
+            ArrayList parametros = new ArrayList();
+            BDContext bd = new BDContext();
+            parametros.Add(new SqlParameter { ParameterName = "@pId", SqlDbType = System.Data.SqlDbType.VarChar, Value = 1 });
+            DataSet ds = bd.Fill("sp_SelectGrupos", parametros);
+            dgvGrupos.DataSource = ds.Tables[0];
+        }
     }
 }
