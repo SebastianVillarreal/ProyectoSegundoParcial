@@ -20,10 +20,6 @@ namespace PSPSDO.Forms
         public frmMaterias()
         {
             InitializeComponent();
-        }
-
-        private void btnMostrarMaterias_Click(object sender, EventArgs e)
-        {
             ArrayList parametros = new ArrayList();
             BDContext bd = new BDContext();
             parametros.Add(new SqlParameter { ParameterName = "@pId", SqlDbType = System.Data.SqlDbType.VarChar, Value = 1 });
@@ -31,7 +27,7 @@ namespace PSPSDO.Forms
             dgvMaterias.DataSource = ds.Tables[0];
         }
 
-        private void btnInsertarMateria_Click(object sender, EventArgs e)
+             private void btnInsertarMateria_Click(object sender, EventArgs e)
         {
             MateriasModel materias = new MateriasModel();
             MateriasClass materiasClass = new MateriasClass();

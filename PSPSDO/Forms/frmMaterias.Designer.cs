@@ -35,7 +35,6 @@
             this.txtNombreMateria = new System.Windows.Forms.TextBox();
             this.txtClaveMateria = new System.Windows.Forms.TextBox();
             this.txtUsuarioMateria = new System.Windows.Forms.TextBox();
-            this.btnMostrarMaterias = new System.Windows.Forms.Button();
             this.btnInsertarMateria = new System.Windows.Forms.Button();
             this.btnEditarMateria = new System.Windows.Forms.Button();
             this.btnEliminarMateria = new System.Windows.Forms.Button();
@@ -101,16 +100,6 @@
             this.txtUsuarioMateria.Size = new System.Drawing.Size(232, 20);
             this.txtUsuarioMateria.TabIndex = 6;
             // 
-            // btnMostrarMaterias
-            // 
-            this.btnMostrarMaterias.Location = new System.Drawing.Point(762, 52);
-            this.btnMostrarMaterias.Name = "btnMostrarMaterias";
-            this.btnMostrarMaterias.Size = new System.Drawing.Size(219, 47);
-            this.btnMostrarMaterias.TabIndex = 8;
-            this.btnMostrarMaterias.Text = "Mostrar";
-            this.btnMostrarMaterias.UseVisualStyleBackColor = true;
-            this.btnMostrarMaterias.Click += new System.EventHandler(this.btnMostrarMaterias_Click);
-            // 
             // btnInsertarMateria
             // 
             this.btnInsertarMateria.Location = new System.Drawing.Point(762, 126);
@@ -143,6 +132,7 @@
             // 
             // dgvMaterias
             // 
+            this.dgvMaterias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMaterias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMaterias.Location = new System.Drawing.Point(19, 175);
             this.dgvMaterias.Name = "dgvMaterias";
@@ -166,7 +156,6 @@
             this.Controls.Add(this.btnEliminarMateria);
             this.Controls.Add(this.btnEditarMateria);
             this.Controls.Add(this.btnInsertarMateria);
-            this.Controls.Add(this.btnMostrarMaterias);
             this.Controls.Add(this.txtUsuarioMateria);
             this.Controls.Add(this.txtClaveMateria);
             this.Controls.Add(this.txtNombreMateria);
@@ -191,7 +180,6 @@
         private System.Windows.Forms.TextBox txtNombreMateria;
         private System.Windows.Forms.TextBox txtClaveMateria;
         private System.Windows.Forms.TextBox txtUsuarioMateria;
-        private System.Windows.Forms.Button btnMostrarMaterias;
         private System.Windows.Forms.Button btnInsertarMateria;
         private System.Windows.Forms.Button btnEditarMateria;
         private System.Windows.Forms.Button btnEliminarMateria;
