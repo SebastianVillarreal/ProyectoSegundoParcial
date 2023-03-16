@@ -32,5 +32,13 @@ namespace PSPSDO.Forms
             frmGrup.ShowDialog();
             this.Show();
         }
+
+        private void carrerasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCarreras frmCarerrs = new frmCarreras();
+            this.Hide();
+            frmCarerrs.ShowDialog();
+            this.Show();
+        }
     }
 }

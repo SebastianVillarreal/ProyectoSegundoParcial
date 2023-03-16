@@ -22,6 +22,7 @@ namespace PSPSDO.Forms
         private void btnCarreraAñadir_Click(object sender, EventArgs e)
         {
             CarreraClass CarreraManager = new CarreraClass();
+            CarreraManager.add(dgvListaCarreras, txtNombreCarrera.Text, txtClaveCarrera.Text, txtDescripcionCarrera.Text);
 
         }
 
