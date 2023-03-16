@@ -110,5 +110,10 @@ namespace PSPSDO.Forms
             DataSet ds = bd.Fill("SP_SelectAlumnos", parametros);
             dgvAlumnos.DataSource = ds.Tables[0];
         }
+
+        private void frmAlumnos_Load(object sender, EventArgs e)
+        {
+            Carga();
+        }
     }
 }

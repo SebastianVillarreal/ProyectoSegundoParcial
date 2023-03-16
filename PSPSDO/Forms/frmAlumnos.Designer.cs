@@ -212,6 +212,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAlumnos";
             this.Text = "frmAlumnos";
+            this.Load += new System.EventHandler(this.frmAlumnos_Load);
             this.gpbDatoPersoAlumno.ResumeLayout(false);
             this.gpbDatoPersoAlumno.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).EndInit();
