@@ -70,6 +70,7 @@
             this.btnCarreraEditar.TabIndex = 2;
             this.btnCarreraEditar.Text = "Editar";
             this.btnCarreraEditar.UseVisualStyleBackColor = true;
+            this.btnCarreraEditar.Click += new System.EventHandler(this.btnCarreraEditar_Click);
             // 
             // btnCarreraMostrar
             // 

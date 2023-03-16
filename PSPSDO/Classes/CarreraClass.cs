@@ -29,12 +29,13 @@ namespace PSPSDO.Classes
                 MessageBox.Show("error inesperado: " + ex.Message);
             }
         }
-        public void add(DataGridView dgvCarreras,string Nombre, string Clave, string Descripcion)
+        public void add(DataGridView dgvCarreras, int id, string Nombre, string Clave, string Descripcion)
         {
             try
             {
                 ArrayList parametros = new ArrayList();
                 BDContext bd = new BDContext();
+                parametros.Add(new SqlParameter { ParameterName = "@pId", SqlDbType = System.Data.SqlDbType.VarChar, Value = id });
                 parametros.Add(new SqlParameter { ParameterName = "@pClave", SqlDbType = System.Data.SqlDbType.VarChar, Value = Clave });
                 parametros.Add(new SqlParameter { ParameterName = "@pNombre", SqlDbType = System.Data.SqlDbType.VarChar, Value = Nombre });
                 parametros.Add(new SqlParameter { ParameterName = "@pDescripcion", SqlDbType = System.Data.SqlDbType.VarChar, Value = Descripcion });
@@ -42,7 +43,7 @@ namespace PSPSDO.Classes
                 bd.ExecuteNonQuery("sp_SetCarrera", parametros);
 
 
-                CarreraClass Opciones= new CarreraClass();
+                CarreraClass Opciones = new CarreraClass();
                 Opciones.show(dgvCarreras);
 
                 MessageBox.Show("Registro completado");
@@ -69,6 +70,17 @@ namespace PSPSDO.Classes
             {
                 MessageBox.Show("error inesperado: " + ex.Message);
             }
+
+        }
+        public void edit(DataGridView dgvCarreras, int id, string Clave, string Nombre, string Descripcion)
+        {
+            ArrayList parametros = new ArrayList();
+            BDContext bd = new BDContext();
+            parametros.Add(new SqlParameter { ParameterName = "@pClave", SqlDbType = System.Data.SqlDbType.VarChar, Value = Clave });
+            parametros.Add(new SqlParameter { ParameterName = "@pNombre", SqlDbType = System.Data.SqlDbType.VarChar, Value = Nombre });
+            parametros.Add(new SqlParameter { ParameterName = "@pDescripcion", SqlDbType = System.Data.SqlDbType.VarChar, Value = Descripcion });
+            parametros.Add(new SqlParameter { ParameterName = "@pUltimoUsuario", SqlDbType = System.Data.SqlDbType.VarChar, Value = 9999 });
+            bd.ExecuteNonQuery("sp_UpdateCarreras", parametros);
         }
     }
 }

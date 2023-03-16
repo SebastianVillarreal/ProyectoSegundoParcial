@@ -27,14 +27,23 @@ namespace PSPSDO.Forms
 
         private void btnCarreraBorrar_Click(object sender, EventArgs e)
         {
-            CarreraModel Carrera = new CarreraModel();
             CarreraClass CarreraManager = new CarreraClass();
-            Carrera.Id = (int)dgvListaCarreras.Rows[dgvListaCarreras.CurrentCell.RowIndex].Cells[0].Value;
+            int ID = (int)dgvListaCarreras.Rows[dgvListaCarreras.CurrentCell.RowIndex].Cells[0].Value;
+            CarreraManager.delete(dgvListaCarreras, ID);
+
         }
 
         private void btnCarreraMostrar_Click(object sender, EventArgs e)
         {
             CarreraClass CarreraManager = new CarreraClass();
+            CarreraManager.show(dgvListaCarreras);
+        }
+
+        private void btnCarreraEditar_Click(object sender, EventArgs e)
+        {
+            CarreraClass CarreraManager = new CarreraClass();
+            int ID = (int)dgvListaCarreras.Rows[dgvListaCarreras.CurrentCell.RowIndex].Cells[0].Value;
+            CarreraManager.edit(dgvListaCarreras, ID,txtClaveCarrera.Text,txtNombreCarrera.Text,txtDescripcionCarrera.Text);
         }
     }
 }
