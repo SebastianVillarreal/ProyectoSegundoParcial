@@ -120,6 +120,7 @@ namespace PSPSDO.Forms
         private void frmAlumnos_Load(object sender, EventArgs e)
         {
            
+            Carga();
         }
     }
 }
