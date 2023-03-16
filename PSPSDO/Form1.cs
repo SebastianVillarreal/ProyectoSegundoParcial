@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PSPSDO.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,15 @@ namespace PSPSDO
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            frmMenu frmmenu = new frmMenu();
+            this.Hide();
+            frmmenu.ShowDialog();
+            this.Show();
+
         }
     }
 }

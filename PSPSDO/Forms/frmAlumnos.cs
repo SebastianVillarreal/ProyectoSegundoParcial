@@ -12,11 +12,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace PSPSDO.Forms
 {
     public partial class frmAlumnos : Form
     {
+        int ubi;
+
         public frmAlumnos()
         {
             InitializeComponent();
@@ -24,21 +27,62 @@ namespace PSPSDO.Forms
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            //Si no funciona agregarle Content entre CellClick
+
+
+            //ubi = e.RowIndex;
+            //if (ubi != -1)
+            //{
+            //    txtMatriAlumno.Text = (string)dgvAlumnos[1, ubi].Value;
+            //    txtNombreAlumno.Text = (string)dgvAlumnos[2, ubi].Value;
+            //    txtApPaterAlumno.Text = (string)dgvAlumnos[3, ubi].Value;
+            //    txtApMaterAlumno.Text = (string)dgvAlumnos[4, ubi].Value;
+            //    txtDireccioAlumno.Text = (string)dgvAlumnos[5, ubi].Value;
+            //}
 
         }
 
         private void btnGuardarAlumno_Click(object sender, EventArgs e)
         {
             AlumnosModel Alumnos = new AlumnosModel();
-            AlumnosClass pc = new AlumnosClass();
-            Alumnos.Matricula = int.Parse(txtMatriAlumno .Text);
+            AlumnosClass Alumn = new AlumnosClass();
+
+            Alumnos.Matricula = int.Parse(txtMatriAlumno.Text);
             Alumnos.Nombre = txtNombreAlumno.Text;
             Alumnos.ApellidoPaterno = txtApPaterAlumno.Text;
             Alumnos.ApellidoMaterno = txtApMaterAlumno.Text;
             Alumnos.Direccion = txtDireccioAlumno.Text;
-            string resultados = pc.InsertAlumnos(Alumnos);
+
+            string resultados = Alumn.InsertAlumnos(Alumnos);
             MessageBox.Show(resultados);
 
+            DataSet ds = Alumn.GetAlumnos();
+
+            dgvAlumnos.DataSource = ds.Tables[0];
+        }
+
+        private void btnActualiAlumnos_Click(object sender, EventArgs e)
+        {
+            AlumnosModel Alumnos = new AlumnosModel();
+            AlumnosClass Alumn = new AlumnosClass();
+
+            Alumnos.Id = (int)dgvAlumnos.Rows[dgvAlumnos.CurrentCell.RowIndex].Cells[0].Value;
+            Alumnos.Matricula = int.Parse(txtMatriAlumno.Text);
+            Alumnos.Nombre = txtNombreAlumno.Text;
+            Alumnos.ApellidoPaterno = txtApPaterAlumno.Text;
+            Alumnos.ApellidoMaterno = txtApMaterAlumno.Text;
+            Alumnos.Direccion = txtDireccioAlumno.Text;
+
+            string resultados = Alumn.ActualizarAlumnos(Alumnos);
+            MessageBox.Show(resultados);
+
+            DataSet ds = Alumn.GetAlumnos();
+
+            dgvAlumnos.DataSource = ds.Tables[0];
+        }
+
+        private void btncargarAlumnos_Click(object sender, EventArgs e)
+        {
             ArrayList parametros = new ArrayList();
             BDContext bd = new BDContext();
             parametros.Add(new SqlParameter { ParameterName = "@pId", SqlDbType = System.Data.SqlDbType.VarChar, Value = 1 });
@@ -46,22 +90,18 @@ namespace PSPSDO.Forms
             dgvAlumnos.DataSource = ds.Tables[0];
         }
 
-        private void btnActualiAlumnos_Click(object sender, EventArgs e)
+        private void btnElimiAlumnos_Click(object sender, EventArgs e)
         {
             AlumnosModel Alumnos = new AlumnosModel();
-            AlumnosClass pc = new AlumnosClass();
-            Alumnos.Matricula = int.Parse(txtMatriAlumno.Text);
-            Alumnos.Nombre = txtNombreAlumno.Text;
-            Alumnos.ApellidoPaterno = txtApPaterAlumno.Text;
-            Alumnos.ApellidoMaterno = txtApMaterAlumno.Text;
-            Alumnos.Direccion = txtDireccioAlumno.Text;
-            string resultados = pc.ActualizarAlumnos(Alumnos);
+            AlumnosClass Alumn = new AlumnosClass();
+
+            Alumnos.Id = (int)dgvAlumnos.Rows[dgvAlumnos.CurrentCell.RowIndex].Cells[0].Value;
+
+            string resultados = Alumn.DeleteAlumnos(Alumnos);
             MessageBox.Show(resultados);
 
-            ArrayList parametros = new ArrayList();
-            BDContext bd = new BDContext();
-            parametros.Add(new SqlParameter { ParameterName = "@pId", SqlDbType = System.Data.SqlDbType.VarChar, Value = 1 });
-            DataSet ds = bd.Fill("SP_SelectAlumnos", parametros);
+            DataSet ds = Alumn.GetAlumnos();
+
             dgvAlumnos.DataSource = ds.Tables[0];
         }
     }
