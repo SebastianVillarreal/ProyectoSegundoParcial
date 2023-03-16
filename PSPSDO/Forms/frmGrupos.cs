@@ -78,12 +78,18 @@ namespace PSPSDO.Forms
 
         private void btnElimiarGrupos_Click(object sender, EventArgs e)
         {
-            btnActualizarGrupos.Enabled = true;
-            btnEliminarGrupos.Enabled = true;
-            btnActualizarGrupos.Enabled = false;
-            btnCargarGrupos.Enabled = false;
-            btnGuardarGrupos.Enabled = false;
-            dgvGrupos.ReadOnly = false;
+            GrupoModels grupoModels = new GrupoModels();
+
+            GrupoClass grupo = new GrupoClass();
+
+            grupoModels.Id = (int)dgvGrupos.Rows[dgvGrupos.CurrentCell.RowIndex].Cells[0].Value;
+
+            string resultado = grupo.BorrarGrupos(grupoModels);
+            MessageBox.Show(resultado);
+
+            DataSet ds = grupo.GetGrupos();
+
+            dgvGrupos.DataSource = ds.Tables[0];
         }
     }
 }
