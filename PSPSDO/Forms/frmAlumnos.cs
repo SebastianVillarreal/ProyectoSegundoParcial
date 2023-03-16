@@ -58,6 +58,12 @@ namespace PSPSDO.Forms
 
             DataSet ds = Alumn.GetAlumnos();
             dgvAlumnos.DataSource = ds.Tables[0];
+
+            txtNombreAlumno.Text = "";
+            txtApPaterAlumno.Text = "";
+            txtApMaterAlumno.Text = "";
+            txtMatriAlumno.Text = "";
+            txtDireccioAlumno.Text = "";
         }
 
         private void btnActualiAlumnos_Click(object sender, EventArgs e)
@@ -109,6 +115,11 @@ namespace PSPSDO.Forms
             parametros.Add(new SqlParameter { ParameterName = "@pId", SqlDbType = System.Data.SqlDbType.VarChar, Value = 1 });
             DataSet ds = bd.Fill("SP_SelectAlumnos", parametros);
             dgvAlumnos.DataSource = ds.Tables[0];
+        }
+
+        private void frmAlumnos_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

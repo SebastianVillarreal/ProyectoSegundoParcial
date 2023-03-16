@@ -49,10 +49,9 @@
             // 
             // btnActualiAlumnos
             // 
-            this.btnActualiAlumnos.Location = new System.Drawing.Point(359, 254);
-            this.btnActualiAlumnos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnActualiAlumnos.Location = new System.Drawing.Point(319, 203);
             this.btnActualiAlumnos.Name = "btnActualiAlumnos";
-            this.btnActualiAlumnos.Size = new System.Drawing.Size(111, 29);
+            this.btnActualiAlumnos.Size = new System.Drawing.Size(99, 23);
             this.btnActualiAlumnos.TabIndex = 0;
             this.btnActualiAlumnos.Text = "Actualizar";
             this.btnActualiAlumnos.UseVisualStyleBackColor = true;
@@ -73,21 +72,18 @@
             this.gpbDatoPersoAlumno.Controls.Add(this.txtApPaterAlumno);
             this.gpbDatoPersoAlumno.Controls.Add(this.txtNombreAlumno);
             this.gpbDatoPersoAlumno.Controls.Add(this.btnActualiAlumnos);
-            this.gpbDatoPersoAlumno.Location = new System.Drawing.Point(39, 41);
-            this.gpbDatoPersoAlumno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gpbDatoPersoAlumno.Location = new System.Drawing.Point(35, 33);
             this.gpbDatoPersoAlumno.Name = "gpbDatoPersoAlumno";
-            this.gpbDatoPersoAlumno.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gpbDatoPersoAlumno.Size = new System.Drawing.Size(735, 324);
+            this.gpbDatoPersoAlumno.Size = new System.Drawing.Size(653, 259);
             this.gpbDatoPersoAlumno.TabIndex = 1;
             this.gpbDatoPersoAlumno.TabStop = false;
             this.gpbDatoPersoAlumno.Text = "Datos Personales";
             // 
             // btnGuardarAlumno
             // 
-            this.btnGuardarAlumno.Location = new System.Drawing.Point(596, 254);
-            this.btnGuardarAlumno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnGuardarAlumno.Location = new System.Drawing.Point(530, 203);
             this.btnGuardarAlumno.Name = "btnGuardarAlumno";
-            this.btnGuardarAlumno.Size = new System.Drawing.Size(84, 29);
+            this.btnGuardarAlumno.Size = new System.Drawing.Size(75, 23);
             this.btnGuardarAlumno.TabIndex = 11;
             this.btnGuardarAlumno.Text = "Guardar";
             this.btnGuardarAlumno.UseVisualStyleBackColor = true;
@@ -95,10 +91,9 @@
             // 
             // btnElimiAlumnos
             // 
-            this.btnElimiAlumnos.Location = new System.Drawing.Point(476, 254);
-            this.btnElimiAlumnos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnElimiAlumnos.Location = new System.Drawing.Point(423, 203);
             this.btnElimiAlumnos.Name = "btnElimiAlumnos";
-            this.btnElimiAlumnos.Size = new System.Drawing.Size(84, 29);
+            this.btnElimiAlumnos.Size = new System.Drawing.Size(75, 23);
             this.btnElimiAlumnos.TabIndex = 10;
             this.btnElimiAlumnos.Text = "Eliminar";
             this.btnElimiAlumnos.UseVisualStyleBackColor = true;
@@ -107,111 +102,105 @@
             // lblDirecciAlumno
             // 
             this.lblDirecciAlumno.AutoSize = true;
-            this.lblDirecciAlumno.Location = new System.Drawing.Point(212, 145);
+            this.lblDirecciAlumno.Location = new System.Drawing.Point(188, 116);
             this.lblDirecciAlumno.Name = "lblDirecciAlumno";
-            this.lblDirecciAlumno.Size = new System.Drawing.Size(75, 20);
+            this.lblDirecciAlumno.Size = new System.Drawing.Size(64, 16);
             this.lblDirecciAlumno.TabIndex = 9;
             this.lblDirecciAlumno.Text = "Direccion";
             // 
             // lblMatriAlumno
             // 
             this.lblMatriAlumno.AutoSize = true;
-            this.lblMatriAlumno.Location = new System.Drawing.Point(25, 145);
+            this.lblMatriAlumno.Location = new System.Drawing.Point(22, 116);
             this.lblMatriAlumno.Name = "lblMatriAlumno";
-            this.lblMatriAlumno.Size = new System.Drawing.Size(73, 20);
+            this.lblMatriAlumno.Size = new System.Drawing.Size(61, 16);
             this.lblMatriAlumno.TabIndex = 8;
             this.lblMatriAlumno.Text = "Matricula";
             // 
             // lblApMaterAlumno
             // 
             this.lblApMaterAlumno.AutoSize = true;
-            this.lblApMaterAlumno.Location = new System.Drawing.Point(393, 35);
+            this.lblApMaterAlumno.Location = new System.Drawing.Point(349, 28);
             this.lblApMaterAlumno.Name = "lblApMaterAlumno";
-            this.lblApMaterAlumno.Size = new System.Drawing.Size(128, 20);
+            this.lblApMaterAlumno.Size = new System.Drawing.Size(109, 16);
             this.lblApMaterAlumno.TabIndex = 7;
             this.lblApMaterAlumno.Text = "Apellido Materno";
             // 
             // lblApPaterAlumno
             // 
             this.lblApPaterAlumno.AutoSize = true;
-            this.lblApPaterAlumno.Location = new System.Drawing.Point(212, 35);
+            this.lblApPaterAlumno.Location = new System.Drawing.Point(188, 28);
             this.lblApPaterAlumno.Name = "lblApPaterAlumno";
-            this.lblApPaterAlumno.Size = new System.Drawing.Size(125, 20);
+            this.lblApPaterAlumno.Size = new System.Drawing.Size(107, 16);
             this.lblApPaterAlumno.TabIndex = 6;
             this.lblApPaterAlumno.Text = "Apellido Paterno";
             // 
             // lblNombreAlumno
             // 
             this.lblNombreAlumno.AutoSize = true;
-            this.lblNombreAlumno.Location = new System.Drawing.Point(50, 35);
+            this.lblNombreAlumno.Location = new System.Drawing.Point(44, 28);
             this.lblNombreAlumno.Name = "lblNombreAlumno";
-            this.lblNombreAlumno.Size = new System.Drawing.Size(65, 20);
+            this.lblNombreAlumno.Size = new System.Drawing.Size(56, 16);
             this.lblNombreAlumno.TabIndex = 5;
             this.lblNombreAlumno.Text = "Nombre";
             // 
             // txtMatriAlumno
             // 
-            this.txtMatriAlumno.Location = new System.Drawing.Point(28, 169);
-            this.txtMatriAlumno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMatriAlumno.Location = new System.Drawing.Point(25, 135);
             this.txtMatriAlumno.Name = "txtMatriAlumno";
-            this.txtMatriAlumno.Size = new System.Drawing.Size(112, 26);
+            this.txtMatriAlumno.Size = new System.Drawing.Size(100, 22);
             this.txtMatriAlumno.TabIndex = 4;
             // 
             // txtDireccioAlumno
             // 
-            this.txtDireccioAlumno.Location = new System.Drawing.Point(215, 169);
-            this.txtDireccioAlumno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDireccioAlumno.Location = new System.Drawing.Point(191, 135);
             this.txtDireccioAlumno.Name = "txtDireccioAlumno";
-            this.txtDireccioAlumno.Size = new System.Drawing.Size(112, 26);
+            this.txtDireccioAlumno.Size = new System.Drawing.Size(100, 22);
             this.txtDireccioAlumno.TabIndex = 4;
             // 
             // txtApMaterAlumno
             // 
-            this.txtApMaterAlumno.Location = new System.Drawing.Point(403, 59);
-            this.txtApMaterAlumno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtApMaterAlumno.Location = new System.Drawing.Point(358, 47);
             this.txtApMaterAlumno.Name = "txtApMaterAlumno";
-            this.txtApMaterAlumno.Size = new System.Drawing.Size(112, 26);
+            this.txtApMaterAlumno.Size = new System.Drawing.Size(100, 22);
             this.txtApMaterAlumno.TabIndex = 3;
             // 
             // txtApPaterAlumno
             // 
-            this.txtApPaterAlumno.Location = new System.Drawing.Point(219, 59);
-            this.txtApPaterAlumno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtApPaterAlumno.Location = new System.Drawing.Point(195, 47);
             this.txtApPaterAlumno.Name = "txtApPaterAlumno";
-            this.txtApPaterAlumno.Size = new System.Drawing.Size(112, 26);
+            this.txtApPaterAlumno.Size = new System.Drawing.Size(100, 22);
             this.txtApPaterAlumno.TabIndex = 2;
             // 
             // txtNombreAlumno
             // 
-            this.txtNombreAlumno.Location = new System.Drawing.Point(28, 59);
-            this.txtNombreAlumno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNombreAlumno.Location = new System.Drawing.Point(25, 47);
             this.txtNombreAlumno.Name = "txtNombreAlumno";
-            this.txtNombreAlumno.Size = new System.Drawing.Size(112, 26);
+            this.txtNombreAlumno.Size = new System.Drawing.Size(100, 22);
             this.txtNombreAlumno.TabIndex = 1;
             // 
             // dgvAlumnos
             // 
             this.dgvAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlumnos.Location = new System.Drawing.Point(39, 421);
-            this.dgvAlumnos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvAlumnos.Location = new System.Drawing.Point(35, 337);
             this.dgvAlumnos.Name = "dgvAlumnos";
             this.dgvAlumnos.RowHeadersWidth = 51;
             this.dgvAlumnos.RowTemplate.Height = 24;
-            this.dgvAlumnos.Size = new System.Drawing.Size(693, 266);
+            this.dgvAlumnos.Size = new System.Drawing.Size(616, 213);
             this.dgvAlumnos.TabIndex = 2;
             this.dgvAlumnos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dgvAlumnos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // frmAlumnos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 702);
+            this.ClientSize = new System.Drawing.Size(800, 562);
             this.Controls.Add(this.dgvAlumnos);
             this.Controls.Add(this.gpbDatoPersoAlumno);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAlumnos";
             this.Text = "frmAlumnos";
+            this.Load += new System.EventHandler(this.frmAlumnos_Load);
             this.gpbDatoPersoAlumno.ResumeLayout(false);
             this.gpbDatoPersoAlumno.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).EndInit();
