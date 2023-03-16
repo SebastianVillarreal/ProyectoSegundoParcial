@@ -77,6 +77,7 @@
             this.personasToolStripMenuItem.Name = "personasToolStripMenuItem";
             this.personasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.personasToolStripMenuItem.Text = "Personas";
+            this.personasToolStripMenuItem.Click += new System.EventHandler(this.personasToolStripMenuItem_Click);
             // 
             // materiasToolStripMenuItem
             // 
@@ -104,6 +105,7 @@
             this.carrerasToolStripMenuItem.Name = "carrerasToolStripMenuItem";
             this.carrerasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.carrerasToolStripMenuItem.Text = "Carreras";
+            this.carrerasToolStripMenuItem.Click += new System.EventHandler(this.carrerasToolStripMenuItem_Click);
             // 
             // profesoresToolStripMenuItem
             // 
