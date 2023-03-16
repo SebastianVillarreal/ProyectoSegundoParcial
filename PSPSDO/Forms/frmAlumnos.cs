@@ -57,7 +57,6 @@ namespace PSPSDO.Forms
             MessageBox.Show(resultados);
 
             DataSet ds = Alumn.GetAlumnos();
-
             dgvAlumnos.DataSource = ds.Tables[0];
         }
 
@@ -77,17 +76,16 @@ namespace PSPSDO.Forms
             MessageBox.Show(resultados);
 
             DataSet ds = Alumn.GetAlumnos();
-
             dgvAlumnos.DataSource = ds.Tables[0];
         }
 
         private void btncargarAlumnos_Click(object sender, EventArgs e)
         {
-            ArrayList parametros = new ArrayList();
-            BDContext bd = new BDContext();
-            parametros.Add(new SqlParameter { ParameterName = "@pId", SqlDbType = System.Data.SqlDbType.VarChar, Value = 1 });
-            DataSet ds = bd.Fill("SP_SelectAlumnos", parametros);
-            dgvAlumnos.DataSource = ds.Tables[0];
+            //ArrayList parametros = new ArrayList();
+            //BDContext bd = new BDContext();
+            //parametros.Add(new SqlParameter { ParameterName = "@pId", SqlDbType = System.Data.SqlDbType.VarChar, Value = 1 });
+            //DataSet ds = bd.Fill("SP_SelectAlumnos", parametros);
+            //dgvAlumnos.DataSource = ds.Tables[0];
         }
 
         private void btnElimiAlumnos_Click(object sender, EventArgs e)
@@ -101,7 +99,15 @@ namespace PSPSDO.Forms
             MessageBox.Show(resultados);
 
             DataSet ds = Alumn.GetAlumnos();
+            dgvAlumnos.DataSource = ds.Tables[0];
+        }
 
+        private void Carga()
+        {
+            ArrayList parametros = new ArrayList();
+            BDContext bd = new BDContext();
+            parametros.Add(new SqlParameter { ParameterName = "@pId", SqlDbType = System.Data.SqlDbType.VarChar, Value = 1 });
+            DataSet ds = bd.Fill("SP_SelectAlumnos", parametros);
             dgvAlumnos.DataSource = ds.Tables[0];
         }
     }

@@ -30,7 +30,6 @@
         {
             this.btnActualiAlumnos = new System.Windows.Forms.Button();
             this.gpbDatoPersoAlumno = new System.Windows.Forms.GroupBox();
-            this.btncargarAlumnos = new System.Windows.Forms.Button();
             this.btnGuardarAlumno = new System.Windows.Forms.Button();
             this.btnElimiAlumnos = new System.Windows.Forms.Button();
             this.lblDirecciAlumno = new System.Windows.Forms.Label();
@@ -61,7 +60,6 @@
             // 
             // gpbDatoPersoAlumno
             // 
-            this.gpbDatoPersoAlumno.Controls.Add(this.btncargarAlumnos);
             this.gpbDatoPersoAlumno.Controls.Add(this.btnGuardarAlumno);
             this.gpbDatoPersoAlumno.Controls.Add(this.btnElimiAlumnos);
             this.gpbDatoPersoAlumno.Controls.Add(this.lblDirecciAlumno);
@@ -83,16 +81,6 @@
             this.gpbDatoPersoAlumno.TabIndex = 1;
             this.gpbDatoPersoAlumno.TabStop = false;
             this.gpbDatoPersoAlumno.Text = "Datos Personales";
-            // 
-            // btncargarAlumnos
-            // 
-            this.btncargarAlumnos.Location = new System.Drawing.Point(604, 18);
-            this.btncargarAlumnos.Name = "btncargarAlumnos";
-            this.btncargarAlumnos.Size = new System.Drawing.Size(125, 37);
-            this.btncargarAlumnos.TabIndex = 12;
-            this.btncargarAlumnos.Text = "Resfrescar";
-            this.btncargarAlumnos.UseVisualStyleBackColor = true;
-            this.btncargarAlumnos.Click += new System.EventHandler(this.btncargarAlumnos_Click);
             // 
             // btnGuardarAlumno
             // 
@@ -248,6 +236,5 @@
         private System.Windows.Forms.TextBox txtApPaterAlumno;
         private System.Windows.Forms.TextBox txtNombreAlumno;
         private System.Windows.Forms.DataGridView dgvAlumnos;
-        private System.Windows.Forms.Button btncargarAlumnos;
     }
 }
