@@ -50,6 +50,10 @@ namespace PSPSDO.Forms
 
             DataSet ds = materiasClass.GetMaterias();
             dgvMaterias.DataSource = ds.Tables[0];
+
+            txtNombreMateria.Text ="" ;
+            txtClaveMateria.Text = "";
+            txtUsuarioMateria.Text ="";
         }
 
         private void btnEditarMateria_Click(object sender, EventArgs e)
@@ -76,7 +80,11 @@ namespace PSPSDO.Forms
             MessageBox.Show(resultados);
 
             DataSet ds = materiasClass.GetMaterias();
+
             dgvMaterias.DataSource = ds.Tables[0];
+            txtNombreMateria.Text = "";
+            txtClaveMateria.Text = "";
+            txtUsuarioMateria.Text = "";
         }
 
         private void btnEliminarMateria_Click(object sender, EventArgs e)
