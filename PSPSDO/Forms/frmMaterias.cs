@@ -27,8 +27,14 @@ namespace PSPSDO.Forms
             dgvMaterias.DataSource = ds.Tables[0];
         }
 
-             private void btnInsertarMateria_Click(object sender, EventArgs e)
+        private void btnInsertarMateria_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtNombreMateria.Text) || string.IsNullOrWhiteSpace(txtClaveMateria.Text) || string.IsNullOrWhiteSpace(txtUsuarioMateria.Text))
+            {
+                MessageBox.Show("Los campos Nombre, Clave y Usuario son obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             MateriasModel materias = new MateriasModel();
             MateriasClass materiasClass = new MateriasClass();
             materias.Nombre = txtNombreMateria.Text;
@@ -48,6 +54,12 @@ namespace PSPSDO.Forms
 
         private void btnEditarMateria_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtNombreMateria.Text) || string.IsNullOrWhiteSpace(txtClaveMateria.Text) || string.IsNullOrWhiteSpace(txtUsuarioMateria.Text))
+            {
+                MessageBox.Show("Los campos Nombre, Clave y Usuario son obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             MateriasModel materias = new MateriasModel();
             MateriasClass materiasClass = new MateriasClass();
             materias.Id = (int)dgvMaterias.Rows[dgvMaterias.CurrentCell.RowIndex].Cells[0].Value;
@@ -75,6 +87,32 @@ namespace PSPSDO.Forms
             materiasClass.DeleteMateria(materias);
             DataSet ds = materiasClass.GetMaterias();
             dgvMaterias.DataSource = ds.Tables[0];
+        }
+
+        private void txtBuscarMateria_TextChanged(object sender, EventArgs e)
+        {
+            MateriasClass materiasClass = new MateriasClass();
+            string Busqueda = txtBuscarMateria.Text;
+            materiasClass.BuscarMaterias(Busqueda);
+            DataSet ds = materiasClass.BuscarMaterias(Busqueda);
+            dgvMaterias.DataSource = ds.Tables[0];
+        }
+
+        private void dgvMaterias_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvMaterias.SelectedRows.Count > 0)
+            {
+                DataGridViewRow row = dgvMaterias.SelectedRows[0];
+
+                string Nombre = row.Cells["Nombre"].Value.ToString();
+                string clave = row.Cells["Clave"].Value.ToString();
+                string Usuario = row.Cells["UsuarioUltimaModificacion"].Value.ToString();
+
+                txtNombreMateria.Text = Nombre;
+                txtClaveMateria.Text = clave;
+                txtUsuarioMateria.Text = Usuario;
+                dtpFechaMateria.Value = Convert.ToDateTime(row.Cells["FechaActualizacion"].Value);
+            }
         }
     }
 }
