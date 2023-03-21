@@ -38,15 +38,17 @@
             this.txtClaveGrupos = new System.Windows.Forms.TextBox();
             this.txtDescripcionGrupos = new System.Windows.Forms.TextBox();
             this.btnEliminarGrupos = new System.Windows.Forms.Button();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvGrupos
             // 
             this.dgvGrupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGrupos.Location = new System.Drawing.Point(12, 250);
+            this.dgvGrupos.Location = new System.Drawing.Point(12, 256);
             this.dgvGrupos.Name = "dgvGrupos";
-            this.dgvGrupos.Size = new System.Drawing.Size(536, 312);
+            this.dgvGrupos.Size = new System.Drawing.Size(536, 306);
             this.dgvGrupos.TabIndex = 0;
             // 
             // lblUsuarioGrupo
@@ -83,7 +85,7 @@
             // btnGuardarGrupos
             // 
             this.btnGuardarGrupos.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarGrupos.Location = new System.Drawing.Point(35, 205);
+            this.btnGuardarGrupos.Location = new System.Drawing.Point(35, 186);
             this.btnGuardarGrupos.Name = "btnGuardarGrupos";
             this.btnGuardarGrupos.Size = new System.Drawing.Size(75, 33);
             this.btnGuardarGrupos.TabIndex = 4;
@@ -94,7 +96,7 @@
             // btnActualizarGrupos
             // 
             this.btnActualizarGrupos.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizarGrupos.Location = new System.Drawing.Point(156, 205);
+            this.btnActualizarGrupos.Location = new System.Drawing.Point(156, 186);
             this.btnActualizarGrupos.Name = "btnActualizarGrupos";
             this.btnActualizarGrupos.Size = new System.Drawing.Size(82, 33);
             this.btnActualizarGrupos.TabIndex = 6;
@@ -113,8 +115,9 @@
             // txtClaveGrupos
             // 
             this.txtClaveGrupos.Location = new System.Drawing.Point(119, 62);
+            this.txtClaveGrupos.Multiline = true;
             this.txtClaveGrupos.Name = "txtClaveGrupos";
-            this.txtClaveGrupos.Size = new System.Drawing.Size(100, 20);
+            this.txtClaveGrupos.Size = new System.Drawing.Size(100, 19);
             this.txtClaveGrupos.TabIndex = 8;
             // 
             // txtDescripcionGrupos
@@ -122,14 +125,14 @@
             this.txtDescripcionGrupos.Location = new System.Drawing.Point(119, 117);
             this.txtDescripcionGrupos.Multiline = true;
             this.txtDescripcionGrupos.Name = "txtDescripcionGrupos";
-            this.txtDescripcionGrupos.Size = new System.Drawing.Size(199, 74);
+            this.txtDescripcionGrupos.Size = new System.Drawing.Size(199, 56);
             this.txtDescripcionGrupos.TabIndex = 9;
             // 
             // btnEliminarGrupos
             // 
             this.btnEliminarGrupos.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.btnEliminarGrupos.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarGrupos.Location = new System.Drawing.Point(289, 207);
+            this.btnEliminarGrupos.Location = new System.Drawing.Point(289, 188);
             this.btnEliminarGrupos.Name = "btnEliminarGrupos";
             this.btnEliminarGrupos.Size = new System.Drawing.Size(75, 31);
             this.btnEliminarGrupos.TabIndex = 10;
@@ -137,11 +140,31 @@
             this.btnEliminarGrupos.UseVisualStyleBackColor = true;
             this.btnEliminarGrupos.Click += new System.EventHandler(this.btnElimiarGrupos_Click);
             // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Location = new System.Drawing.Point(13, 234);
+            this.lblSearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(88, 13);
+            this.lblSearch.TabIndex = 11;
+            this.lblSearch.Text = "Busqueda por Id:";
+            // 
+            // txtBusqueda
+            // 
+            this.txtBusqueda.Location = new System.Drawing.Point(105, 231);
+            this.txtBusqueda.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(93, 20);
+            this.txtBusqueda.TabIndex = 13;
+            // 
             // frmGrupos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(558, 576);
+            this.Controls.Add(this.txtBusqueda);
+            this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.btnEliminarGrupos);
             this.Controls.Add(this.txtDescripcionGrupos);
             this.Controls.Add(this.txtClaveGrupos);
@@ -173,5 +196,7 @@
         private System.Windows.Forms.TextBox txtClaveGrupos;
         private System.Windows.Forms.TextBox txtDescripcionGrupos;
         private System.Windows.Forms.Button btnEliminarGrupos;
+        private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.TextBox txtBusqueda;
     }
 }
