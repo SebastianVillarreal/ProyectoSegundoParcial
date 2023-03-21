@@ -127,48 +127,7 @@ namespace PSPSDO.Forms
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //Esto es del buscador
-            int id = Convert.ToInt32(txtBusqueda.Text);
-
-            string connectionString = "Data Source=104.254.247.128; Initial Catalog=BddSecParcial; User ID = sa; password=ABC1238f47!;";
-            SqlConnection connection = new SqlConnection(connectionString);
-
-            string query = "SELECT * FROM Alumnos WHERE Id = @Id";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("@Id", id);
-
-            connection.Open();
-
-            SqlDataReader reader = command.ExecuteReader();
-
-            if (reader.Read())
-            {
-                txtMatriAlumno.Text = reader["Matricula"].ToString();
-                txtNombreAlumno.Text = reader["Nombre"].ToString();
-                txtApPaterAlumno.Text = reader["ApPaterno"].ToString();
-                txtApMaterAlumno.Text = reader["ApMaterno"].ToString();
-                txtDireccioAlumno.Text = reader["Dirección"].ToString();
-                txtIdGrupo.Text = reader["IdGrupo"].ToString();
-
-                foreach (DataGridViewRow row in dgvAlumnos.Rows)//Esto sirve para que te seleccione la fila que buscaste
-                {
-                    if (Convert.ToInt32(row.Cells["Id"].Value) == id)
-                    {
-                        row.Selected = true;
-                        dgvAlumnos.CurrentCell = row.Cells[0];
-                        break;
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("No se encontró ningún registro con el ID proporcionado.");
-            }
-
-            reader.Close();
-            connection.Close();
+          
         }
     }
 }
