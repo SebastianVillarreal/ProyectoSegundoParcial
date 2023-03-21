@@ -72,8 +72,7 @@ namespace PSPSDO.Forms
             txtApMaterAlumno.Text = "";
             txtMatriAlumno.Text = "";
             txtDireccioAlumno.Text = "";
-                DataSet ds = Alumn.GetAlumnos();
-                dgvAlumnos.DataSource = ds.Tables[0];
+               
             }
         }
 
