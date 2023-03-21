@@ -100,5 +100,10 @@ namespace PSPSDO.Forms
             DataSet ds = bd.Fill("sp_SelectGrupos", parametros);
             dgvGrupos.DataSource = ds.Tables[0];
         }
+
+        private void txtUsuarioGrupo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

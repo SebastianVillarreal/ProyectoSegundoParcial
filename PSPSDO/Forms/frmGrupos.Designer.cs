@@ -108,6 +108,7 @@
             this.txtUsuarioGrupo.Name = "txtUsuarioGrupo";
             this.txtUsuarioGrupo.Size = new System.Drawing.Size(100, 20);
             this.txtUsuarioGrupo.TabIndex = 7;
+            this.txtUsuarioGrupo.TextChanged += new System.EventHandler(this.txtUsuarioGrupo_TextChanged);
             // 
             // txtClaveGrupos
             // 
