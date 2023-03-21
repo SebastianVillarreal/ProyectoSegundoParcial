@@ -66,7 +66,7 @@
             // 
             // btnCarreraEditar
             // 
-            this.btnCarreraEditar.Location = new System.Drawing.Point(568, 103);
+            this.btnCarreraEditar.Location = new System.Drawing.Point(702, 106);
             this.btnCarreraEditar.Name = "btnCarreraEditar";
             this.btnCarreraEditar.Size = new System.Drawing.Size(75, 23);
             this.btnCarreraEditar.TabIndex = 2;
@@ -76,7 +76,7 @@
             // 
             // btnCarreraMostrar
             // 
-            this.btnCarreraMostrar.Location = new System.Drawing.Point(312, 391);
+            this.btnCarreraMostrar.Location = new System.Drawing.Point(563, 106);
             this.btnCarreraMostrar.Name = "btnCarreraMostrar";
             this.btnCarreraMostrar.Size = new System.Drawing.Size(113, 23);
             this.btnCarreraMostrar.TabIndex = 3;
@@ -143,14 +143,14 @@
             // 
             // txtBusquedaCarreras
             // 
-            this.txtBusquedaCarreras.Location = new System.Drawing.Point(12, 391);
+            this.txtBusquedaCarreras.Location = new System.Drawing.Point(199, 106);
             this.txtBusquedaCarreras.Name = "txtBusquedaCarreras";
-            this.txtBusquedaCarreras.Size = new System.Drawing.Size(213, 20);
+            this.txtBusquedaCarreras.Size = new System.Drawing.Size(257, 20);
             this.txtBusquedaCarreras.TabIndex = 11;
             // 
             // btnBuscarCarrera
             // 
-            this.btnBuscarCarrera.Location = new System.Drawing.Point(231, 391);
+            this.btnBuscarCarrera.Location = new System.Drawing.Point(462, 106);
             this.btnBuscarCarrera.Name = "btnBuscarCarrera";
             this.btnBuscarCarrera.Size = new System.Drawing.Size(75, 23);
             this.btnBuscarCarrera.TabIndex = 12;
