@@ -64,6 +64,7 @@ namespace PSPSDO.Classes
                 bd.ExecuteNonQuery("SP_DeleteCarreras", parametros);
                 CarreraClass Opciones = new CarreraClass();
                 Opciones.show(dgvCarreras);
+                MessageBox.Show("Carrera Borrada exitosamente");
             }
             catch (Exception ex)
             {
@@ -73,6 +74,8 @@ namespace PSPSDO.Classes
         }
         public void edit(DataGridView dgvCarreras, int id, string Clave, string Nombre, string Descripcion)
         {
+            try
+            {
             ArrayList parametros = new ArrayList();
             BDContext bd = new BDContext();
             parametros.Add(new SqlParameter { ParameterName = "@pId", SqlDbType = System.Data.SqlDbType.VarChar, Value = id });
@@ -83,6 +86,27 @@ namespace PSPSDO.Classes
             bd.ExecuteNonQuery("SP_UpdateCarreras", parametros);
             CarreraClass Opciones = new CarreraClass();
             Opciones.show(dgvCarreras);
+            MessageBox.Show("Carrera Editada exitosamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error inesperado: " + ex.Message);
+            }
+        }
+        public void search(DataGridView dgvCarreras, string Nombre)
+        {
+            try
+            {
+                ArrayList parametros = new ArrayList();
+                BDContext bd = new BDContext();
+                parametros.Add(new SqlParameter { ParameterName = "@pClave", SqlDbType = System.Data.SqlDbType.VarChar, Value = Nombre});
+                DataSet ds = bd.Fill("SP_SearchCarrera", parametros);
+                dgvCarreras.DataSource = ds.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error inesperado: " + ex.Message);
+            }
         }
     }
 }

@@ -46,5 +46,17 @@ namespace PSPSDO.Forms
             int ID = (int)dgvListaCarreras.Rows[dgvListaCarreras.CurrentCell.RowIndex].Cells[0].Value;
             CarreraManager.edit(dgvListaCarreras, ID,txtClaveCarrera.Text,txtNombreCarrera.Text,txtDescripcionCarrera.Text);
         }
+
+        private void frmCarreras_Load(object sender, EventArgs e)
+        {
+            CarreraClass CarreraManager = new CarreraClass();
+            CarreraManager.show(dgvListaCarreras);
+        }
+
+        private void btnBuscarCarrera_Click(object sender, EventArgs e)
+        {
+            CarreraClass CarreraManager = new CarreraClass();
+            CarreraManager.search(dgvListaCarreras,txtBusquedaCarreras.Text);
+        }
     }
 }
