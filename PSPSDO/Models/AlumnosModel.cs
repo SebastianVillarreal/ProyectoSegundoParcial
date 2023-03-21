@@ -14,5 +14,6 @@ namespace PSPSDO.Models
         public string ApellidoMaterno { get; set; }
         public int Matricula { get; set; }
         public string Direccion { get; set; }
+        public int IdGrupo { get; set; }
     }
 }
