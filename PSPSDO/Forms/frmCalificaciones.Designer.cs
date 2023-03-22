@@ -43,34 +43,6 @@
             // cmbMateria
             // 
             this.cmbMateria.FormattingEnabled = true;
-            this.cmbMateria.Items.AddRange(new object[] {
-            "",
-            "Funciones Matematicas",
-            "Metodologias y Modelado de Desarollo de Software",
-            "Interconexion de Redes",
-            "Programacion Orientada a Objetos",
-            "Introduccion al Diseño Digital",
-            "Base de Datos",
-            "Ingles II",
-            "Formacion Sociocultural II",
-            "Calculo Diferencial",
-            "Probabilidad y Estadistica",
-            "Sistemas Operativos",
-            "Integradora I",
-            "Aplicaciones Web",
-            "Bases de Datos para Aplicaciones",
-            "Ingles III",
-            "Formacion Sociocultural III",
-            "Estadistica Aplicada a la Educacion",
-            "La Educacion en Mexico",
-            "Diseño de Material Didactico",
-            "Metodologia de la Didactica I",
-            "Fisica",
-            "Probabilidad y Estadistica",
-            "Metodos y sistemas de trabajo I",
-            "Distribucion de Planta",
-            "Costos de Produccion",
-            "Electricidad y Magnetismo"});
             this.cmbMateria.Location = new System.Drawing.Point(160, 87);
             this.cmbMateria.Name = "cmbMateria";
             this.cmbMateria.Size = new System.Drawing.Size(173, 21);
@@ -79,63 +51,6 @@
             // cmbAlumno
             // 
             this.cmbAlumno.FormattingEnabled = true;
-            this.cmbAlumno.Items.AddRange(new object[] {
-            "",
-            "Jorge Alberto Rubio Reyna",
-            "Bryan Rolando De La Rosa Medrano",
-            "Karen Sofia Alvarez Martinez",
-            "Jose Reynaldo Sillas\tGuerrero",
-            "Cesar Fabian Gonzalez Valdez",
-            "Felipe de Jesús Bernal Gazca",
-            "Jonathan\tMartinez Rivera",
-            "Abril Galvan Rodriguez",
-            "Karen Alvarez Martinez",
-            "Alejandra\tLucio Zuñiga",
-            "Gustavo Angel Borrego Ramirez",
-            "Carlos Cortez Lopez",
-            "Jonathan Cortez Perez",
-            "Brandon Arturo Gonzalez Saravia",
-            "Yaretzi Sandoval Vazquez",
-            "Keyla Abigail Martinez Castillo",
-            "Jose Manuel de la Fuente Irracheta",
-            "Carlos Alberto Alvarez Montes",
-            "Osiel Yado Flores",
-            "Edgar Camarillo Alcocer",
-            "Alberto Rubio Lazcano",
-            "Arturo Martinez Rubio",
-            "Ivan Yado Flores",
-            "Javier Martinez Leal",
-            "Irma Lazcano Martinez",
-            "Enrique Flores Martinez",
-            "Enedino Rubio Flores",
-            "Checo Rubio Flores",
-            "Mercedes\tCalderón López",
-            "Karen López Reyes",
-            "Jullio Gutiérrez Sandoval",
-            "Marcos Callejón Garza",
-            "Juan Garcia Garcia",
-            "Cristian Reyna López",
-            "Pablo Jaramillo Ibarra",
-            "Mirna López Ibarreche",
-            "Cecilia Montes Morelos",
-            "Camila Guerrero Gutiérrez",
-            "Ruth Reyes López",
-            "Luis Ibarra\tChapa",
-            "Cristina Montes Mata",
-            "Ariana Lopéz Salas",
-            "Zarahí Gutiérrez Reyes",
-            "Julian Torres Zamora",
-            "Milton Lira Garza",
-            "Pedro Elizondo Mireles",
-            "Rubén Reyes Salas",
-            "Román Reyna Ibarra",
-            "Talía Mireles Lópes",
-            "Celia MijaresTorres",
-            "Rosa Zendejas Ramírez",
-            "Maria Torres Del Monte",
-            "Yudith López Ortíz",
-            "Sandra Cárdenas Mata",
-            "Sebastian Villarreal Alvarado"});
             this.cmbAlumno.Location = new System.Drawing.Point(411, 87);
             this.cmbAlumno.Name = "cmbAlumno";
             this.cmbAlumno.Size = new System.Drawing.Size(173, 21);
@@ -175,6 +90,7 @@
             this.btnCancelarCapCal.TabIndex = 5;
             this.btnCancelarCapCal.Text = "Cancelar";
             this.btnCancelarCapCal.UseVisualStyleBackColor = true;
+            this.btnCancelarCapCal.Click += new System.EventHandler(this.btnCancelarCapCal_Click);
             // 
             // label1
             // 

@@ -23,23 +23,38 @@ namespace PSPSDO.Forms
             InitializeComponent();
             cmbMateria.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbAlumno.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            MateriasClass materias = new MateriasClass();
+            DataSet dsm = materias.GetMaterias();
+            DataTable dtm = dsm.Tables[0];
+            cmbMateria.DataSource = dtm;
+            cmbMateria.ValueMember = "ID";
+            cmbMateria.DisplayMember = "Nombre";
+
+            AlumnosClass alumnos= new AlumnosClass();
+            DataSet dsa = alumnos.GetAlumnos();
+            DataTable dta= dsa.Tables[0];
+            cmbAlumno.DataSource = dta;
+            cmbAlumno.ValueMember = "ID";
+            cmbAlumno.DisplayMember= "NombreCompleto";
         }
 
         private void btnGuardarCapCal_Click(object sender, EventArgs e)
         {
-            if (cmbMateria.SelectedIndex<=1|| cmbAlumno.SelectedIndex <= 1 || string.IsNullOrWhiteSpace(txtParcial.Text)|| string.IsNullOrWhiteSpace(txtCalificaciones.Text))
+
+            if (cmbMateria.SelectedIndex <= 1 || cmbAlumno.SelectedIndex <= 1 || string.IsNullOrWhiteSpace(txtParcial.Text) || string.IsNullOrWhiteSpace(txtCalificaciones.Text))
             {
-                MessageBox.Show("Los campos Nombre, Clave y Usuario son obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Faltan Campos por llenar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             CalificacionesModel calificaciones = new CalificacionesModel();
-            CalificacionesClass calificacionesClass= new CalificacionesClass();
-            calificaciones.IdMateria = cmbMateria.SelectedIndex;
-            calificaciones.IdAlumno = cmbAlumno.SelectedIndex;
+            CalificacionesClass calificacionesClass = new CalificacionesClass();
+            calificaciones.IdMateria = int.Parse(cmbMateria.SelectedValue.ToString());
+            calificaciones.IdAlumno = int.Parse(cmbAlumno.SelectedValue.ToString());
             calificaciones.IdParcial = int.Parse(txtParcial.Text);
             calificaciones.Calificacion = int.Parse(txtCalificaciones.Text);
 
-            if (calificaciones.Calificacion<80|| calificaciones.Calificacion > 100 || calificaciones.Calificacion == 0 )
+            if (calificaciones.Calificacion < 80 || calificaciones.Calificacion > 100 || calificaciones.Calificacion < 0)
             {
                 MessageBox.Show("Calificacion no valida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -68,6 +83,14 @@ namespace PSPSDO.Forms
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnCancelarCapCal_Click(object sender, EventArgs e)
+        {
+            cmbMateria.SelectedIndex = 0;
+            cmbAlumno.SelectedIndex = 0;
+            txtParcial.Text = "";
+            txtCalificaciones.Text = "";
         }
     }
 }
