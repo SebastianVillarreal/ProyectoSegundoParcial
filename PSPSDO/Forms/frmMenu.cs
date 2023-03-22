@@ -59,9 +59,9 @@ namespace PSPSDO.Forms
 
         private void capturaCalificacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCapturaCalificaciones  frmCapCal = new frmCapturaCalificaciones();
+            frmCalificaciones  frmCal = new frmCalificaciones();
             this.Hide();
-            frmCapCal.ShowDialog();
+            frmCal.ShowDialog();
             this.Show();
         }
     }
