@@ -105,5 +105,14 @@ namespace PSPSDO.Forms
         {
 
         }
+
+        private void txtBuscarGrupo_TextChanged(object sender, EventArgs e)
+        {
+            GrupoClass grupo = new GrupoClass();
+            string buscar = txtBuscarGrupo.Text;
+            grupo.BuscarGrupo(buscar);
+            DataSet ds = grupo.BuscarGrupo(buscar);
+            dgvGrupos.DataSource = ds.Tables[0];
+        }
     }
 }

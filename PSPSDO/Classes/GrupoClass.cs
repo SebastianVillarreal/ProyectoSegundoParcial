@@ -88,5 +88,14 @@ namespace PSPSDO.Classes
 
 
         }
+
+        public DataSet BuscarGrupo(string Buscar)
+        {
+            BDContext BD = new BDContext();
+            ArrayList parametros = new ArrayList();
+            parametros.Add(new SqlParameter { ParameterName = "@pBuscarGrupo", SqlDbType = SqlDbType.VarChar, Value = Buscar });
+            DataSet ds = BD.Fill("SP_ShearchGrupo", parametros);
+            return ds;
+        }
     }
 }
