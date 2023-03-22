@@ -29,13 +29,12 @@ namespace PSPSDO.Classes
                 MessageBox.Show("error inesperado: " + ex.Message);
             }
         }
-        public void add(DataGridView dgvCarreras, int id, string Nombre, string Clave, string Descripcion)
+        public void add(DataGridView dgvCarreras, string Nombre, string Clave, string Descripcion)
         {
             try
             {
                 ArrayList parametros = new ArrayList();
                 BDContext bd = new BDContext();
-                parametros.Add(new SqlParameter { ParameterName = "@pId", SqlDbType = System.Data.SqlDbType.VarChar, Value = id });
                 parametros.Add(new SqlParameter { ParameterName = "@pClave", SqlDbType = System.Data.SqlDbType.VarChar, Value = Clave });
                 parametros.Add(new SqlParameter { ParameterName = "@pNombre", SqlDbType = System.Data.SqlDbType.VarChar, Value = Nombre });
                 parametros.Add(new SqlParameter { ParameterName = "@pDescripcion", SqlDbType = System.Data.SqlDbType.VarChar, Value = Descripcion });
@@ -61,10 +60,11 @@ namespace PSPSDO.Classes
             {
                 ArrayList parametros = new ArrayList();
                 BDContext bd = new BDContext();
-                parametros.Add(new SqlParameter { ParameterName = "@pID", SqlDbType = System.Data.SqlDbType.VarChar, Value = (ID + 1) });
+                parametros.Add(new SqlParameter { ParameterName = "@pID", SqlDbType = System.Data.SqlDbType.VarChar, Value = ID });
                 bd.ExecuteNonQuery("SP_DeleteCarreras", parametros);
                 CarreraClass Opciones = new CarreraClass();
                 Opciones.show(dgvCarreras);
+                MessageBox.Show("Carrera Borrada exitosamente");
             }
             catch (Exception ex)
             {
@@ -74,13 +74,56 @@ namespace PSPSDO.Classes
         }
         public void edit(DataGridView dgvCarreras, int id, string Clave, string Nombre, string Descripcion)
         {
+            try
+            {
             ArrayList parametros = new ArrayList();
             BDContext bd = new BDContext();
+            parametros.Add(new SqlParameter { ParameterName = "@pId", SqlDbType = System.Data.SqlDbType.VarChar, Value = id });
             parametros.Add(new SqlParameter { ParameterName = "@pClave", SqlDbType = System.Data.SqlDbType.VarChar, Value = Clave });
             parametros.Add(new SqlParameter { ParameterName = "@pNombre", SqlDbType = System.Data.SqlDbType.VarChar, Value = Nombre });
             parametros.Add(new SqlParameter { ParameterName = "@pDescripcion", SqlDbType = System.Data.SqlDbType.VarChar, Value = Descripcion });
             parametros.Add(new SqlParameter { ParameterName = "@pUltimoUsuario", SqlDbType = System.Data.SqlDbType.VarChar, Value = 9999 });
-            bd.ExecuteNonQuery("sp_UpdateCarreras", parametros);
+            bd.ExecuteNonQuery("SP_UpdateCarreras", parametros);
+            CarreraClass Opciones = new CarreraClass();
+            Opciones.show(dgvCarreras);
+            MessageBox.Show("Carrera Editada exitosamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error inesperado: " + ex.Message);
+            }
+        }
+        public void search(DataGridView dgvCarreras, string Nombre)
+        {
+            try
+            {
+                ArrayList parametros = new ArrayList();
+                BDContext bd = new BDContext();
+                parametros.Add(new SqlParameter { ParameterName = "@pClave", SqlDbType = System.Data.SqlDbType.VarChar, Value = Nombre});
+                DataSet ds = bd.Fill("SP_SearchCarrera", parametros);
+                dgvCarreras.DataSource = ds.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error inesperado: " + ex.Message);
+            }
+        }
+
+        public DataSet extract()
+        {
+            try
+            {
+                ArrayList parametros = new ArrayList();
+                BDContext bd = new BDContext();
+                parametros.Add(new SqlParameter { ParameterName = "@pEstatus", SqlDbType = System.Data.SqlDbType.VarChar, Value = 1 });
+                DataSet ds = bd.Fill("sp_GetCarrera", parametros);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error inesperado: " + ex.Message);
+                return null;
+            }
         }
     }
 }

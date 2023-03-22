@@ -33,11 +33,11 @@ namespace PSPSDO.Forms
             this.Show();
         }
 
-        private void carrerasToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void carrerasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmReportesCarerra frmRCarreras = new frmReportesCarerra();
+            frmCarreras frmCarerrs = new frmCarreras();
             this.Hide();
-            frmRCarreras.ShowDialog();
+            frmCarerrs.ShowDialog();
             this.Show();
         }
     }
