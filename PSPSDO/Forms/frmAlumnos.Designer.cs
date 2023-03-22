@@ -134,7 +134,7 @@
             this.lblDirecciAlumno.Name = "lblDirecciAlumno";
             this.lblDirecciAlumno.Size = new System.Drawing.Size(79, 20);
             this.lblDirecciAlumno.TabIndex = 9;
-            this.lblDirecciAlumno.Text = "Direccion:";
+            this.lblDirecciAlumno.Text = "Dirección:";
             // 
             // lblMatriAlumno
             // 
@@ -150,9 +150,9 @@
             this.lblApMaterAlumno.AutoSize = true;
             this.lblApMaterAlumno.Location = new System.Drawing.Point(478, 35);
             this.lblApMaterAlumno.Name = "lblApMaterAlumno";
-            this.lblApMaterAlumno.Size = new System.Drawing.Size(128, 20);
+            this.lblApMaterAlumno.Size = new System.Drawing.Size(132, 20);
             this.lblApMaterAlumno.TabIndex = 7;
-            this.lblApMaterAlumno.Text = "Apellido Materno";
+            this.lblApMaterAlumno.Text = "Apellido Materno:";
             // 
             // lblApPaterAlumno
             // 
@@ -227,7 +227,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(326, 374);
+            this.btnBuscar.Location = new System.Drawing.Point(359, 374);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 34);
             this.btnBuscar.TabIndex = 3;
@@ -237,7 +237,7 @@
             // 
             // txtBusqueda
             // 
-            this.txtBusqueda.Location = new System.Drawing.Point(176, 378);
+            this.txtBusqueda.Location = new System.Drawing.Point(216, 378);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(137, 26);
             this.txtBusqueda.TabIndex = 4;
@@ -247,9 +247,9 @@
             this.lblSearch.AutoSize = true;
             this.lblSearch.Location = new System.Drawing.Point(39, 381);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(131, 20);
+            this.lblSearch.Size = new System.Drawing.Size(171, 20);
             this.lblSearch.TabIndex = 5;
-            this.lblSearch.Text = "Busqueda por Id:";
+            this.lblSearch.Text = "Búsqueda por nombre:";
             // 
             // frmAlumnos
             // 

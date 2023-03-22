@@ -46,6 +46,15 @@ namespace PSPSDO.Classes
             return ds;
         }
 
+        public DataSet BuscarAlumnos(string Busqueda)
+        {
+            ArrayList parametros = new ArrayList();
+            BDContext bd = new BDContext();
+            parametros.Add(new SqlParameter { ParameterName = "@pDatosBuscar", SqlDbType = System.Data.SqlDbType.VarChar, Value = Busqueda });
+            DataSet ds = bd.Fill("SP_SearchAlumnos", parametros);
+            return ds;
+        }
+
         public string ActualizarAlumnos(AlumnosModel Alumnos)
         {
             try

@@ -132,6 +132,9 @@
     <EmbeddedResource Include="Forms\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReportesCarerra.resx">
+      <DependentUpon>frmReportesCarerra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmReportesGrupos.resx">
       <DependentUpon>frmReportesGrupos.cs</DependentUpon>
     </EmbeddedResource>
