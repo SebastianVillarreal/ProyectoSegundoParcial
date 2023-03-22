@@ -108,5 +108,22 @@ namespace PSPSDO.Classes
                 MessageBox.Show("error inesperado: " + ex.Message);
             }
         }
+
+        public DataSet extract()
+        {
+            try
+            {
+                ArrayList parametros = new ArrayList();
+                BDContext bd = new BDContext();
+                parametros.Add(new SqlParameter { ParameterName = "@pEstatus", SqlDbType = System.Data.SqlDbType.VarChar, Value = 1 });
+                DataSet ds = bd.Fill("sp_GetCarrera", parametros);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error inesperado: " + ex.Message);
+                return null;
+            }
+        }
     }
 }
