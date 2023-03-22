@@ -13,12 +13,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PSPSDO.Forms
 {
     public partial class frmAlumnos : Form
     {
-        //int ubi;
 
         public frmAlumnos()
         {
@@ -27,19 +27,14 @@ namespace PSPSDO.Forms
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //Si no funciona agregarle Content entre CellClick
+            DataGridViewRow row = dgvAlumnos.SelectedRows[0];
 
-
-            //ubi = e.RowIndex;
-            //if (ubi != -1)
-            //{
-            //    txtMatriAlumno.Text = (string)dgvAlumnos[1, ubi].Value;
-            //    txtNombreAlumno.Text = (string)dgvAlumnos[2, ubi].Value;
-            //    txtApPaterAlumno.Text = (string)dgvAlumnos[3, ubi].Value;
-            //    txtApMaterAlumno.Text = (string)dgvAlumnos[4, ubi].Value;
-            //    txtDireccioAlumno.Text = (string)dgvAlumnos[5, ubi].Value;
-            //    txtIdGrupo.Text = (string)dgvAlumnos[6, ubi].Value;
-            //}
+            txtMatriAlumno.Text = row.Cells["Matricula"].Value.ToString();
+            txtNombreAlumno.Text = row.Cells["Nombre"].Value.ToString();
+            txtApPaterAlumno.Text = row.Cells["ApPaterno"].Value.ToString();
+            txtApMaterAlumno.Text = row.Cells["ApMaterno"].Value.ToString();
+            txtDireccioAlumno.Text = row.Cells["Dirección"].Value.ToString();
+            txtIdGrupo.Text = row.Cells["IdGrupo"].Value.ToString();
 
         }
 
@@ -127,7 +122,11 @@ namespace PSPSDO.Forms
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-          
+            AlumnosClass Alumn = new AlumnosClass();
+            string Busqueda = txtBusqueda.Text;
+            Alumn.BuscarAlumnos(Busqueda);
+            DataSet ds = Alumn.BuscarAlumnos(Busqueda);
+            dgvAlumnos.DataSource = ds.Tables[0];
         }
     }
 }
