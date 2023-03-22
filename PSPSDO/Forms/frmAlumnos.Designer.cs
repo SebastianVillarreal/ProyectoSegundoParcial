@@ -45,7 +45,6 @@
             this.txtApPaterAlumno = new System.Windows.Forms.TextBox();
             this.txtNombreAlumno = new System.Windows.Forms.TextBox();
             this.dgvAlumnos = new System.Windows.Forms.DataGridView();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.gpbDatoPersoAlumno.SuspendLayout();
@@ -255,27 +254,18 @@
             this.dgvAlumnos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dgvAlumnos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(359, 374);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 34);
-            this.btnBuscar.TabIndex = 3;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // txtBusqueda
             // 
-            this.txtBusqueda.Location = new System.Drawing.Point(216, 378);
+            this.txtBusqueda.Location = new System.Drawing.Point(214, 375);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(137, 26);
             this.txtBusqueda.TabIndex = 4;
+            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(39, 381);
+            this.lblSearch.Location = new System.Drawing.Point(39, 378);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(171, 20);
             this.lblSearch.TabIndex = 5;
@@ -289,7 +279,6 @@
             this.ClientSize = new System.Drawing.Size(1255, 702);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txtBusqueda);
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dgvAlumnos);
             this.Controls.Add(this.gpbDatoPersoAlumno);
             this.Name = "frmAlumnos";
@@ -322,7 +311,6 @@
         private System.Windows.Forms.DataGridView dgvAlumnos;
         private System.Windows.Forms.Label lblGrupo;
         private System.Windows.Forms.TextBox txtIdGrupo;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Label lblSearch;
     }

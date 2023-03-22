@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PSPSDO.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,9 +16,23 @@ namespace PSPSDO.Forms
         public frmReportesCarerra()
         {
             InitializeComponent();
+            cmbReportesCarreras.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            CarreraClass carrera = new CarreraClass();
+            DataSet ds = carrera.show();
+            DataTable dta = ds.Tables[0];
+            cmbReportesCarreras.DataSource = dta;
+            cmbReportesCarreras.ValueMember = "ID";
+            cmbReportesCarreras.DisplayMember = "Name";
+            //dgvReportesCarreras.DataSource = ds.Tables[0];
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmReportesCarerra_Load(object sender, EventArgs e)
         {
 
         }

@@ -20,6 +20,7 @@ namespace PSPSDO.Forms
     public partial class frmAlumnos : Form
     {
 
+
         public frmAlumnos()
         {
             InitializeComponent();
@@ -35,7 +36,6 @@ namespace PSPSDO.Forms
             txtApMaterAlumno.Text = row.Cells["ApMaterno"].Value.ToString();
             txtDireccioAlumno.Text = row.Cells["Dirección"].Value.ToString();
             txtIdGrupo.Text = row.Cells["IdGrupo"].Value.ToString();
-
         }
 
         private void btnGuardarAlumno_Click(object sender, EventArgs e)
@@ -129,6 +129,15 @@ namespace PSPSDO.Forms
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            //AlumnosClass Alumn = new AlumnosClass();
+            //string Busqueda = txtBusqueda.Text;
+            //Alumn.BuscarAlumnos(Busqueda);
+            //DataSet ds = Alumn.BuscarAlumnos(Busqueda);
+            //dgvAlumnos.DataSource = ds.Tables[0];
+        }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
             AlumnosClass Alumn = new AlumnosClass();
             string Busqueda = txtBusqueda.Text;
