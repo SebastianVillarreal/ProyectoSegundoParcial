@@ -39,6 +39,8 @@
             this.lbCarreraClave = new System.Windows.Forms.Label();
             this.lbCarreraNombre = new System.Windows.Forms.Label();
             this.lbCarreraDescripcion = new System.Windows.Forms.Label();
+            this.txtBusquedaCarreras = new System.Windows.Forms.TextBox();
+            this.btnBuscarCarrera = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCarreras)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +56,7 @@
             // 
             // btnCarreraBorrar
             // 
-            this.btnCarreraBorrar.Location = new System.Drawing.Point(183, 103);
+            this.btnCarreraBorrar.Location = new System.Drawing.Point(118, 103);
             this.btnCarreraBorrar.Name = "btnCarreraBorrar";
             this.btnCarreraBorrar.Size = new System.Drawing.Size(75, 23);
             this.btnCarreraBorrar.TabIndex = 1;
@@ -64,7 +66,7 @@
             // 
             // btnCarreraEditar
             // 
-            this.btnCarreraEditar.Location = new System.Drawing.Point(517, 103);
+            this.btnCarreraEditar.Location = new System.Drawing.Point(702, 106);
             this.btnCarreraEditar.Name = "btnCarreraEditar";
             this.btnCarreraEditar.Size = new System.Drawing.Size(75, 23);
             this.btnCarreraEditar.TabIndex = 2;
@@ -74,11 +76,11 @@
             // 
             // btnCarreraMostrar
             // 
-            this.btnCarreraMostrar.Location = new System.Drawing.Point(649, 103);
+            this.btnCarreraMostrar.Location = new System.Drawing.Point(563, 106);
             this.btnCarreraMostrar.Name = "btnCarreraMostrar";
             this.btnCarreraMostrar.Size = new System.Drawing.Size(113, 23);
             this.btnCarreraMostrar.TabIndex = 3;
-            this.btnCarreraMostrar.Text = "Actualizar/Mostrar";
+            this.btnCarreraMostrar.Text = "Mostrar Todo";
             this.btnCarreraMostrar.UseVisualStyleBackColor = true;
             this.btnCarreraMostrar.Click += new System.EventHandler(this.btnCarreraMostrar_Click);
             // 
@@ -139,11 +141,30 @@
             this.lbCarreraDescripcion.TabIndex = 10;
             this.lbCarreraDescripcion.Text = "Descripcion";
             // 
+            // txtBusquedaCarreras
+            // 
+            this.txtBusquedaCarreras.Location = new System.Drawing.Point(199, 106);
+            this.txtBusquedaCarreras.Name = "txtBusquedaCarreras";
+            this.txtBusquedaCarreras.Size = new System.Drawing.Size(257, 20);
+            this.txtBusquedaCarreras.TabIndex = 11;
+            // 
+            // btnBuscarCarrera
+            // 
+            this.btnBuscarCarrera.Location = new System.Drawing.Point(462, 106);
+            this.btnBuscarCarrera.Name = "btnBuscarCarrera";
+            this.btnBuscarCarrera.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarCarrera.TabIndex = 12;
+            this.btnBuscarCarrera.Text = "Buscar";
+            this.btnBuscarCarrera.UseVisualStyleBackColor = true;
+            this.btnBuscarCarrera.Click += new System.EventHandler(this.btnBuscarCarrera_Click);
+            // 
             // frmCarreras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBuscarCarrera);
+            this.Controls.Add(this.txtBusquedaCarreras);
             this.Controls.Add(this.lbCarreraDescripcion);
             this.Controls.Add(this.lbCarreraNombre);
             this.Controls.Add(this.lbCarreraClave);
@@ -157,6 +178,7 @@
             this.Controls.Add(this.btnCarreraAñadir);
             this.Name = "frmCarreras";
             this.Text = "Carreras";
+            this.Load += new System.EventHandler(this.frmCarreras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCarreras)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -176,5 +198,7 @@
         private System.Windows.Forms.Label lbCarreraClave;
         private System.Windows.Forms.Label lbCarreraNombre;
         private System.Windows.Forms.Label lbCarreraDescripcion;
+        private System.Windows.Forms.TextBox txtBusquedaCarreras;
+        private System.Windows.Forms.Button btnBuscarCarrera;
     }
 }
