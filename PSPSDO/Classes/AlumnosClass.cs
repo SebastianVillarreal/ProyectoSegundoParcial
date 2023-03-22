@@ -26,6 +26,7 @@ namespace PSPSDO.Classes
                 parametros.Add(new SqlParameter { ParameterName = "@pApPaterno", SqlDbType = System.Data.SqlDbType.VarChar, Value = Alumnos.ApellidoPaterno });
                 parametros.Add(new SqlParameter { ParameterName = "@pApMaterno", SqlDbType = System.Data.SqlDbType.VarChar, Value = Alumnos.ApellidoMaterno });
                 parametros.Add(new SqlParameter { ParameterName = "@pDirección", SqlDbType = System.Data.SqlDbType.VarChar, Value = Alumnos.Direccion });
+                parametros.Add(new SqlParameter { ParameterName = "@pIdGrupo", SqlDbType = System.Data.SqlDbType.Int, Value = Alumnos.IdGrupo });
 
                 bd.ExecuteNonQuery("SP_InsertAlumnos", parametros);
                 return "Inserción correcta";
@@ -45,6 +46,15 @@ namespace PSPSDO.Classes
             return ds;
         }
 
+        public DataSet BuscarAlumnos(string Busqueda)
+        {
+            ArrayList parametros = new ArrayList();
+            BDContext bd = new BDContext();
+            parametros.Add(new SqlParameter { ParameterName = "@pDatosBuscar", SqlDbType = System.Data.SqlDbType.VarChar, Value = Busqueda });
+            DataSet ds = bd.Fill("SP_SearchAlumnos", parametros);
+            return ds;
+        }
+
         public string ActualizarAlumnos(AlumnosModel Alumnos)
         {
             try
@@ -52,12 +62,13 @@ namespace PSPSDO.Classes
                 ArrayList parametros = new ArrayList();
                 BDContext bd = new BDContext();
 
-                parametros.Add(new SqlParameter { ParameterName = "@Id", SqlDbType = System.Data.SqlDbType.VarChar, Value = Alumnos.Id });
+                parametros.Add(new SqlParameter { ParameterName = "@Id", SqlDbType = System.Data.SqlDbType.Int, Value = Alumnos.Id });
                 parametros.Add(new SqlParameter { ParameterName = "@pMatricula", SqlDbType = System.Data.SqlDbType.Int, Value = Alumnos.Matricula });
                 parametros.Add(new SqlParameter { ParameterName = "@pNombre", SqlDbType = System.Data.SqlDbType.VarChar, Value = Alumnos.Nombre });
                 parametros.Add(new SqlParameter { ParameterName = "@pApPaterno", SqlDbType = System.Data.SqlDbType.VarChar, Value = Alumnos.ApellidoPaterno });
                 parametros.Add(new SqlParameter { ParameterName = "@pApMaterno", SqlDbType = System.Data.SqlDbType.VarChar, Value = Alumnos.ApellidoMaterno });
                 parametros.Add(new SqlParameter { ParameterName = "@pDirección", SqlDbType = System.Data.SqlDbType.VarChar, Value = Alumnos.Direccion });
+                parametros.Add(new SqlParameter { ParameterName = "@pIdGrupo", SqlDbType = System.Data.SqlDbType.Int, Value = Alumnos.IdGrupo });
 
                 bd.ExecuteNonQuery("SP_UpdateAlumnos", parametros);
                 return "Actualización correcta";

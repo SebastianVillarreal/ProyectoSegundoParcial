@@ -160,6 +160,7 @@
             this.carrerasToolStripMenuItem1.Name = "carrerasToolStripMenuItem1";
             this.carrerasToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
             this.carrerasToolStripMenuItem1.Text = "Carreras";
+            this.carrerasToolStripMenuItem1.Click += new System.EventHandler(this.carrerasToolStripMenuItem1_Click);
             // 
             // frmMenu
             // 
