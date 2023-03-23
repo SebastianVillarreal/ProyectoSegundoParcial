@@ -68,5 +68,34 @@ namespace PSPSDO.Classes
 
 
         }
+
+        public string BorrarGrupos(GrupoModels grupo)
+        {
+            try
+            {
+                ArrayList parametros = new ArrayList();
+                BDContext bd = new BDContext();
+
+                parametros.Add(new SqlParameter { ParameterName = "@pId", SqlDbType = System.Data.SqlDbType.VarChar, Value = grupo.Id });
+                bd.ExecuteNonQuery("sp_DeleteGrupos", parametros);
+                return "Eliminación correcta";
+            }
+            catch (Exception ex)
+            {
+
+                return ex.Message;
+            }
+
+
+        }
+
+        public DataSet BuscarGrupo(string Buscar)
+        {
+            BDContext BD = new BDContext();
+            ArrayList parametros = new ArrayList();
+            parametros.Add(new SqlParameter { ParameterName = "@pBuscarGrupo", SqlDbType = SqlDbType.VarChar, Value = Buscar });
+            DataSet ds = BD.Fill("SP_ShearchGrupo", parametros);
+            return ds;
+        }
     }
 }

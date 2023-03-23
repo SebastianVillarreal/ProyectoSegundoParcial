@@ -78,12 +78,41 @@ namespace PSPSDO.Forms
 
         private void btnElimiarGrupos_Click(object sender, EventArgs e)
         {
-            btnActualizarGrupos.Enabled = true;
-            btnEliminarGrupos.Enabled = true;
-            btnActualizarGrupos.Enabled = false;
-            btnCargarGrupos.Enabled = false;
-            btnGuardarGrupos.Enabled = false;
-            dgvGrupos.ReadOnly = false;
+            GrupoModels grupoModels = new GrupoModels();
+
+            GrupoClass grupo = new GrupoClass();
+
+            grupoModels.Id = (int)dgvGrupos.Rows[dgvGrupos.CurrentCell.RowIndex].Cells[0].Value;
+
+            string resultado = grupo.BorrarGrupos(grupoModels);
+            MessageBox.Show(resultado);
+
+            DataSet ds = grupo.GetGrupos();
+
+            dgvGrupos.DataSource = ds.Tables[0];
+        }
+
+        private void frmGrupos_Load(object sender, EventArgs e)
+        {
+            ArrayList parametros = new ArrayList();
+            BDContext bd = new BDContext();
+            parametros.Add(new SqlParameter { ParameterName = "@pId", SqlDbType = System.Data.SqlDbType.VarChar, Value = 1 });
+            DataSet ds = bd.Fill("sp_SelectGrupos", parametros);
+            dgvGrupos.DataSource = ds.Tables[0];
+        }
+
+        private void txtUsuarioGrupo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuscarGrupo_TextChanged(object sender, EventArgs e)
+        {
+            GrupoClass grupo = new GrupoClass();
+            string buscar = txtBuscarGrupo.Text;
+            grupo.BuscarGrupo(buscar);
+            DataSet ds = grupo.BuscarGrupo(buscar);
+            dgvGrupos.DataSource = ds.Tables[0];
         }
     }
 }
