@@ -28,33 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmbMateria = new System.Windows.Forms.ComboBox();
-            this.cmbAlumno = new System.Windows.Forms.ComboBox();
+            this.cmbMateriaCal = new System.Windows.Forms.ComboBox();
+            this.cmbAlumnoCal = new System.Windows.Forms.ComboBox();
             this.txtParcial = new System.Windows.Forms.TextBox();
             this.txtCalificaciones = new System.Windows.Forms.TextBox();
             this.btnGuardarCapCal = new System.Windows.Forms.Button();
             this.btnCancelarCapCal = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblMateriaCal = new System.Windows.Forms.Label();
+            this.lblAlumnoCal = new System.Windows.Forms.Label();
+            this.lblParcialCal = new System.Windows.Forms.Label();
+            this.lblCalificacionCal = new System.Windows.Forms.Label();
+            this.cmbCarreraCal = new System.Windows.Forms.ComboBox();
+            this.cmbGrupoCal = new System.Windows.Forms.ComboBox();
+            this.lblCarreraCal = new System.Windows.Forms.Label();
+            this.lblGrupoCal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // cmbMateria
+            // cmbMateriaCal
             // 
-            this.cmbMateria.FormattingEnabled = true;
-            this.cmbMateria.Location = new System.Drawing.Point(160, 87);
-            this.cmbMateria.Name = "cmbMateria";
-            this.cmbMateria.Size = new System.Drawing.Size(173, 21);
-            this.cmbMateria.TabIndex = 0;
+            this.cmbMateriaCal.FormattingEnabled = true;
+            this.cmbMateriaCal.Location = new System.Drawing.Point(23, 58);
+            this.cmbMateriaCal.Name = "cmbMateriaCal";
+            this.cmbMateriaCal.Size = new System.Drawing.Size(173, 21);
+            this.cmbMateriaCal.TabIndex = 0;
+            this.cmbMateriaCal.SelectedIndexChanged += new System.EventHandler(this.cmbMateria_SelectedIndexChanged);
             // 
-            // cmbAlumno
+            // cmbAlumnoCal
             // 
-            this.cmbAlumno.FormattingEnabled = true;
-            this.cmbAlumno.Location = new System.Drawing.Point(411, 87);
-            this.cmbAlumno.Name = "cmbAlumno";
-            this.cmbAlumno.Size = new System.Drawing.Size(173, 21);
-            this.cmbAlumno.TabIndex = 1;
+            this.cmbAlumnoCal.FormattingEnabled = true;
+            this.cmbAlumnoCal.Location = new System.Drawing.Point(615, 58);
+            this.cmbAlumnoCal.Name = "cmbAlumnoCal";
+            this.cmbAlumnoCal.Size = new System.Drawing.Size(173, 21);
+            this.cmbAlumnoCal.TabIndex = 1;
             // 
             // txtParcial
             // 
@@ -92,59 +97,97 @@
             this.btnCancelarCapCal.UseVisualStyleBackColor = true;
             this.btnCancelarCapCal.Click += new System.EventHandler(this.btnCancelarCapCal_Click);
             // 
-            // label1
+            // lblMateriaCal
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(163, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Materia";
+            this.lblMateriaCal.AutoSize = true;
+            this.lblMateriaCal.Location = new System.Drawing.Point(26, 45);
+            this.lblMateriaCal.Name = "lblMateriaCal";
+            this.lblMateriaCal.Size = new System.Drawing.Size(42, 13);
+            this.lblMateriaCal.TabIndex = 6;
+            this.lblMateriaCal.Text = "Materia";
             // 
-            // label2
+            // lblAlumnoCal
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(407, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Alumno";
+            this.lblAlumnoCal.AutoSize = true;
+            this.lblAlumnoCal.Location = new System.Drawing.Point(611, 45);
+            this.lblAlumnoCal.Name = "lblAlumnoCal";
+            this.lblAlumnoCal.Size = new System.Drawing.Size(42, 13);
+            this.lblAlumnoCal.TabIndex = 7;
+            this.lblAlumnoCal.Text = "Alumno";
             // 
-            // label3
+            // lblParcialCal
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(157, 178);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Parcial";
+            this.lblParcialCal.AutoSize = true;
+            this.lblParcialCal.Location = new System.Drawing.Point(157, 178);
+            this.lblParcialCal.Name = "lblParcialCal";
+            this.lblParcialCal.Size = new System.Drawing.Size(39, 13);
+            this.lblParcialCal.TabIndex = 8;
+            this.lblParcialCal.Text = "Parcial";
             // 
-            // label4
+            // lblCalificacionCal
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(408, 178);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Calificacion";
+            this.lblCalificacionCal.AutoSize = true;
+            this.lblCalificacionCal.Location = new System.Drawing.Point(408, 178);
+            this.lblCalificacionCal.Name = "lblCalificacionCal";
+            this.lblCalificacionCal.Size = new System.Drawing.Size(61, 13);
+            this.lblCalificacionCal.TabIndex = 9;
+            this.lblCalificacionCal.Text = "Calificacion";
+            // 
+            // cmbCarreraCal
+            // 
+            this.cmbCarreraCal.FormattingEnabled = true;
+            this.cmbCarreraCal.Location = new System.Drawing.Point(229, 58);
+            this.cmbCarreraCal.Name = "cmbCarreraCal";
+            this.cmbCarreraCal.Size = new System.Drawing.Size(158, 21);
+            this.cmbCarreraCal.TabIndex = 10;
+            // 
+            // cmbGrupoCal
+            // 
+            this.cmbGrupoCal.FormattingEnabled = true;
+            this.cmbGrupoCal.Location = new System.Drawing.Point(424, 58);
+            this.cmbGrupoCal.Name = "cmbGrupoCal";
+            this.cmbGrupoCal.Size = new System.Drawing.Size(158, 21);
+            this.cmbGrupoCal.TabIndex = 11;
+            // 
+            // lblCarreraCal
+            // 
+            this.lblCarreraCal.AutoSize = true;
+            this.lblCarreraCal.Location = new System.Drawing.Point(226, 45);
+            this.lblCarreraCal.Name = "lblCarreraCal";
+            this.lblCarreraCal.Size = new System.Drawing.Size(41, 13);
+            this.lblCarreraCal.TabIndex = 12;
+            this.lblCarreraCal.Text = "Carrera";
+            // 
+            // lblGrupoCal
+            // 
+            this.lblGrupoCal.AutoSize = true;
+            this.lblGrupoCal.Location = new System.Drawing.Point(421, 45);
+            this.lblGrupoCal.Name = "lblGrupoCal";
+            this.lblGrupoCal.Size = new System.Drawing.Size(36, 13);
+            this.lblGrupoCal.TabIndex = 13;
+            this.lblGrupoCal.Text = "Grupo";
             // 
             // frmCalificaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblGrupoCal);
+            this.Controls.Add(this.lblCarreraCal);
+            this.Controls.Add(this.cmbGrupoCal);
+            this.Controls.Add(this.cmbCarreraCal);
+            this.Controls.Add(this.lblCalificacionCal);
+            this.Controls.Add(this.lblParcialCal);
+            this.Controls.Add(this.lblAlumnoCal);
+            this.Controls.Add(this.lblMateriaCal);
             this.Controls.Add(this.btnCancelarCapCal);
             this.Controls.Add(this.btnGuardarCapCal);
             this.Controls.Add(this.txtCalificaciones);
             this.Controls.Add(this.txtParcial);
-            this.Controls.Add(this.cmbAlumno);
-            this.Controls.Add(this.cmbMateria);
+            this.Controls.Add(this.cmbAlumnoCal);
+            this.Controls.Add(this.cmbMateriaCal);
             this.Name = "frmCalificaciones";
-            this.Text = "frmCapturaCalificaciones";
+            this.Text = "Captura Calificaciones";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,15 +195,19 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cmbMateria;
-        private System.Windows.Forms.ComboBox cmbAlumno;
+        private System.Windows.Forms.ComboBox cmbMateriaCal;
+        private System.Windows.Forms.ComboBox cmbAlumnoCal;
         private System.Windows.Forms.TextBox txtParcial;
         private System.Windows.Forms.TextBox txtCalificaciones;
         private System.Windows.Forms.Button btnGuardarCapCal;
         private System.Windows.Forms.Button btnCancelarCapCal;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblMateriaCal;
+        private System.Windows.Forms.Label lblAlumnoCal;
+        private System.Windows.Forms.Label lblParcialCal;
+        private System.Windows.Forms.Label lblCalificacionCal;
+        private System.Windows.Forms.ComboBox cmbCarreraCal;
+        private System.Windows.Forms.ComboBox cmbGrupoCal;
+        private System.Windows.Forms.Label lblCarreraCal;
+        private System.Windows.Forms.Label lblGrupoCal;
     }
 }

@@ -82,5 +82,20 @@ namespace PSPSDO.Classes
             parametros.Add(new SqlParameter { ParameterName = "@pUltimoUsuario", SqlDbType = System.Data.SqlDbType.VarChar, Value = 9999 });
             bd.ExecuteNonQuery("sp_UpdateCarreras", parametros);
         }
+        public DataSet GetCarreras()
+        {
+            try
+            {
+                ArrayList parametros = new ArrayList();
+                BDContext bd = new BDContext();
+                parametros.Add(new SqlParameter { ParameterName = "@pEstatus", SqlDbType = System.Data.SqlDbType.VarChar, Value = 1 });
+                DataSet ds = bd.Fill("sp_GetCarrera", parametros);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
     }
 }

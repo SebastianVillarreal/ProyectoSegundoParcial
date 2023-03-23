@@ -21,36 +21,52 @@ namespace PSPSDO.Forms
         public frmCalificaciones()
         {
             InitializeComponent();
-            cmbMateria.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbAlumno.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbMateriaCal.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbAlumnoCal.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbGrupoCal.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbCarreraCal.DropDownStyle = ComboBoxStyle.DropDownList;
 
             MateriasClass materias = new MateriasClass();
             DataSet dsm = materias.GetMaterias();
             DataTable dtm = dsm.Tables[0];
-            cmbMateria.DataSource = dtm;
-            cmbMateria.ValueMember = "ID";
-            cmbMateria.DisplayMember = "Nombre";
+            cmbMateriaCal.DataSource = dtm;
+            cmbMateriaCal.ValueMember = "ID";
+            cmbMateriaCal.DisplayMember = "Nombre";
+
+            CarreraClass carrera = new CarreraClass();
+            DataSet dsc = carrera.GetCarreras();
+            DataTable dtc = dsc.Tables[0];
+            cmbCarreraCal.DataSource = dtc;
+            cmbCarreraCal.ValueMember = "Id";
+            cmbCarreraCal.DisplayMember = "Nombre";
+
+            GrupoClass grupo = new GrupoClass();
+            DataSet dsg = grupo.GetGrupos();
+            DataTable dtg = dsc.Tables[0];
+            cmbGrupoCal.DataSource = dtg;
+            cmbGrupoCal.ValueMember = "Id";
+            cmbGrupoCal.DisplayMember = "Clave";
 
             AlumnosClass alumnos= new AlumnosClass();
             DataSet dsa = alumnos.GetAlumnos();
             DataTable dta= dsa.Tables[0];
-            cmbAlumno.DataSource = dta;
-            cmbAlumno.ValueMember = "ID";
-            cmbAlumno.DisplayMember= "NombreCompleto";
+            cmbAlumnoCal.DataSource = dta;
+            cmbAlumnoCal.ValueMember = "ID";
+            cmbAlumnoCal.DisplayMember= "NombreCompleto";
         }
 
         private void btnGuardarCapCal_Click(object sender, EventArgs e)
         {
 
-            if (cmbMateria.SelectedIndex <= 1 || cmbAlumno.SelectedIndex <= 1 || string.IsNullOrWhiteSpace(txtParcial.Text) || string.IsNullOrWhiteSpace(txtCalificaciones.Text))
+            if (cmbMateriaCal.SelectedIndex <= 1 || cmbAlumnoCal.SelectedIndex <= 1 || string.IsNullOrWhiteSpace(txtParcial.Text) || string.IsNullOrWhiteSpace(txtCalificaciones.Text))
             {
                 MessageBox.Show("Faltan Campos por llenar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             CalificacionesModel calificaciones = new CalificacionesModel();
             CalificacionesClass calificacionesClass = new CalificacionesClass();
-            calificaciones.IdMateria = int.Parse(cmbMateria.SelectedValue.ToString());
-            calificaciones.IdAlumno = int.Parse(cmbAlumno.SelectedValue.ToString());
+            calificaciones.IdMateria = int.Parse(cmbMateriaCal.SelectedValue.ToString());
+            calificaciones.IdAlumno = int.Parse(cmbAlumnoCal.SelectedValue.ToString());
             calificaciones.IdParcial = int.Parse(txtParcial.Text);
             calificaciones.Calificacion = int.Parse(txtCalificaciones.Text);
 
@@ -62,8 +78,8 @@ namespace PSPSDO.Forms
             calificacionesClass.InsertCalificaciones(calificaciones);
             MessageBox.Show("Calificacion guardada correctamente");
 
-            cmbMateria.SelectedIndex = 0;
-            cmbAlumno.SelectedIndex = 0;
+            cmbMateriaCal.SelectedIndex = 0;
+            cmbAlumnoCal.SelectedIndex = 0;
             txtParcial.Text = "";
             txtCalificaciones.Text = "";
 
@@ -87,10 +103,15 @@ namespace PSPSDO.Forms
 
         private void btnCancelarCapCal_Click(object sender, EventArgs e)
         {
-            cmbMateria.SelectedIndex = 0;
-            cmbAlumno.SelectedIndex = 0;
+            cmbMateriaCal.SelectedIndex = 0;
+            cmbAlumnoCal.SelectedIndex = 0;
             txtParcial.Text = "";
             txtCalificaciones.Text = "";
+        }
+
+        private void cmbMateria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
