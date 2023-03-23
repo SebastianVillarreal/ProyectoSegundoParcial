@@ -25,7 +25,7 @@ namespace PSPSDO.Forms
             cmbAlumnoCal.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbGrupoCal.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbCarreraCal.DropDownStyle = ComboBoxStyle.DropDownList;
-
+            //materias
             MateriasClass materias = new MateriasClass();
             DataSet dsm = materias.GetMaterias();
             DataTable dtm = dsm.Tables[0];
@@ -33,20 +33,24 @@ namespace PSPSDO.Forms
             cmbMateriaCal.ValueMember = "ID";
             cmbMateriaCal.DisplayMember = "Nombre";
 
+            //carreras
             CarreraClass carrera = new CarreraClass();
             DataSet dsc = carrera.GetCarreras();
             DataTable dtc = dsc.Tables[0];
             cmbCarreraCal.DataSource = dtc;
             cmbCarreraCal.ValueMember = "Id";
-            cmbCarreraCal.DisplayMember = "Nombre";
+            cmbCarreraCal.DisplayMember = "Clave";
 
+            //grupos
+            string filtro = cmbCarreraCal.SelectedValue.ToString();
             GrupoClass grupo = new GrupoClass();
-            DataSet dsg = grupo.GetGrupos();
-            DataTable dtg = dsc.Tables[0];
+            DataSet dsg = grupo.GetGrupoFiltro(filtro);
+            DataTable dtg = dsg.Tables[0];
             cmbGrupoCal.DataSource = dtg;
             cmbGrupoCal.ValueMember = "Id";
             cmbGrupoCal.DisplayMember = "Clave";
 
+            //alumnos
             AlumnosClass alumnos= new AlumnosClass();
             DataSet dsa = alumnos.GetAlumnos();
             DataTable dta= dsa.Tables[0];
