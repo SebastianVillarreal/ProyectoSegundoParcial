@@ -53,6 +53,8 @@
     <Compile Include="Classes\MateriasClass.cs" />
     <Compile Include="Classes\PersonasClass.cs" />
     <Compile Include="Classes\CarreraClass.cs" />
+    <Compile Include="Classes\ReportesCarerrasClass.cs" />
+    <Compile Include="Classes\ReportesGruposCass.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +103,12 @@
     <Compile Include="Forms\frmReporteCalificacion.Designer.cs">
       <DependentUpon>frmReporteCalificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmReportesAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReportesAlumnos.Designer.cs">
+      <DependentUpon>frmReportesAlumnos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmReportesCarerra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +126,8 @@
     <Compile Include="Models\GrupoModels.cs" />
     <Compile Include="Models\MateriasModel.cs" />
     <Compile Include="Models\PersonaModel.cs" />
+    <Compile Include="Models\ReportesCarrerasModel.cs" />
+    <Compile Include="Models\ReportesGruposModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmCarreras.resx">
@@ -140,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmReporteCalificacion.resx">
       <DependentUpon>frmReporteCalificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReportesAlumnos.resx">
+      <DependentUpon>frmReportesAlumnos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmReportesCarerra.resx">
       <DependentUpon>frmReportesCarerra.cs</DependentUpon>

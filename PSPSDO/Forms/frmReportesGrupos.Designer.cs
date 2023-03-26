@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.gbRG = new System.Windows.Forms.GroupBox();
-            this.cmbGrupos = new System.Windows.Forms.ComboBox();
-            this.rbParcialUno = new System.Windows.Forms.RadioButton();
-            this.rbParcialDos = new System.Windows.Forms.RadioButton();
-            this.dgvReportesGrupos = new System.Windows.Forms.DataGridView();
-            this.lblGpo = new System.Windows.Forms.Label();
-            this.lblParcialGpo = new System.Windows.Forms.Label();
             this.btnReporte = new System.Windows.Forms.Button();
+            this.lblParcialGpo = new System.Windows.Forms.Label();
+            this.lblGpo = new System.Windows.Forms.Label();
+            this.rbParcialDos = new System.Windows.Forms.RadioButton();
+            this.rbParcialUno = new System.Windows.Forms.RadioButton();
+            this.cmbGrupos = new System.Windows.Forms.ComboBox();
+            this.dgvReportesGrupos = new System.Windows.Forms.DataGridView();
             this.gbRG.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportesGrupos)).BeginInit();
             this.SuspendLayout();
@@ -55,24 +55,33 @@
             this.gbRG.TabStop = false;
             this.gbRG.Text = "Reportes por Grupos";
             // 
-            // cmbGrupos
+            // btnReporte
             // 
-            this.cmbGrupos.FormattingEnabled = true;
-            this.cmbGrupos.Location = new System.Drawing.Point(35, 65);
-            this.cmbGrupos.Name = "cmbGrupos";
-            this.cmbGrupos.Size = new System.Drawing.Size(159, 28);
-            this.cmbGrupos.TabIndex = 0;
+            this.btnReporte.Location = new System.Drawing.Point(645, 86);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(124, 38);
+            this.btnReporte.TabIndex = 5;
+            this.btnReporte.Text = "Crear Reporte";
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
-            // rbParcialUno
+            // lblParcialGpo
             // 
-            this.rbParcialUno.AutoSize = true;
-            this.rbParcialUno.Location = new System.Drawing.Point(302, 66);
-            this.rbParcialUno.Name = "rbParcialUno";
-            this.rbParcialUno.Size = new System.Drawing.Size(94, 24);
-            this.rbParcialUno.TabIndex = 1;
-            this.rbParcialUno.TabStop = true;
-            this.rbParcialUno.Text = "Parcial 1";
-            this.rbParcialUno.UseVisualStyleBackColor = true;
+            this.lblParcialGpo.AutoSize = true;
+            this.lblParcialGpo.Location = new System.Drawing.Point(298, 39);
+            this.lblParcialGpo.Name = "lblParcialGpo";
+            this.lblParcialGpo.Size = new System.Drawing.Size(60, 20);
+            this.lblParcialGpo.TabIndex = 4;
+            this.lblParcialGpo.Text = "Parcial:";
+            // 
+            // lblGpo
+            // 
+            this.lblGpo.AutoSize = true;
+            this.lblGpo.Location = new System.Drawing.Point(35, 39);
+            this.lblGpo.Name = "lblGpo";
+            this.lblGpo.Size = new System.Drawing.Size(58, 20);
+            this.lblGpo.TabIndex = 3;
+            this.lblGpo.Text = "Grupo:";
             // 
             // rbParcialDos
             // 
@@ -85,6 +94,25 @@
             this.rbParcialDos.Text = "Parcial 2";
             this.rbParcialDos.UseVisualStyleBackColor = true;
             // 
+            // rbParcialUno
+            // 
+            this.rbParcialUno.AutoSize = true;
+            this.rbParcialUno.Location = new System.Drawing.Point(302, 66);
+            this.rbParcialUno.Name = "rbParcialUno";
+            this.rbParcialUno.Size = new System.Drawing.Size(94, 24);
+            this.rbParcialUno.TabIndex = 1;
+            this.rbParcialUno.TabStop = true;
+            this.rbParcialUno.Text = "Parcial 1";
+            this.rbParcialUno.UseVisualStyleBackColor = true;
+            // 
+            // cmbGrupos
+            // 
+            this.cmbGrupos.FormattingEnabled = true;
+            this.cmbGrupos.Location = new System.Drawing.Point(35, 65);
+            this.cmbGrupos.Name = "cmbGrupos";
+            this.cmbGrupos.Size = new System.Drawing.Size(159, 28);
+            this.cmbGrupos.TabIndex = 0;
+            // 
             // dgvReportesGrupos
             // 
             this.dgvReportesGrupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -95,33 +123,6 @@
             this.dgvReportesGrupos.Size = new System.Drawing.Size(775, 277);
             this.dgvReportesGrupos.TabIndex = 1;
             // 
-            // lblGpo
-            // 
-            this.lblGpo.AutoSize = true;
-            this.lblGpo.Location = new System.Drawing.Point(35, 39);
-            this.lblGpo.Name = "lblGpo";
-            this.lblGpo.Size = new System.Drawing.Size(58, 20);
-            this.lblGpo.TabIndex = 3;
-            this.lblGpo.Text = "Grupo:";
-            // 
-            // lblParcialGpo
-            // 
-            this.lblParcialGpo.AutoSize = true;
-            this.lblParcialGpo.Location = new System.Drawing.Point(298, 39);
-            this.lblParcialGpo.Name = "lblParcialGpo";
-            this.lblParcialGpo.Size = new System.Drawing.Size(60, 20);
-            this.lblParcialGpo.TabIndex = 4;
-            this.lblParcialGpo.Text = "Parcial:";
-            // 
-            // btnReporte
-            // 
-            this.btnReporte.Location = new System.Drawing.Point(645, 86);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(124, 38);
-            this.btnReporte.TabIndex = 5;
-            this.btnReporte.Text = "Crear Reporte";
-            this.btnReporte.UseVisualStyleBackColor = true;
-            // 
             // frmReportesGrupos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -131,6 +132,7 @@
             this.Controls.Add(this.gbRG);
             this.Name = "frmReportesGrupos";
             this.Text = "frmReportesGrupos";
+            this.Load += new System.EventHandler(this.frmReportesGrupos_Load);
             this.gbRG.ResumeLayout(false);
             this.gbRG.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportesGrupos)).EndInit();

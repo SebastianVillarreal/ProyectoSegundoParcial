@@ -59,14 +59,9 @@ namespace PSPSDO.Forms
                 string resultados = Alumn.InsertAlumnos(Alumnos);
                 MessageBox.Show(resultados);
 
-            DataSet ds = Alumn.GetAlumnos();
-            dgvAlumnos.DataSource = ds.Tables[0];
-
-            txtNombreAlumno.Text = "";
-            txtApPaterAlumno.Text = "";
-            txtApMaterAlumno.Text = "";
-            txtMatriAlumno.Text = "";
-            txtDireccioAlumno.Text = "";
+                 DataSet ds = Alumn.GetAlumnos();
+                 dgvAlumnos.DataSource = ds.Tables[0];
+                Clean();
                
             }
         }
@@ -95,9 +90,9 @@ namespace PSPSDO.Forms
 
                 DataSet ds = Alumn.GetAlumnos();
                 dgvAlumnos.DataSource = ds.Tables[0];
+                Clean();
             }
         }
-
 
         private void btnElimiAlumnos_Click(object sender, EventArgs e)
         {
@@ -111,30 +106,30 @@ namespace PSPSDO.Forms
 
             DataSet ds = Alumn.GetAlumnos();
             dgvAlumnos.DataSource = ds.Tables[0];
+            Clean();
         }
 
         private void Carga()
         {
             ArrayList parametros = new ArrayList();
             BDContext bd = new BDContext();
-            parametros.Add(new SqlParameter { ParameterName = "@pId", SqlDbType = System.Data.SqlDbType.VarChar, Value = 1 });
+            parametros.Add(new SqlParameter { ParameterName = "@pId", SqlDbType = System.Data.SqlDbType.Int, Value = 1 });
             DataSet ds = bd.Fill("SP_SelectAlumnos", parametros);
             dgvAlumnos.DataSource = ds.Tables[0];
+        }
+        private void Clean()
+        {
+            txtNombreAlumno.Text = "";
+            txtApPaterAlumno.Text = "";
+            txtApMaterAlumno.Text = "";
+            txtMatriAlumno.Text = "";
+            txtDireccioAlumno.Text = "";
+            txtIdGrupo.Text = "";
         }
 
         private void frmAlumnos_Load(object sender, EventArgs e)
         {
-           
             Carga();
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            //AlumnosClass Alumn = new AlumnosClass();
-            //string Busqueda = txtBusqueda.Text;
-            //Alumn.BuscarAlumnos(Busqueda);
-            //DataSet ds = Alumn.BuscarAlumnos(Busqueda);
-            //dgvAlumnos.DataSource = ds.Tables[0];
         }
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
