@@ -83,5 +83,13 @@ namespace PSPSDO.Classes
                 return null;
             }
         }
+        public DataSet BuscarMaterias(string Busqueda)
+        {
+            BDContext bd = new BDContext();
+            ArrayList parametros = new ArrayList();
+            parametros.Add(new SqlParameter { ParameterName = "@pDatosBuscados", SqlDbType = SqlDbType.VarChar, Value = Busqueda });
+            DataSet ds = bd.Fill("SP_SearchMateria", parametros);
+            return ds;
+        }
     }
 }

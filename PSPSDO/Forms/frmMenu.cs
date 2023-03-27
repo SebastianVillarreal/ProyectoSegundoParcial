@@ -44,6 +44,36 @@ namespace PSPSDO.Forms
             frmReportesCarerra frmRCarreras = new frmReportesCarerra();
             this.Hide();
             frmRCarreras.ShowDialog();
+            }
+        private void materiasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMaterias frmMat = new frmMaterias();
+            this.Hide();
+            frmMat.ShowDialog();
+            this.Show();
+        }
+
+        private void carrerasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCarreras frmCar = new frmCarreras();
+            this.Hide();
+            frmCar.ShowDialog();
+            this.Show();
+        }
+
+        private void personasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPersonas frmPers = new frmPersonas();
+            this.Hide();
+            frmPers.ShowDialog();
+            this.Show();
+        }
+
+        private void capturaCalificacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCalificaciones  frmCal = new frmCalificaciones();
+            this.Hide();
+            frmCal.ShowDialog();
             this.Show();
         }
     }
