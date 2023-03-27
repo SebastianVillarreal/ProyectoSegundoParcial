@@ -40,29 +40,12 @@ namespace PSPSDO.Forms
             cmbCarreraCal.DataSource = dtc;
             cmbCarreraCal.ValueMember = "Id";
             cmbCarreraCal.DisplayMember = "Clave";
-
-            //grupos
-            string filtro = cmbCarreraCal.SelectedValue.ToString();
-            GrupoClass grupo = new GrupoClass();
-            DataSet dsg = grupo.GetGrupoFiltro(filtro);
-            DataTable dtg = dsg.Tables[0];
-            cmbGrupoCal.DataSource = dtg;
-            cmbGrupoCal.ValueMember = "Id";
-            cmbGrupoCal.DisplayMember = "Clave";
-
-            //alumnos
-            AlumnosClass alumnos= new AlumnosClass();
-            DataSet dsa = alumnos.GetAlumnos();
-            DataTable dta= dsa.Tables[0];
-            cmbAlumnoCal.DataSource = dta;
-            cmbAlumnoCal.ValueMember = "ID";
-            cmbAlumnoCal.DisplayMember= "NombreCompleto";
         }
 
         private void btnGuardarCapCal_Click(object sender, EventArgs e)
         {
 
-            if (cmbMateriaCal.SelectedIndex <= 1 || cmbAlumnoCal.SelectedIndex <= 1 || string.IsNullOrWhiteSpace(txtParcial.Text) || string.IsNullOrWhiteSpace(txtCalificaciones.Text))
+            if (cmbMateriaCal.SelectedIndex < 0 || cmbAlumnoCal.SelectedIndex < 0 || string.IsNullOrWhiteSpace(txtParcialCal.Text) || string.IsNullOrWhiteSpace(txtCalificacionesCal.Text))
             {
                 MessageBox.Show("Faltan Campos por llenar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -71,8 +54,8 @@ namespace PSPSDO.Forms
             CalificacionesClass calificacionesClass = new CalificacionesClass();
             calificaciones.IdMateria = int.Parse(cmbMateriaCal.SelectedValue.ToString());
             calificaciones.IdAlumno = int.Parse(cmbAlumnoCal.SelectedValue.ToString());
-            calificaciones.IdParcial = int.Parse(txtParcial.Text);
-            calificaciones.Calificacion = int.Parse(txtCalificaciones.Text);
+            calificaciones.IdParcial = int.Parse(txtParcialCal.Text);
+            calificaciones.Calificacion = int.Parse(txtCalificacionesCal.Text);
 
             if (calificaciones.Calificacion < 80 || calificaciones.Calificacion > 100 || calificaciones.Calificacion < 0)
             {
@@ -84,8 +67,8 @@ namespace PSPSDO.Forms
 
             cmbMateriaCal.SelectedIndex = 0;
             cmbAlumnoCal.SelectedIndex = 0;
-            txtParcial.Text = "";
-            txtCalificaciones.Text = "";
+            txtParcialCal.Text = "";
+            txtCalificacionesCal.Text = "";
 
         }
 
@@ -109,13 +92,36 @@ namespace PSPSDO.Forms
         {
             cmbMateriaCal.SelectedIndex = 0;
             cmbAlumnoCal.SelectedIndex = 0;
-            txtParcial.Text = "";
-            txtCalificaciones.Text = "";
+            txtParcialCal.Text = "";
+            txtCalificacionesCal.Text = "";
         }
 
-        private void cmbMateria_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbCarreraCal_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //grupos
+            GrupoClass grupo = new GrupoClass();
+            string filtro = cmbCarreraCal.Text;
+            DataSet dsg = grupo.GetGrupoFiltro(filtro);
+            DataTable dtg = dsg.Tables[0];
+            cmbGrupoCal.DataSource = dtg;
+            cmbGrupoCal.ValueMember = "Id";
+            cmbGrupoCal.DisplayMember = "Clave";
+        }
 
+        private void cmbAlumnoCal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+   
+        }
+
+        private void cmbGrupoCal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AlumnosClass alumnos = new AlumnosClass();
+            int filtro = Convert.ToInt32(cmbGrupoCal.SelectedValue);
+            DataSet dsa = alumnos.GetAlumnoFiltro(filtro);
+            DataTable dta = dsa.Tables[0];
+            cmbAlumnoCal.DataSource = dta;
+            cmbAlumnoCal.ValueMember = "Id";
+            cmbAlumnoCal.DisplayMember = "Nombre";
         }
     }
 }

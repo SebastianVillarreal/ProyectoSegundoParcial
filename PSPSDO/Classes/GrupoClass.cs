@@ -105,9 +105,6 @@ namespace PSPSDO.Classes
             parametros.Add(new SqlParameter { ParameterName = "@pFiltro", SqlDbType = SqlDbType.VarChar, Value = filtro });
             DataSet ds = bd.Fill("sp_GetGrupoFiltro", parametros);
             return ds;  
-
-
-
         }
     }
 }
