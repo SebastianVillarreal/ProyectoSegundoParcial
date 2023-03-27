@@ -19,7 +19,7 @@ namespace PSPSDO.Forms
             cmbReportesCarreras.DropDownStyle = ComboBoxStyle.DropDownList;
 
             CarreraClass carrera = new CarreraClass();
-            DataSet ds = carrera.show();
+            DataSet ds = carrera.extract();
             DataTable dta = ds.Tables[0];
             cmbReportesCarreras.DataSource = dta;
             cmbReportesCarreras.ValueMember = "ID";
