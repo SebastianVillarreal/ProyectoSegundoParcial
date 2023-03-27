@@ -98,14 +98,31 @@ namespace PSPSDO.Forms
 
         private void cmbCarreraCal_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //grupos
-            GrupoClass grupo = new GrupoClass();
-            string filtro = cmbCarreraCal.Text;
-            DataSet dsg = grupo.GetGrupoFiltro(filtro);
-            DataTable dtg = dsg.Tables[0];
-            cmbGrupoCal.DataSource = dtg;
-            cmbGrupoCal.ValueMember = "Id";
-            cmbGrupoCal.DisplayMember = "Clave";
+            try
+            {
+                //grupos
+                GrupoClass grupo = new GrupoClass();
+                string filtro = cmbCarreraCal.Text;
+                DataSet dsg = grupo.GetGrupoFiltro(filtro);
+                DataTable dtg = dsg.Tables[0];
+                cmbGrupoCal.DataSource = dtg;
+                cmbGrupoCal.ValueMember = "Id";
+                cmbGrupoCal.DisplayMember = "Clave";
+
+                MateriasClass Materia = new MateriasClass();
+                int Filtro = Convert.ToInt32(cmbCarreraCal.SelectedValue);
+                DataSet dsm = Materia.GetMateriaFiltro(Filtro);
+                DataTable dtm = dsm.Tables[0];
+                cmbMateriaCal.DataSource = dtm;
+                cmbMateriaCal.ValueMember = "Id";
+                cmbMateriaCal.DisplayMember = "Nombre";
+            }
+            catch (Exception ex)
+            {
+
+                Console.Write(ex.Message);
+            }
+            
         }
 
         private void cmbAlumnoCal_SelectedIndexChanged(object sender, EventArgs e)

@@ -13,5 +13,6 @@ namespace PSPSDO.Models
         public string Clave { get; set; }
         public string Usuario { get; set; }
         public string Fecha { get; set; }
+        public int IdCarrera { get; set; }
     }
 }
