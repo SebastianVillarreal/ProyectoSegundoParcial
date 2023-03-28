@@ -78,12 +78,14 @@
             this.personasToolStripMenuItem.Name = "personasToolStripMenuItem";
             this.personasToolStripMenuItem.Size = new System.Drawing.Size(185, 34);
             this.personasToolStripMenuItem.Text = "Personas";
+            this.personasToolStripMenuItem.Click += new System.EventHandler(this.personasToolStripMenuItem_Click);
             // 
             // materiasToolStripMenuItem
             // 
             this.materiasToolStripMenuItem.Name = "materiasToolStripMenuItem";
             this.materiasToolStripMenuItem.Size = new System.Drawing.Size(185, 34);
             this.materiasToolStripMenuItem.Text = "Materias";
+            this.materiasToolStripMenuItem.Click += new System.EventHandler(this.materiasToolStripMenuItem_Click);
             // 
             // alumnosToolStripMenuItem
             // 
@@ -120,6 +122,7 @@
             this.capturaCalificacionesToolStripMenuItem.Name = "capturaCalificacionesToolStripMenuItem";
             this.capturaCalificacionesToolStripMenuItem.Size = new System.Drawing.Size(286, 34);
             this.capturaCalificacionesToolStripMenuItem.Text = "Captura Calificaciones";
+            this.capturaCalificacionesToolStripMenuItem.Click += new System.EventHandler(this.capturaCalificacionesToolStripMenuItem_Click);
             // 
             // reportesAlumnosToolStripMenuItem
             // 

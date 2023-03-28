@@ -23,6 +23,7 @@ namespace PSPSDO.Classes
                 parametros.Add(new SqlParameter { ParameterName = "@pClave", SqlDbType = System.Data.SqlDbType.VarChar, Value = Materia.Clave });
                 parametros.Add(new SqlParameter { ParameterName = "@pUsuario", SqlDbType = System.Data.SqlDbType.VarChar, Value = Materia.Usuario });
                 parametros.Add(new SqlParameter { ParameterName = "@pFechaUltAct", SqlDbType = System.Data.SqlDbType.VarChar, Value = Materia.Fecha });
+                parametros.Add(new SqlParameter { ParameterName = "@pIdCarrera", SqlDbType = System.Data.SqlDbType.Int, Value = Materia.IdCarrera });
                 bd.ExecuteNonQuery("SP_InsertMaterias", parametros);
                 return "Inserción correcta";
             }
@@ -41,6 +42,7 @@ namespace PSPSDO.Classes
                 parametros.Add(new SqlParameter { ParameterName = "@pNombre", SqlDbType = System.Data.SqlDbType.VarChar, Value = Materia.Nombre });
                 parametros.Add(new SqlParameter { ParameterName = "@pClave", SqlDbType = System.Data.SqlDbType.VarChar, Value = Materia.Clave });
                 parametros.Add(new SqlParameter { ParameterName = "@pUsuario", SqlDbType = System.Data.SqlDbType.VarChar, Value = Materia.Usuario });
+                parametros.Add(new SqlParameter { ParameterName = "@pIdCarrera", SqlDbType = System.Data.SqlDbType.Int, Value = Materia.IdCarrera });
                 bd.ExecuteNonQuery("SP_UpdateMteria", parametros);
                 return "Actualizacion correcta";
             }
@@ -82,6 +84,22 @@ namespace PSPSDO.Classes
             {
                 return null;
             }
+        }
+        public DataSet BuscarMaterias(string Busqueda)
+        {
+            BDContext bd = new BDContext();
+            ArrayList parametros = new ArrayList();
+            parametros.Add(new SqlParameter { ParameterName = "@pDatosBuscados", SqlDbType = SqlDbType.VarChar, Value = Busqueda });
+            DataSet ds = bd.Fill("SP_SearchMateria", parametros);
+            return ds;
+        }
+        public DataSet GetMateriaFiltro(int Filtro)
+        {
+            BDContext bd = new BDContext();
+            ArrayList parametros = new ArrayList();
+            parametros.Add(new SqlParameter { ParameterName = "@pFiltro", SqlDbType = SqlDbType.Int, Value = Filtro });
+            DataSet ds = bd.Fill("sp_GetMateriaFiltro", parametros);
+            return ds;
         }
     }
 }

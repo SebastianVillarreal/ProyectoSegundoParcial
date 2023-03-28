@@ -41,7 +41,9 @@
             this.lbCarreraDescripcion = new System.Windows.Forms.Label();
             this.txtBusquedaCarreras = new System.Windows.Forms.TextBox();
             this.btnBuscarCarrera = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCarreras)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCarreraAñadir
@@ -111,7 +113,7 @@
             this.txtDescripcionCarrera.Location = new System.Drawing.Point(152, 30);
             this.txtDescripcionCarrera.Multiline = true;
             this.txtDescripcionCarrera.Name = "txtDescripcionCarrera";
-            this.txtDescripcionCarrera.Size = new System.Drawing.Size(625, 67);
+            this.txtDescripcionCarrera.Size = new System.Drawing.Size(524, 67);
             this.txtDescripcionCarrera.TabIndex = 7;
             // 
             // lbCarreraClave
@@ -158,11 +160,21 @@
             this.btnBuscarCarrera.UseVisualStyleBackColor = true;
             this.btnBuscarCarrera.Click += new System.EventHandler(this.btnBuscarCarrera_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(716, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(61, 63);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmCarreras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBuscarCarrera);
             this.Controls.Add(this.txtBusquedaCarreras);
             this.Controls.Add(this.lbCarreraDescripcion);
@@ -180,6 +192,7 @@
             this.Text = "Carreras";
             this.Load += new System.EventHandler(this.frmCarreras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaCarreras)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,5 +213,6 @@
         private System.Windows.Forms.Label lbCarreraDescripcion;
         private System.Windows.Forms.TextBox txtBusquedaCarreras;
         private System.Windows.Forms.Button btnBuscarCarrera;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

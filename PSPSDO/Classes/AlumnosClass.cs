@@ -99,5 +99,13 @@ namespace PSPSDO.Classes
                 return ex.Message;
             }
         }
+        public DataSet GetAlumnoFiltro(int filtro)
+        {
+            BDContext bd = new BDContext();
+            ArrayList parametros = new ArrayList();
+            parametros.Add(new SqlParameter { ParameterName = "@pFiltro", SqlDbType = SqlDbType.Int, Value = filtro });
+            DataSet ds = bd.Fill("sp_GetAlumnosFiltro", parametros);
+            return ds;
+        }
     }
 }
