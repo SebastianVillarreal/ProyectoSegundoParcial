@@ -62,5 +62,13 @@ namespace PSPSDO.Forms
             frmRAlumnos.ShowDialog();
             this.Show();
         }
+
+        private void materiasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmReportesMaterias frmRMaterias = new frmReportesMaterias();
+            this.Hide();
+            frmRMaterias.ShowDialog();
+            this.Show();
+        }
     }
 }

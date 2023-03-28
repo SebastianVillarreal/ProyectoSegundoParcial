@@ -143,6 +143,7 @@
             this.materiasToolStripMenuItem1.Name = "materiasToolStripMenuItem1";
             this.materiasToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
             this.materiasToolStripMenuItem1.Text = "Materias";
+            this.materiasToolStripMenuItem1.Click += new System.EventHandler(this.materiasToolStripMenuItem1_Click);
             // 
             // alumnosToolStripMenuItem1
             // 
