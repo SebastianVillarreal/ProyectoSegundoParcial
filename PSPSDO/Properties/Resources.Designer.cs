@@ -296,11 +296,6 @@ namespace PSPSDO.Properties {
         internal static System.Drawing.Bitmap WhatsApp_Image_2023_03_22_at_7_48_04_AM {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp_Image_2023_03_22_at_7_48_04_AM", resourceCulture);
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap New_Piskel {
-            get {
-                object obj = ResourceManager.GetObject("New Piskel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
