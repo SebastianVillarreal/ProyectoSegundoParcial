@@ -162,9 +162,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(716, 34);
+            this.pictureBox1.Image = global::PSPSDO.Properties.Resources.New_Piskel;
+            this.pictureBox1.Location = new System.Drawing.Point(702, 30);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(61, 63);
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
