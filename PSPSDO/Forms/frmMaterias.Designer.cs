@@ -42,6 +42,8 @@
             this.dtpFechaMateria = new System.Windows.Forms.DateTimePicker();
             this.txtBuscarMateria = new System.Windows.Forms.TextBox();
             this.lblBuscadorMateria = new System.Windows.Forms.Label();
+            this.cmbCarreraMat = new System.Windows.Forms.ComboBox();
+            this.lblCarreraMat = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +59,7 @@
             // lblClaveMateria
             // 
             this.lblClaveMateria.AutoSize = true;
-            this.lblClaveMateria.Location = new System.Drawing.Point(305, 16);
+            this.lblClaveMateria.Location = new System.Drawing.Point(270, 16);
             this.lblClaveMateria.Name = "lblClaveMateria";
             this.lblClaveMateria.Size = new System.Drawing.Size(72, 13);
             this.lblClaveMateria.TabIndex = 1;
@@ -75,7 +77,7 @@
             // lblFechaMateria
             // 
             this.lblFechaMateria.AutoSize = true;
-            this.lblFechaMateria.Location = new System.Drawing.Point(305, 60);
+            this.lblFechaMateria.Location = new System.Drawing.Point(270, 60);
             this.lblFechaMateria.Name = "lblFechaMateria";
             this.lblFechaMateria.Size = new System.Drawing.Size(37, 13);
             this.lblFechaMateria.TabIndex = 3;
@@ -90,7 +92,7 @@
             // 
             // txtClaveMateria
             // 
-            this.txtClaveMateria.Location = new System.Drawing.Point(308, 37);
+            this.txtClaveMateria.Location = new System.Drawing.Point(273, 37);
             this.txtClaveMateria.Name = "txtClaveMateria";
             this.txtClaveMateria.Size = new System.Drawing.Size(232, 20);
             this.txtClaveMateria.TabIndex = 5;
@@ -144,7 +146,7 @@
             // 
             // dtpFechaMateria
             // 
-            this.dtpFechaMateria.Location = new System.Drawing.Point(308, 76);
+            this.dtpFechaMateria.Location = new System.Drawing.Point(273, 76);
             this.dtpFechaMateria.Name = "dtpFechaMateria";
             this.dtpFechaMateria.Size = new System.Drawing.Size(229, 20);
             this.dtpFechaMateria.TabIndex = 13;
@@ -166,11 +168,30 @@
             this.lblBuscadorMateria.TabIndex = 15;
             this.lblBuscadorMateria.Text = "Buscador";
             // 
+            // cmbCarreraMat
+            // 
+            this.cmbCarreraMat.FormattingEnabled = true;
+            this.cmbCarreraMat.Location = new System.Drawing.Point(524, 36);
+            this.cmbCarreraMat.Name = "cmbCarreraMat";
+            this.cmbCarreraMat.Size = new System.Drawing.Size(102, 21);
+            this.cmbCarreraMat.TabIndex = 16;
+            // 
+            // lblCarreraMat
+            // 
+            this.lblCarreraMat.AutoSize = true;
+            this.lblCarreraMat.Location = new System.Drawing.Point(521, 20);
+            this.lblCarreraMat.Name = "lblCarreraMat";
+            this.lblCarreraMat.Size = new System.Drawing.Size(41, 13);
+            this.lblCarreraMat.TabIndex = 17;
+            this.lblCarreraMat.Text = "Carrera";
+            // 
             // frmMaterias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1014, 577);
+            this.Controls.Add(this.lblCarreraMat);
+            this.Controls.Add(this.cmbCarreraMat);
             this.Controls.Add(this.lblBuscadorMateria);
             this.Controls.Add(this.txtBuscarMateria);
             this.Controls.Add(this.dtpFechaMateria);
@@ -209,5 +230,7 @@
         private System.Windows.Forms.DateTimePicker dtpFechaMateria;
         private System.Windows.Forms.TextBox txtBuscarMateria;
         private System.Windows.Forms.Label lblBuscadorMateria;
+        private System.Windows.Forms.ComboBox cmbCarreraMat;
+        private System.Windows.Forms.Label lblCarreraMat;
     }
 }
