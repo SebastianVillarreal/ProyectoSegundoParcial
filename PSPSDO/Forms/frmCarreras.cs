@@ -58,5 +58,7 @@ namespace PSPSDO.Forms
             CarreraClass CarreraManager = new CarreraClass();
             CarreraManager.search(dgvListaCarreras,txtBusquedaCarreras.Text);
         }
+
+
     }
 }

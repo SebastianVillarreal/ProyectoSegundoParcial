@@ -197,5 +197,104 @@
   <ItemGroup>
     <None Include="Resources\New Piskel1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\310869.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agregar icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Borrar icon 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Borrar icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeadSpitefulBluewhale-max-1mb.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guardar icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-icon-png-19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lynx blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Return icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ut menu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2023-03-22 at 7.48.04 AM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7a7f454ee5761ad0cfdc66ab6af48d22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\86fa020e67291180d4ac04cafc5b580c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\886c765f0c395293a3d8e44bfd62edd5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\881563d6444b370fa4ceea0c3183bb4c.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1098321945.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blender.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-874402896-170667a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ut VERDE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1098321945g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ut menu2 .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lynx green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon-png-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon-design-in-blue-circle-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descripcion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nombre.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
