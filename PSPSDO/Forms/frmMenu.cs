@@ -70,5 +70,21 @@ namespace PSPSDO.Forms
             frmCal.ShowDialog();
             this.Show();
         }
+
+        private void gruposToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmReportesGrupos frmRGrupos = new frmReportesGrupos();
+            this.Hide();
+            frmRGrupos.ShowDialog();
+            this.Show();
+        }
+
+        private void alumnosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmReportesAlumnos frmRAlumnos = new frmReportesAlumnos();
+            this.Hide();
+            frmRAlumnos.ShowDialog();
+            this.Show();
+        }
     }
 }

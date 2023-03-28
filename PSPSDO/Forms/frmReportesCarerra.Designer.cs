@@ -47,7 +47,7 @@
             this.dgvReportesCarreras.Name = "dgvReportesCarreras";
             this.dgvReportesCarreras.RowHeadersWidth = 62;
             this.dgvReportesCarreras.RowTemplate.Height = 28;
-            this.dgvReportesCarreras.Size = new System.Drawing.Size(764, 224);
+            this.dgvReportesCarreras.Size = new System.Drawing.Size(992, 275);
             this.dgvReportesCarreras.TabIndex = 0;
             // 
             // gbReportesCarreras
@@ -58,9 +58,9 @@
             this.gbReportesCarreras.Controls.Add(this.lblReportesCarrerasParciales);
             this.gbReportesCarreras.Controls.Add(this.btnReporteCarreras);
             this.gbReportesCarreras.Controls.Add(this.lblReportesCarreras);
-            this.gbReportesCarreras.Location = new System.Drawing.Point(12, 33);
+            this.gbReportesCarreras.Location = new System.Drawing.Point(12, 12);
             this.gbReportesCarreras.Name = "gbReportesCarreras";
-            this.gbReportesCarreras.Size = new System.Drawing.Size(764, 172);
+            this.gbReportesCarreras.Size = new System.Drawing.Size(992, 177);
             this.gbReportesCarreras.TabIndex = 1;
             this.gbReportesCarreras.TabStop = false;
             this.gbReportesCarreras.Text = "Reportes por Carreras";
@@ -69,15 +69,15 @@
             // cmbReportesCarreras
             // 
             this.cmbReportesCarreras.FormattingEnabled = true;
-            this.cmbReportesCarreras.Location = new System.Drawing.Point(30, 73);
+            this.cmbReportesCarreras.Location = new System.Drawing.Point(21, 73);
             this.cmbReportesCarreras.Name = "cmbReportesCarreras";
-            this.cmbReportesCarreras.Size = new System.Drawing.Size(121, 28);
+            this.cmbReportesCarreras.Size = new System.Drawing.Size(571, 28);
             this.cmbReportesCarreras.TabIndex = 6;
             // 
             // rbParcialDos
             // 
             this.rbParcialDos.AutoSize = true;
-            this.rbParcialDos.Location = new System.Drawing.Point(384, 73);
+            this.rbParcialDos.Location = new System.Drawing.Point(780, 74);
             this.rbParcialDos.Name = "rbParcialDos";
             this.rbParcialDos.Size = new System.Drawing.Size(94, 24);
             this.rbParcialDos.TabIndex = 5;
@@ -88,7 +88,7 @@
             // rbParcialUno
             // 
             this.rbParcialUno.AutoSize = true;
-            this.rbParcialUno.Location = new System.Drawing.Point(272, 73);
+            this.rbParcialUno.Location = new System.Drawing.Point(634, 74);
             this.rbParcialUno.Name = "rbParcialUno";
             this.rbParcialUno.Size = new System.Drawing.Size(94, 24);
             this.rbParcialUno.TabIndex = 4;
@@ -99,7 +99,7 @@
             // lblReportesCarrerasParciales
             // 
             this.lblReportesCarrerasParciales.AutoSize = true;
-            this.lblReportesCarrerasParciales.Location = new System.Drawing.Point(268, 45);
+            this.lblReportesCarrerasParciales.Location = new System.Drawing.Point(630, 46);
             this.lblReportesCarrerasParciales.Name = "lblReportesCarrerasParciales";
             this.lblReportesCarrerasParciales.Size = new System.Drawing.Size(64, 20);
             this.lblReportesCarrerasParciales.TabIndex = 2;
@@ -107,17 +107,18 @@
             // 
             // btnReporteCarreras
             // 
-            this.btnReporteCarreras.Location = new System.Drawing.Point(614, 126);
+            this.btnReporteCarreras.Location = new System.Drawing.Point(842, 131);
             this.btnReporteCarreras.Name = "btnReporteCarreras";
             this.btnReporteCarreras.Size = new System.Drawing.Size(144, 40);
             this.btnReporteCarreras.TabIndex = 1;
             this.btnReporteCarreras.Text = "Crear Reporte";
             this.btnReporteCarreras.UseVisualStyleBackColor = true;
+            this.btnReporteCarreras.Click += new System.EventHandler(this.btnReporteCarreras_Click);
             // 
             // lblReportesCarreras
             // 
             this.lblReportesCarreras.AutoSize = true;
-            this.lblReportesCarreras.Location = new System.Drawing.Point(26, 45);
+            this.lblReportesCarreras.Location = new System.Drawing.Point(17, 45);
             this.lblReportesCarreras.Name = "lblReportesCarreras";
             this.lblReportesCarreras.Size = new System.Drawing.Size(74, 20);
             this.lblReportesCarreras.TabIndex = 0;
@@ -127,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 448);
+            this.ClientSize = new System.Drawing.Size(1015, 498);
             this.Controls.Add(this.gbReportesCarreras);
             this.Controls.Add(this.dgvReportesCarreras);
             this.Name = "frmReportesCarerra";
