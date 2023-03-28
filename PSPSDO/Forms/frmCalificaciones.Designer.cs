@@ -30,8 +30,8 @@
         {
             this.cmbMateriaCal = new System.Windows.Forms.ComboBox();
             this.cmbAlumnoCal = new System.Windows.Forms.ComboBox();
-            this.txtParcial = new System.Windows.Forms.TextBox();
-            this.txtCalificaciones = new System.Windows.Forms.TextBox();
+            this.txtParcialCal = new System.Windows.Forms.TextBox();
+            this.txtCalificacionesCal = new System.Windows.Forms.TextBox();
             this.btnGuardarCapCal = new System.Windows.Forms.Button();
             this.btnCancelarCapCal = new System.Windows.Forms.Button();
             this.lblMateriaCal = new System.Windows.Forms.Label();
@@ -51,7 +51,6 @@
             this.cmbMateriaCal.Name = "cmbMateriaCal";
             this.cmbMateriaCal.Size = new System.Drawing.Size(173, 21);
             this.cmbMateriaCal.TabIndex = 0;
-            this.cmbMateriaCal.SelectedIndexChanged += new System.EventHandler(this.cmbMateria_SelectedIndexChanged);
             // 
             // cmbAlumnoCal
             // 
@@ -60,22 +59,23 @@
             this.cmbAlumnoCal.Name = "cmbAlumnoCal";
             this.cmbAlumnoCal.Size = new System.Drawing.Size(173, 21);
             this.cmbAlumnoCal.TabIndex = 1;
+            this.cmbAlumnoCal.SelectedIndexChanged += new System.EventHandler(this.cmbAlumnoCal_SelectedIndexChanged);
             // 
-            // txtParcial
+            // txtParcialCal
             // 
-            this.txtParcial.Location = new System.Drawing.Point(160, 194);
-            this.txtParcial.Name = "txtParcial";
-            this.txtParcial.Size = new System.Drawing.Size(173, 20);
-            this.txtParcial.TabIndex = 2;
-            this.txtParcial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParcial_KeyPress);
+            this.txtParcialCal.Location = new System.Drawing.Point(160, 194);
+            this.txtParcialCal.Name = "txtParcialCal";
+            this.txtParcialCal.Size = new System.Drawing.Size(173, 20);
+            this.txtParcialCal.TabIndex = 2;
+            this.txtParcialCal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParcial_KeyPress);
             // 
-            // txtCalificaciones
+            // txtCalificacionesCal
             // 
-            this.txtCalificaciones.Location = new System.Drawing.Point(411, 194);
-            this.txtCalificaciones.Name = "txtCalificaciones";
-            this.txtCalificaciones.Size = new System.Drawing.Size(173, 20);
-            this.txtCalificaciones.TabIndex = 3;
-            this.txtCalificaciones.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCalificaciones_KeyPress);
+            this.txtCalificacionesCal.Location = new System.Drawing.Point(411, 194);
+            this.txtCalificacionesCal.Name = "txtCalificacionesCal";
+            this.txtCalificacionesCal.Size = new System.Drawing.Size(173, 20);
+            this.txtCalificacionesCal.TabIndex = 3;
+            this.txtCalificacionesCal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCalificaciones_KeyPress);
             // 
             // btnGuardarCapCal
             // 
@@ -140,6 +140,7 @@
             this.cmbCarreraCal.Name = "cmbCarreraCal";
             this.cmbCarreraCal.Size = new System.Drawing.Size(158, 21);
             this.cmbCarreraCal.TabIndex = 10;
+            this.cmbCarreraCal.SelectedIndexChanged += new System.EventHandler(this.cmbCarreraCal_SelectedIndexChanged);
             // 
             // cmbGrupoCal
             // 
@@ -148,6 +149,7 @@
             this.cmbGrupoCal.Name = "cmbGrupoCal";
             this.cmbGrupoCal.Size = new System.Drawing.Size(158, 21);
             this.cmbGrupoCal.TabIndex = 11;
+            this.cmbGrupoCal.SelectedIndexChanged += new System.EventHandler(this.cmbGrupoCal_SelectedIndexChanged);
             // 
             // lblCarreraCal
             // 
@@ -182,8 +184,8 @@
             this.Controls.Add(this.lblMateriaCal);
             this.Controls.Add(this.btnCancelarCapCal);
             this.Controls.Add(this.btnGuardarCapCal);
-            this.Controls.Add(this.txtCalificaciones);
-            this.Controls.Add(this.txtParcial);
+            this.Controls.Add(this.txtCalificacionesCal);
+            this.Controls.Add(this.txtParcialCal);
             this.Controls.Add(this.cmbAlumnoCal);
             this.Controls.Add(this.cmbMateriaCal);
             this.Name = "frmCalificaciones";
@@ -197,8 +199,8 @@
 
         private System.Windows.Forms.ComboBox cmbMateriaCal;
         private System.Windows.Forms.ComboBox cmbAlumnoCal;
-        private System.Windows.Forms.TextBox txtParcial;
-        private System.Windows.Forms.TextBox txtCalificaciones;
+        private System.Windows.Forms.TextBox txtParcialCal;
+        private System.Windows.Forms.TextBox txtCalificacionesCal;
         private System.Windows.Forms.Button btnGuardarCapCal;
         private System.Windows.Forms.Button btnCancelarCapCal;
         private System.Windows.Forms.Label lblMateriaCal;

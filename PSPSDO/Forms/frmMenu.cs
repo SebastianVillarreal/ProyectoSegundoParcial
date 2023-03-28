@@ -33,6 +33,12 @@ namespace PSPSDO.Forms
             this.Show();
         }
 
+        private void carrerasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmReportesCarerra frmRCarreras = new frmReportesCarerra();
+            this.Hide();
+            frmRCarreras.ShowDialog();
+            }
         private void materiasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmMaterias frmMat = new frmMaterias();
@@ -62,6 +68,30 @@ namespace PSPSDO.Forms
             frmCalificaciones  frmCal = new frmCalificaciones();
             this.Hide();
             frmCal.ShowDialog();
+            this.Show();
+        }
+
+        private void gruposToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmReportesGrupos frmRGrupos = new frmReportesGrupos();
+            this.Hide();
+            frmRGrupos.ShowDialog();
+            this.Show();
+        }
+
+        private void alumnosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmReportesAlumnos frmRAlumnos = new frmReportesAlumnos();
+            this.Hide();
+            frmRAlumnos.ShowDialog();
+            this.Show();
+        }
+
+        private void materiasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmReportesMaterias frmRMaterias = new frmReportesMaterias();
+            this.Hide();
+            frmRMaterias.ShowDialog();
             this.Show();
         }
     }

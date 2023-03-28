@@ -20,11 +20,19 @@ namespace PSPSDO.Forms
         public frmMaterias()
         {
             InitializeComponent();
+            cmbCarreraMat.DropDownStyle = ComboBoxStyle.DropDownList;
             ArrayList parametros = new ArrayList();
             BDContext bd = new BDContext();
             parametros.Add(new SqlParameter { ParameterName = "@pId", SqlDbType = System.Data.SqlDbType.VarChar, Value = 1 });
             DataSet ds = bd.Fill("sp_GetMateria", parametros);
             dgvMaterias.DataSource = ds.Tables[0];
+
+            CarreraClass carrera = new CarreraClass();
+            DataSet dsc = carrera.GetCarreras();
+            DataTable dtc = dsc.Tables[0];
+            cmbCarreraMat.DataSource = dtc;
+            cmbCarreraMat.ValueMember = "Id";
+            cmbCarreraMat.DisplayMember = "Clave";
         }
 
         private void btnInsertarMateria_Click(object sender, EventArgs e)
@@ -40,6 +48,7 @@ namespace PSPSDO.Forms
             materias.Nombre = txtNombreMateria.Text;
             materias.Clave = txtClaveMateria.Text;
             materias.Usuario = txtUsuarioMateria.Text;
+            materias.IdCarrera = int.Parse(cmbCarreraMat.SelectedValue.ToString());
             dtpFechaMateria.Value.ToString("yyyy-MM-dd");
 
             string fecha_format = dtpFechaMateria.Value.ToString("yyyy-MM-dd");
@@ -72,6 +81,7 @@ namespace PSPSDO.Forms
             materias.Nombre = txtNombreMateria.Text;
             materias.Clave = txtClaveMateria.Text;
             materias.Usuario = txtUsuarioMateria.Text;
+            materias.IdCarrera = int.Parse(cmbCarreraMat.SelectedValue.ToString());
             dtpFechaMateria.Value.ToString("yyyy-MM-dd");
             string fecha_format = dtpFechaMateria.Value.ToString("yyyy-MM-dd");
 
@@ -122,5 +132,7 @@ namespace PSPSDO.Forms
                 dtpFechaMateria.Value = Convert.ToDateTime(row.Cells["FechaActualizacion"].Value);
             }
         }
+
+  
     }
 }
