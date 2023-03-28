@@ -97,5 +97,17 @@ namespace PSPSDO.Classes
             DataSet ds = BD.Fill("SP_ShearchGrupo", parametros);
             return ds;
         }
+      
+        public DataSet GetGrupoFiltro(string filtro)
+        {
+            BDContext bd = new BDContext();
+            ArrayList parametros = new ArrayList();
+            parametros.Add(new SqlParameter { ParameterName = "@pFiltro", SqlDbType = SqlDbType.VarChar, Value = filtro });
+            DataSet ds = bd.Fill("sp_GetGrupoFiltro", parametros);
+            return ds;  
+
+
+
+        }
     }
 }

@@ -33,33 +33,35 @@ namespace PSPSDO.Forms
             this.Show();
         }
 
+        private void materiasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMaterias frmMat = new frmMaterias();
+            this.Hide();
+            frmMat.ShowDialog();
+            this.Show();
+        }
+
         private void carrerasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCarreras frmCarerrs = new frmCarreras();
+            frmCarreras frmCar = new frmCarreras();
             this.Hide();
-            frmCarerrs.ShowDialog();
-        }
-        private void carrerasToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            frmReportesCarerra frmRCarreras = new frmReportesCarerra();
-            this.Hide();
-            frmRCarreras.ShowDialog();
+            frmCar.ShowDialog();
             this.Show();
         }
 
-        private void gruposToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void personasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmReportesGrupos frmRGrupos = new frmReportesGrupos();
+            frmPersonas frmPers = new frmPersonas();
             this.Hide();
-            frmRGrupos.ShowDialog();
+            frmPers.ShowDialog();
             this.Show();
         }
 
-        private void alumnosToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void capturaCalificacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmReportesAlumnos frmRAlumnos = new frmReportesAlumnos();
+            frmCalificaciones  frmCal = new frmCalificaciones();
             this.Hide();
-            frmRAlumnos.ShowDialog();
+            frmCal.ShowDialog();
             this.Show();
         }
     }
