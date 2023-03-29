@@ -39,33 +39,33 @@
             // 
             // btnReportes
             // 
-            this.btnReportes.Location = new System.Drawing.Point(989, 147);
-            this.btnReportes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnReportes.Location = new System.Drawing.Point(675, 95);
+            this.btnReportes.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(147, 34);
+            this.btnReportes.Size = new System.Drawing.Size(98, 22);
             this.btnReportes.TabIndex = 0;
-            this.btnReportes.Text = "Crear Reporte";
+            this.btnReportes.Text = "Generar reporte";
             this.btnReportes.UseVisualStyleBackColor = true;
             this.btnReportes.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvReportesMaterias
             // 
             this.dgvReportesMaterias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReportesMaterias.Location = new System.Drawing.Point(20, 241);
-            this.dgvReportesMaterias.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvReportesMaterias.Location = new System.Drawing.Point(13, 157);
+            this.dgvReportesMaterias.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgvReportesMaterias.Name = "dgvReportesMaterias";
             this.dgvReportesMaterias.RowHeadersWidth = 51;
             this.dgvReportesMaterias.RowTemplate.Height = 24;
-            this.dgvReportesMaterias.Size = new System.Drawing.Size(1154, 436);
+            this.dgvReportesMaterias.Size = new System.Drawing.Size(769, 283);
             this.dgvReportesMaterias.TabIndex = 1;
             // 
             // cmbCarrera
             // 
             this.cmbCarrera.FormattingEnabled = true;
-            this.cmbCarrera.Location = new System.Drawing.Point(6, 73);
-            this.cmbCarrera.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbCarrera.Location = new System.Drawing.Point(4, 47);
+            this.cmbCarrera.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmbCarrera.Name = "cmbCarrera";
-            this.cmbCarrera.Size = new System.Drawing.Size(421, 28);
+            this.cmbCarrera.Size = new System.Drawing.Size(282, 21);
             this.cmbCarrera.TabIndex = 2;
             // 
             // gbReportesCalificaciones
@@ -73,11 +73,11 @@
             this.gbReportesCalificaciones.Controls.Add(this.lblMat);
             this.gbReportesCalificaciones.Controls.Add(this.btnReportes);
             this.gbReportesCalificaciones.Controls.Add(this.cmbCarrera);
-            this.gbReportesCalificaciones.Location = new System.Drawing.Point(14, 24);
-            this.gbReportesCalificaciones.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gbReportesCalificaciones.Location = new System.Drawing.Point(9, 16);
+            this.gbReportesCalificaciones.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gbReportesCalificaciones.Name = "gbReportesCalificaciones";
-            this.gbReportesCalificaciones.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbReportesCalificaciones.Size = new System.Drawing.Size(1173, 189);
+            this.gbReportesCalificaciones.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.gbReportesCalificaciones.Size = new System.Drawing.Size(782, 123);
             this.gbReportesCalificaciones.TabIndex = 3;
             this.gbReportesCalificaciones.TabStop = false;
             this.gbReportesCalificaciones.Text = "Reporte de calificaciones por materia";
@@ -86,20 +86,20 @@
             // lblMat
             // 
             this.lblMat.AutoSize = true;
-            this.lblMat.Location = new System.Drawing.Point(6, 37);
+            this.lblMat.Location = new System.Drawing.Point(4, 24);
+            this.lblMat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMat.Name = "lblMat";
-            this.lblMat.Size = new System.Drawing.Size(66, 20);
+            this.lblMat.Size = new System.Drawing.Size(44, 13);
             this.lblMat.TabIndex = 3;
             this.lblMat.Text = "Carrera:";
             // 
             // frmReportesMaterias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gbReportesCalificaciones);
             this.Controls.Add(this.dgvReportesMaterias);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmReportesMaterias";
             this.Text = "frmReporteCalificacion";
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportesMaterias)).EndInit();
