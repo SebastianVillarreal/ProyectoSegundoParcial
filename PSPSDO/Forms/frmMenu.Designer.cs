@@ -56,7 +56,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1196, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(600, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -143,35 +143,36 @@
             // materiasToolStripMenuItem1
             // 
             this.materiasToolStripMenuItem1.Name = "materiasToolStripMenuItem1";
-            this.materiasToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
+            this.materiasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.materiasToolStripMenuItem1.Text = "Materias";
+            this.materiasToolStripMenuItem1.Click += new System.EventHandler(this.materiasToolStripMenuItem1_Click);
             // 
             // alumnosToolStripMenuItem1
             // 
             this.alumnosToolStripMenuItem1.Name = "alumnosToolStripMenuItem1";
-            this.alumnosToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
+            this.alumnosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.alumnosToolStripMenuItem1.Text = "Alumnos";
-            this.alumnosToolStripMenuItem1.Click += new System.EventHandler(this.alumnosToolStripMenuItem1_Click);
+            this.alumnosToolStripMenuItem1.Click += new System.EventHandler(this.alumnosToolStripMenuItem1_Click_1);
             // 
             // gruposToolStripMenuItem1
             // 
             this.gruposToolStripMenuItem1.Name = "gruposToolStripMenuItem1";
-            this.gruposToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
+            this.gruposToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.gruposToolStripMenuItem1.Text = "Grupos";
-            this.gruposToolStripMenuItem1.Click += new System.EventHandler(this.gruposToolStripMenuItem1_Click);
+            this.gruposToolStripMenuItem1.Click += new System.EventHandler(this.gruposToolStripMenuItem1_Click_1);
             // 
             // carrerasToolStripMenuItem1
             // 
             this.carrerasToolStripMenuItem1.Name = "carrerasToolStripMenuItem1";
-            this.carrerasToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
+            this.carrerasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.carrerasToolStripMenuItem1.Text = "Carreras";
-            this.carrerasToolStripMenuItem1.Click += new System.EventHandler(this.carrerasToolStripMenuItem1_Click);
+            this.carrerasToolStripMenuItem1.Click += new System.EventHandler(this.carrerasToolStripMenuItem1_Click_1);
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1196, 648);
+            this.ClientSize = new System.Drawing.Size(600, 365);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
