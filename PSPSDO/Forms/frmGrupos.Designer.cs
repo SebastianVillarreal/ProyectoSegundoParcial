@@ -41,6 +41,8 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.txtBuscarGrupo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtClaveGrupo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -81,7 +83,7 @@
             // 
             this.lblDescripcionGrupos.AutoSize = true;
             this.lblDescripcionGrupos.Font = new System.Drawing.Font("Impact", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcionGrupos.Location = new System.Drawing.Point(50, 207);
+            this.lblDescripcionGrupos.Location = new System.Drawing.Point(50, 297);
             this.lblDescripcionGrupos.Name = "lblDescripcionGrupos";
             this.lblDescripcionGrupos.Size = new System.Drawing.Size(202, 45);
             this.lblDescripcionGrupos.TabIndex = 3;
@@ -93,7 +95,7 @@
             this.btnGuardarGrupos.BackgroundImage = global::PSPSDO.Properties.Resources.Guardar_icon;
             this.btnGuardarGrupos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnGuardarGrupos.Font = new System.Drawing.Font("Impact", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarGrupos.Location = new System.Drawing.Point(58, 270);
+            this.btnGuardarGrupos.Location = new System.Drawing.Point(50, 378);
             this.btnGuardarGrupos.Name = "btnGuardarGrupos";
             this.btnGuardarGrupos.Size = new System.Drawing.Size(104, 83);
             this.btnGuardarGrupos.TabIndex = 4;
@@ -131,7 +133,7 @@
             // 
             // txtDescripcionGrupos
             // 
-            this.txtDescripcionGrupos.Location = new System.Drawing.Point(287, 196);
+            this.txtDescripcionGrupos.Location = new System.Drawing.Point(287, 286);
             this.txtDescripcionGrupos.Multiline = true;
             this.txtDescripcionGrupos.Name = "txtDescripcionGrupos";
             this.txtDescripcionGrupos.Size = new System.Drawing.Size(399, 56);
@@ -175,6 +177,8 @@
             // 
             this.groupBox1.BackgroundImage = global::PSPSDO.Properties.Resources._1098321945g;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtClaveGrupo);
             this.groupBox1.Controls.Add(this.dgvGrupos);
             this.groupBox1.Controls.Add(this.txtBuscarGrupo);
             this.groupBox1.Controls.Add(this.lblUsuarioGrupo);
@@ -194,6 +198,24 @@
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "GRUPOS";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Impact", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(50, 211);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(201, 45);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Clave Grupo";
+            // 
+            // txtClaveGrupo
+            // 
+            this.txtClaveGrupo.Location = new System.Drawing.Point(287, 211);
+            this.txtClaveGrupo.Multiline = true;
+            this.txtClaveGrupo.Name = "txtClaveGrupo";
+            this.txtClaveGrupo.Size = new System.Drawing.Size(469, 56);
+            this.txtClaveGrupo.TabIndex = 15;
             // 
             // frmGrupos
             // 
@@ -227,5 +249,7 @@
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.TextBox txtBuscarGrupo;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtClaveGrupo;
     }
 }

@@ -20,6 +20,7 @@ namespace PSPSDO.Classes
                 ArrayList parametros = new ArrayList();
                 BDContext bd = new BDContext();
                 parametros.Add(new SqlParameter { ParameterName = "@pClave", SqlDbType = System.Data.SqlDbType.VarChar, Value = grupos.Clave });
+                parametros.Add(new SqlParameter { ParameterName = "@pClaveGrupo", SqlDbType = System.Data.SqlDbType.VarChar, Value = grupos.Clave });
                 parametros.Add(new SqlParameter { ParameterName = "@pDescripcion", SqlDbType = System.Data.SqlDbType.VarChar, Value = grupos.Descripcion });
                 parametros.Add(new SqlParameter { ParameterName = "@pUsuarioUltMod", SqlDbType = System.Data.SqlDbType.VarChar, Value = grupos.UsuarioUltima });
                 bd.ExecuteNonQuery("sp_InsertGrupos", parametros);
@@ -55,6 +56,7 @@ namespace PSPSDO.Classes
 
                 parametros.Add(new SqlParameter { ParameterName = "@pId", SqlDbType = System.Data.SqlDbType.VarChar, Value = grupo.Id });
                 parametros.Add(new SqlParameter { ParameterName = "@pClave", SqlDbType = System.Data.SqlDbType.VarChar, Value = grupo.Clave });
+                parametros.Add(new SqlParameter { ParameterName = "@pClaveGrupo", SqlDbType = System.Data.SqlDbType.VarChar, Value = grupo.Clave });
                 parametros.Add(new SqlParameter { ParameterName = "@pDescripcion", SqlDbType = System.Data.SqlDbType.VarChar, Value = grupo.Descripcion });
                 parametros.Add(new SqlParameter { ParameterName = "@pUsuarioUltMod", SqlDbType = System.Data.SqlDbType.VarChar, Value = grupo.UsuarioUltima });
                 bd.ExecuteNonQuery("sp_UpdateGrupos", parametros);
