@@ -135,7 +135,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvListaCarreras.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvListaCarreras.GridColor = System.Drawing.Color.Black;
-            this.dgvListaCarreras.Location = new System.Drawing.Point(59, 501);
+            this.dgvListaCarreras.Location = new System.Drawing.Point(59, 503);
             this.dgvListaCarreras.Name = "dgvListaCarreras";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -145,7 +145,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvListaCarreras.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvListaCarreras.Size = new System.Drawing.Size(1473, 433);
+            this.dgvListaCarreras.Size = new System.Drawing.Size(1313, 320);
             this.dgvListaCarreras.TabIndex = 4;
             // 
             // btnCarreraAñadir
@@ -188,9 +188,9 @@
             // 
             // txtBusquedaCarreras
             // 
-            this.txtBusquedaCarreras.Location = new System.Drawing.Point(59, 455);
+            this.txtBusquedaCarreras.Location = new System.Drawing.Point(59, 445);
             this.txtBusquedaCarreras.Name = "txtBusquedaCarreras";
-            this.txtBusquedaCarreras.Size = new System.Drawing.Size(1421, 53);
+            this.txtBusquedaCarreras.Size = new System.Drawing.Size(1313, 53);
             this.txtBusquedaCarreras.TabIndex = 11;
             // 
             // btnCarreraEditar
@@ -276,7 +276,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1924, 1051);
+            this.ClientSize = new System.Drawing.Size(1444, 881);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmCarreras";
             this.Text = "Carreras";
