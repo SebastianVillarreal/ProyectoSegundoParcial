@@ -55,13 +55,6 @@ namespace PSPSDO.Forms
             this.Show();
         }
 
-        private void personasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmPersonas frmPers = new frmPersonas();
-            this.Hide();
-            frmPers.ShowDialog();
-            this.Show();
-        }
 
         private void capturaCalificacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {

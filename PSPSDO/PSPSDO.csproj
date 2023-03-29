@@ -50,6 +50,8 @@
     <Compile Include="BD\BDContext.cs" />
     <Compile Include="Classes\AlumnosClass.cs" />
     <Compile Include="Classes\CalificacionesClass.cs" />
+    <Compile Include="Classes\frmReportesAlumnosClass.cs" />
+    <Compile Include="Classes\frmReportesMateriasClass.cs" />
     <Compile Include="Classes\GrupoClass.cs" />
     <Compile Include="Classes\MateriasClass.cs" />
     <Compile Include="Classes\PersonasClass.cs" />
@@ -134,8 +136,10 @@
     <Compile Include="Models\GrupoModels.cs" />
     <Compile Include="Models\MateriasModel.cs" />
     <Compile Include="Models\PersonaModel.cs" />
+    <Compile Include="Models\ReportesAlumnosModel.cs" />
     <Compile Include="Models\ReportesCarrerasModel.cs" />
     <Compile Include="Models\ReportesGruposModel.cs" />
+    <Compile Include="Models\ReportesMateriasModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmCalificaciones.resx">
@@ -195,6 +199,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\lynx blue.mdp" />
     <None Include="Resources\New Piskel1.png" />
   </ItemGroup>
   <ItemGroup>
