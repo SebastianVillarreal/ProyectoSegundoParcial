@@ -143,27 +143,28 @@
             // materiasToolStripMenuItem1
             // 
             this.materiasToolStripMenuItem1.Name = "materiasToolStripMenuItem1";
-            this.materiasToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
+            this.materiasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.materiasToolStripMenuItem1.Text = "Materias";
+            this.materiasToolStripMenuItem1.Click += new System.EventHandler(this.materiasToolStripMenuItem1_Click);
             // 
             // alumnosToolStripMenuItem1
             // 
             this.alumnosToolStripMenuItem1.Name = "alumnosToolStripMenuItem1";
-            this.alumnosToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
+            this.alumnosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.alumnosToolStripMenuItem1.Text = "Alumnos";
             this.alumnosToolStripMenuItem1.Click += new System.EventHandler(this.alumnosToolStripMenuItem1_Click);
             // 
             // gruposToolStripMenuItem1
             // 
             this.gruposToolStripMenuItem1.Name = "gruposToolStripMenuItem1";
-            this.gruposToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
+            this.gruposToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.gruposToolStripMenuItem1.Text = "Grupos";
             this.gruposToolStripMenuItem1.Click += new System.EventHandler(this.gruposToolStripMenuItem1_Click);
             // 
             // carrerasToolStripMenuItem1
             // 
             this.carrerasToolStripMenuItem1.Name = "carrerasToolStripMenuItem1";
-            this.carrerasToolStripMenuItem1.Size = new System.Drawing.Size(122, 22);
+            this.carrerasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.carrerasToolStripMenuItem1.Text = "Carreras";
             this.carrerasToolStripMenuItem1.Click += new System.EventHandler(this.carrerasToolStripMenuItem1_Click);
             // 
