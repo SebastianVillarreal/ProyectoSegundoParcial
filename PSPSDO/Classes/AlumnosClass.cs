@@ -46,15 +46,6 @@ namespace PSPSDO.Classes
             return ds;
         }
 
-        public DataSet GetMatricula(int matri)
-        {
-            ArrayList parametros = new ArrayList();
-            BDContext bd = new BDContext();
-            parametros.Add(new SqlParameter { ParameterName = "@pMatricula", SqlDbType = System.Data.SqlDbType.Int, Value = matri });
-            DataSet ds = bd.Fill("SP_MatriculaUnica", parametros);
-            return ds;
-        }
-
         public DataSet BuscarAlumnos(string Busqueda)
         {
             ArrayList parametros = new ArrayList();

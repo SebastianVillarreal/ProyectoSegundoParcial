@@ -19,7 +19,5 @@ namespace PSPSDO.Models
         public int UsuarioUltima { get; set; }
 
         public int FechaActualizacion { get; set; }
-
-        public string ClaveGrupo { get;  set; }
     }
 }

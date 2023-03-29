@@ -1,5 +1,4 @@
-﻿using PSPSDO.Classes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,19 +10,14 @@ using System.Windows.Forms;
 
 namespace PSPSDO.Forms
 {
-    public partial class frmReportesAlumnos : Form
+    public partial class frmReporteCalificacion : Form
     {
-        public frmReportesAlumnos()
+        public frmReporteCalificacion()
         {
             InitializeComponent();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmReportesAlumnos_Load(object sender, EventArgs e)
         {
 
         }

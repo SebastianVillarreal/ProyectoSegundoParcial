@@ -40,8 +40,6 @@
             this.btnEliminarGrupos = new System.Windows.Forms.Button();
             this.lblSearch = new System.Windows.Forms.Label();
             this.txtBuscarGrupo = new System.Windows.Forms.TextBox();
-            this.txtClaveGrupo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +66,7 @@
             // 
             this.lblClaveGrupos.AutoSize = true;
             this.lblClaveGrupos.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClaveGrupos.Location = new System.Drawing.Point(31, 50);
+            this.lblClaveGrupos.Location = new System.Drawing.Point(31, 62);
             this.lblClaveGrupos.Name = "lblClaveGrupos";
             this.lblClaveGrupos.Size = new System.Drawing.Size(44, 19);
             this.lblClaveGrupos.TabIndex = 2;
@@ -116,7 +114,7 @@
             // 
             // txtClaveGrupos
             // 
-            this.txtClaveGrupos.Location = new System.Drawing.Point(119, 50);
+            this.txtClaveGrupos.Location = new System.Drawing.Point(119, 62);
             this.txtClaveGrupos.Multiline = true;
             this.txtClaveGrupos.Name = "txtClaveGrupos";
             this.txtClaveGrupos.Size = new System.Drawing.Size(100, 19);
@@ -161,31 +159,11 @@
             this.txtBuscarGrupo.TabIndex = 13;
             this.txtBuscarGrupo.TextChanged += new System.EventHandler(this.txtBuscarGrupo_TextChanged);
             // 
-            // txtClaveGrupo
-            // 
-            this.txtClaveGrupo.Location = new System.Drawing.Point(119, 82);
-            this.txtClaveGrupo.Multiline = true;
-            this.txtClaveGrupo.Name = "txtClaveGrupo";
-            this.txtClaveGrupo.Size = new System.Drawing.Size(100, 19);
-            this.txtClaveGrupo.TabIndex = 15;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 82);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 19);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Clave del Grupo";
-            // 
             // frmGrupos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(558, 576);
-            this.Controls.Add(this.txtClaveGrupo);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtBuscarGrupo);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.btnEliminarGrupos);
@@ -221,7 +199,5 @@
         private System.Windows.Forms.Button btnEliminarGrupos;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.TextBox txtBuscarGrupo;
-        private System.Windows.Forms.TextBox txtClaveGrupo;
-        private System.Windows.Forms.Label label1;
     }
 }
