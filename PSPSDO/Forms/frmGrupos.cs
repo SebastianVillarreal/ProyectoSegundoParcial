@@ -34,7 +34,6 @@ namespace PSPSDO.Forms
             GrupoClass grupo = new GrupoClass();
 
             grupoModel.Clave = txtClaveGrupos.Text;
-            grupoModel.ClaveGrupo = txtClaveGrupo.Text;
             grupoModel.Descripcion = txtDescripcionGrupos.Text;
             grupoModel.UsuarioUltima = int.Parse(txtUsuarioGrupo.Text);
 
