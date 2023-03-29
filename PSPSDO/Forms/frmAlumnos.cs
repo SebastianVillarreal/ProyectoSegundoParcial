@@ -140,5 +140,15 @@ namespace PSPSDO.Forms
             DataSet ds = Alumn.BuscarAlumnos(Busqueda);
             dgvAlumnos.DataSource = ds.Tables[0];
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtApMaterAlumno_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

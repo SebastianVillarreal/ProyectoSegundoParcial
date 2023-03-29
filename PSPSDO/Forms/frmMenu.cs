@@ -55,13 +55,6 @@ namespace PSPSDO.Forms
             this.Show();
         }
 
-        private void personasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmPersonas frmPers = new frmPersonas();
-            this.Hide();
-            frmPers.ShowDialog();
-            this.Show();
-        }
 
         private void capturaCalificacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -84,6 +77,14 @@ namespace PSPSDO.Forms
             frmReportesAlumnos frmRAlumnos = new frmReportesAlumnos();
             this.Hide();
             frmRAlumnos.ShowDialog();
+            this.Show();
+        }
+
+        private void materiasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmMaterias frmMat = new frmMaterias();
+            this.Hide();
+            frmMat.ShowDialog();
             this.Show();
         }
     }

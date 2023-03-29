@@ -66,5 +66,10 @@ namespace PSPSDO.Forms
                 dgvReportesGrupos.DataSource = ds.Tables[0];
             }
         }
+
+        private void dgvReportesGrupos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

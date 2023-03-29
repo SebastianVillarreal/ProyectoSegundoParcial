@@ -73,7 +73,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(2, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1130, 830);
+            this.groupBox1.Size = new System.Drawing.Size(1352, 865);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Calificaciones";
@@ -81,7 +81,7 @@
             // cmbCarreraCal
             // 
             this.cmbCarreraCal.FormattingEnabled = true;
-            this.cmbCarreraCal.Location = new System.Drawing.Point(221, 101);
+            this.cmbCarreraCal.Location = new System.Drawing.Point(302, 101);
             this.cmbCarreraCal.Name = "cmbCarreraCal";
             this.cmbCarreraCal.Size = new System.Drawing.Size(158, 47);
             this.cmbCarreraCal.TabIndex = 10;
@@ -92,7 +92,7 @@
             this.lblGrupoCal.AutoSize = true;
             this.lblGrupoCal.BackColor = System.Drawing.Color.Transparent;
             this.lblGrupoCal.ForeColor = System.Drawing.Color.Black;
-            this.lblGrupoCal.Location = new System.Drawing.Point(409, 59);
+            this.lblGrupoCal.Location = new System.Drawing.Point(601, 59);
             this.lblGrupoCal.Name = "lblGrupoCal";
             this.lblGrupoCal.Size = new System.Drawing.Size(96, 39);
             this.lblGrupoCal.TabIndex = 13;
@@ -111,7 +111,7 @@
             this.lblCarreraCal.AutoSize = true;
             this.lblCarreraCal.BackColor = System.Drawing.Color.Transparent;
             this.lblCarreraCal.ForeColor = System.Drawing.Color.Black;
-            this.lblCarreraCal.Location = new System.Drawing.Point(214, 59);
+            this.lblCarreraCal.Location = new System.Drawing.Point(321, 59);
             this.lblCarreraCal.Name = "lblCarreraCal";
             this.lblCarreraCal.Size = new System.Drawing.Size(116, 39);
             this.lblCarreraCal.TabIndex = 12;
@@ -120,7 +120,7 @@
             // cmbAlumnoCal
             // 
             this.cmbAlumnoCal.FormattingEnabled = true;
-            this.cmbAlumnoCal.Location = new System.Drawing.Point(606, 101);
+            this.cmbAlumnoCal.Location = new System.Drawing.Point(898, 101);
             this.cmbAlumnoCal.Name = "cmbAlumnoCal";
             this.cmbAlumnoCal.Size = new System.Drawing.Size(173, 47);
             this.cmbAlumnoCal.TabIndex = 1;
@@ -129,7 +129,7 @@
             // cmbGrupoCal
             // 
             this.cmbGrupoCal.FormattingEnabled = true;
-            this.cmbGrupoCal.Location = new System.Drawing.Point(411, 101);
+            this.cmbGrupoCal.Location = new System.Drawing.Point(582, 101);
             this.cmbGrupoCal.Name = "cmbGrupoCal";
             this.cmbGrupoCal.Size = new System.Drawing.Size(158, 47);
             this.cmbGrupoCal.TabIndex = 11;
@@ -145,7 +145,7 @@
             // 
             // txtCalificacionesCal
             // 
-            this.txtCalificacionesCal.Location = new System.Drawing.Point(398, 234);
+            this.txtCalificacionesCal.Location = new System.Drawing.Point(597, 234);
             this.txtCalificacionesCal.Name = "txtCalificacionesCal";
             this.txtCalificacionesCal.Size = new System.Drawing.Size(173, 47);
             this.txtCalificacionesCal.TabIndex = 3;
@@ -156,7 +156,7 @@
             this.lblCalificacionCal.AutoSize = true;
             this.lblCalificacionCal.BackColor = System.Drawing.Color.Transparent;
             this.lblCalificacionCal.ForeColor = System.Drawing.Color.Black;
-            this.lblCalificacionCal.Location = new System.Drawing.Point(396, 192);
+            this.lblCalificacionCal.Location = new System.Drawing.Point(597, 192);
             this.lblCalificacionCal.Name = "lblCalificacionCal";
             this.lblCalificacionCal.Size = new System.Drawing.Size(173, 39);
             this.lblCalificacionCal.TabIndex = 9;
@@ -164,7 +164,7 @@
             // 
             // btnGuardarCapCal
             // 
-            this.btnGuardarCapCal.Location = new System.Drawing.Point(206, 320);
+            this.btnGuardarCapCal.Location = new System.Drawing.Point(377, 320);
             this.btnGuardarCapCal.Name = "btnGuardarCapCal";
             this.btnGuardarCapCal.Size = new System.Drawing.Size(142, 57);
             this.btnGuardarCapCal.TabIndex = 4;
@@ -186,7 +186,7 @@
             // btnCancelarCapCal
             // 
             this.btnCancelarCapCal.BackgroundImage = global::PSPSDO.Properties.Resources.Borrar_icon;
-            this.btnCancelarCapCal.Location = new System.Drawing.Point(398, 320);
+            this.btnCancelarCapCal.Location = new System.Drawing.Point(923, 320);
             this.btnCancelarCapCal.Name = "btnCancelarCapCal";
             this.btnCancelarCapCal.Size = new System.Drawing.Size(159, 57);
             this.btnCancelarCapCal.TabIndex = 5;
@@ -199,7 +199,7 @@
             this.lblAlumnoCal.AutoSize = true;
             this.lblAlumnoCal.BackColor = System.Drawing.Color.Transparent;
             this.lblAlumnoCal.ForeColor = System.Drawing.Color.Black;
-            this.lblAlumnoCal.Location = new System.Drawing.Point(599, 59);
+            this.lblAlumnoCal.Location = new System.Drawing.Point(925, 59);
             this.lblAlumnoCal.Name = "lblAlumnoCal";
             this.lblAlumnoCal.Size = new System.Drawing.Size(116, 39);
             this.lblAlumnoCal.TabIndex = 7;
@@ -229,7 +229,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Image = global::PSPSDO.Properties.Resources.ut_menu2;
-            this.pictureBox2.Location = new System.Drawing.Point(966, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(1192, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(148, 148);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
