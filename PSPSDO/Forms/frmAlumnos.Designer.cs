@@ -47,6 +47,7 @@
             this.dgvAlumnos = new System.Windows.Forms.DataGridView();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gpbDatoPersoAlumno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).BeginInit();
             this.SuspendLayout();
@@ -185,7 +186,6 @@
             this.txtMatriAlumno.Name = "txtMatriAlumno";
             this.txtMatriAlumno.Size = new System.Drawing.Size(76, 20);
             this.txtMatriAlumno.TabIndex = 4;
-            this.txtMatriAlumno.TextChanged += new System.EventHandler(this.txtMatriAlumno_TextChanged);
             // 
             // txtDireccioAlumno
             // 
@@ -222,7 +222,7 @@
             // dgvAlumnos
             // 
             this.dgvAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlumnos.Location = new System.Drawing.Point(26, 274);
+            this.dgvAlumnos.Location = new System.Drawing.Point(38, 469);
             this.dgvAlumnos.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgvAlumnos.Name = "dgvAlumnos";
             this.dgvAlumnos.RowHeadersWidth = 51;
@@ -251,11 +251,21 @@
             this.lblSearch.TabIndex = 5;
             this.lblSearch.Text = "Búsqueda por nombre:";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(948, 170);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1022, 645);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
             // frmAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(941, 660);
+            this.ClientSize = new System.Drawing.Size(1454, 1061);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.dgvAlumnos);
@@ -293,5 +303,6 @@
         private System.Windows.Forms.TextBox txtIdGrupo;
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
