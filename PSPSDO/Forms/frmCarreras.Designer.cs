@@ -66,7 +66,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackgroundImage = global::PSPSDO.Properties.Resources._1098321945g;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.groupBox1.Controls.Add(this.pictureBox5);
             this.groupBox1.Controls.Add(this.pictureBox4);
@@ -94,7 +93,7 @@
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = global::PSPSDO.Properties.Resources.nombre;
+
             this.pictureBox5.Location = new System.Drawing.Point(59, 260);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(279, 52);
@@ -105,7 +104,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::PSPSDO.Properties.Resources.clave;
+
             this.pictureBox4.Location = new System.Drawing.Point(59, 125);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(279, 52);
@@ -301,7 +300,6 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::PSPSDO.Properties.Resources.lynx_green;
             this.pictureBox2.Location = new System.Drawing.Point(1486, 293);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(493, 530);
@@ -312,7 +310,6 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::PSPSDO.Properties.Resources.descripcion;
             this.pictureBox3.Location = new System.Drawing.Point(513, 128);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(279, 52);
