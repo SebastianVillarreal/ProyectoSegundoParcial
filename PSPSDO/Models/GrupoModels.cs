@@ -20,6 +20,6 @@ namespace PSPSDO.Models
 
         public int FechaActualizacion { get; set; }
 
-        public string ClaveGrupo { get;  set; }
+        public string ClaveGrupo { get; set; }
     }
 }
