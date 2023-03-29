@@ -50,6 +50,8 @@
     <Compile Include="BD\BDContext.cs" />
     <Compile Include="Classes\AlumnosClass.cs" />
     <Compile Include="Classes\CalificacionesClass.cs" />
+    <Compile Include="Classes\frmReportesAlumnosClass.cs" />
+    <Compile Include="Classes\frmReportesMateriasClass.cs" />
     <Compile Include="Classes\GrupoClass.cs" />
     <Compile Include="Classes\MateriasClass.cs" />
     <Compile Include="Classes\PersonasClass.cs" />
@@ -128,14 +130,20 @@
     <Compile Include="Forms\frmReportesGrupos.Designer.cs">
       <DependentUpon>frmReportesGrupos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmReportesMaterias.cs" />
+    <Compile Include="Forms\frmReportesMaterias.Designer.cs">
+      <DependentUpon>frmReportesMaterias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\AlumnosModel.cs" />
     <Compile Include="Models\CalificacionesModel.cs" />
     <Compile Include="Models\CarreraModel.cs" />
     <Compile Include="Models\GrupoModels.cs" />
     <Compile Include="Models\MateriasModel.cs" />
     <Compile Include="Models\PersonaModel.cs" />
+    <Compile Include="Models\ReportesAlumnosModel.cs" />
     <Compile Include="Models\ReportesCarrerasModel.cs" />
     <Compile Include="Models\ReportesGruposModel.cs" />
+    <Compile Include="Models\ReportesMateriasModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmCalificaciones.resx">
@@ -171,6 +179,9 @@
     <EmbeddedResource Include="Forms\frmReportesGrupos.resx">
       <DependentUpon>frmReportesGrupos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReportesMaterias.resx">
+      <DependentUpon>frmReportesMaterias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -195,6 +206,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\lynx blue.mdp" />
     <None Include="Resources\New Piskel1.png" />
   </ItemGroup>
   <ItemGroup>

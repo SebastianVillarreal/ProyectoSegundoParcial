@@ -138,7 +138,7 @@ namespace PSPSDO.Forms
             DataTable dta = dsa.Tables[0];
             cmbAlumnoCal.DataSource = dta;
             cmbAlumnoCal.ValueMember = "Id";
-            cmbAlumnoCal.DisplayMember = "Nombre";
+            cmbAlumnoCal.DisplayMember = "NombreCompleto";
         }
     }
 }
