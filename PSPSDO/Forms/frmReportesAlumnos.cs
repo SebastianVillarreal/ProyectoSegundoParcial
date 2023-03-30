@@ -25,7 +25,7 @@ namespace PSPSDO.Forms
 
         private void frmReportesAlumnos_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
