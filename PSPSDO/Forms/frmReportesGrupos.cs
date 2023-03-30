@@ -66,5 +66,10 @@ namespace PSPSDO.Forms
                 dgvReportesGrupos.DataSource = ds.Tables[0];
             }
         }
+
+        private void cmbGrupos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
