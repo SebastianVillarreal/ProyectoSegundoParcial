@@ -13,7 +13,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using static PSPSDO.Classes.frmReportesAlumnosClass;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PSPSDO.Forms
@@ -142,7 +141,12 @@ namespace PSPSDO.Forms
             dgvAlumnos.DataSource = ds.Tables[0];
         }
 
-        private void txtMatriAlumno_TextChanged(object sender, EventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtApMaterAlumno_TextChanged(object sender, EventArgs e)
         {
 
         }

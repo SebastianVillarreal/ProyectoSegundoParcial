@@ -68,6 +68,7 @@ namespace PSPSDO.Forms
         }
 
         private void cmbGrupos_SelectedIndexChanged(object sender, EventArgs e)
+        private void dgvReportesGrupos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

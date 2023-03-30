@@ -33,9 +33,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <NoWin32Manifest>true</NoWin32Manifest>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,9 +49,9 @@
   <ItemGroup>
     <Compile Include="BD\BDContext.cs" />
     <Compile Include="Classes\AlumnosClass.cs" />
+    <Compile Include="Classes\CalificacionesClass.cs" />
     <Compile Include="Classes\frmReportesAlumnosClass.cs" />
     <Compile Include="Classes\frmReportesMateriasClass.cs" />
-    <Compile Include="Classes\CalificacionesClass.cs" />
     <Compile Include="Classes\GrupoClass.cs" />
     <Compile Include="Classes\MateriasClass.cs" />
     <Compile Include="Classes\PersonasClass.cs" />
@@ -103,17 +100,11 @@
     <Compile Include="Forms\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmPersonas.cs">
+    <Compile Include="Forms\frmReporteCalificacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmPersonas.Designer.cs">
-      <DependentUpon>frmPersonas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmReportesMaterias.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmReportesMaterias.Designer.cs">
-      <DependentUpon>frmReportesMaterias.cs</DependentUpon>
+    <Compile Include="Forms\frmReporteCalificacion.Designer.cs">
+      <DependentUpon>frmReporteCalificacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmReportesAlumnos.cs">
       <SubType>Form</SubType>
@@ -132,6 +123,12 @@
     </Compile>
     <Compile Include="Forms\frmReportesGrupos.Designer.cs">
       <DependentUpon>frmReportesGrupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReportesMaterias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReportesMaterias.Designer.cs">
+      <DependentUpon>frmReportesMaterias.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\AlumnosModel.cs" />
     <Compile Include="Models\CalificacionesModel.cs" />
@@ -166,8 +163,8 @@
     <EmbeddedResource Include="Forms\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmReportesMaterias.resx">
-      <DependentUpon>frmReportesMaterias.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmReporteCalificacion.resx">
+      <DependentUpon>frmReporteCalificacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmReportesAlumnos.resx">
       <DependentUpon>frmReportesAlumnos.cs</DependentUpon>
@@ -202,6 +199,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\lynx blue.mdp" />
+    <None Include="Resources\New Piskel1.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\310869.png" />
   </ItemGroup>
   <ItemGroup>
@@ -232,9 +233,6 @@
     <None Include="Resources\login-icon-png-19.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\lynx blue.mdp" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\lynx blue.png" />
   </ItemGroup>
   <ItemGroup>
@@ -245,9 +243,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ut menu.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ut menu2 .png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WhatsApp Image 2023-03-22 at 7.48.04 AM.jpeg" />
@@ -272,7 +267,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\istockphoto-874402896-170667a.jpg" />
-    <None Include="Resources\New Piskel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ut VERDE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1098321945g.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ut menu2 .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lynx green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon-png-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon-design-in-blue-circle-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descripcion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nombre.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
