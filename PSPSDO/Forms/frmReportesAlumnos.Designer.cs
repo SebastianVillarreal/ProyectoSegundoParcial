@@ -48,9 +48,9 @@
             this.gbRA.Controls.Add(this.lblRANombre);
             this.gbRA.Controls.Add(this.txtRANombre);
             this.gbRA.Location = new System.Drawing.Point(19, 41);
-            this.gbRA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbRA.Margin = new System.Windows.Forms.Padding(2);
             this.gbRA.Name = "gbRA";
-            this.gbRA.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbRA.Padding = new System.Windows.Forms.Padding(2);
             this.gbRA.Size = new System.Drawing.Size(1042, 230);
             this.gbRA.TabIndex = 0;
             this.gbRA.TabStop = false;
@@ -59,7 +59,7 @@
             // 
             this.btnCrearRA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCrearRA.Location = new System.Drawing.Point(720, 88);
-            this.btnCrearRA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCrearRA.Margin = new System.Windows.Forms.Padding(2);
             this.btnCrearRA.Name = "btnCrearRA";
             this.btnCrearRA.Size = new System.Drawing.Size(239, 42);
             this.btnCrearRA.TabIndex = 2;
@@ -79,7 +79,7 @@
             // txtRANombre
             // 
             this.txtRANombre.Location = new System.Drawing.Point(131, 88);
-            this.txtRANombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRANombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtRANombre.Name = "txtRANombre";
             this.txtRANombre.Size = new System.Drawing.Size(172, 43);
             this.txtRANombre.TabIndex = 0;
@@ -87,9 +87,11 @@
             // 
             // dgvReportesAlumno
             // 
+            this.dgvReportesAlumno.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvReportesAlumno.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvReportesAlumno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReportesAlumno.Location = new System.Drawing.Point(19, 291);
-            this.dgvReportesAlumno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvReportesAlumno.Margin = new System.Windows.Forms.Padding(2);
             this.dgvReportesAlumno.Name = "dgvReportesAlumno";
             this.dgvReportesAlumno.RowHeadersWidth = 62;
             this.dgvReportesAlumno.RowTemplate.Height = 28;
@@ -126,9 +128,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1285, 854);
+            this.ClientSize = new System.Drawing.Size(1285, 749);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmReportesAlumnos";
             this.Text = "frmReportesAlumnos";
             this.Load += new System.EventHandler(this.frmReportesAlumnos_Load);

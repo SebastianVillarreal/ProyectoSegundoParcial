@@ -37,8 +37,8 @@
             this.btnReporteCarreras = new System.Windows.Forms.Button();
             this.lblReportesCarreras = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportesCarreras)).BeginInit();
             this.gbReportesCarreras.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -47,9 +47,11 @@
             // 
             // dgvReportesCarreras
             // 
+            this.dgvReportesCarreras.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvReportesCarreras.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvReportesCarreras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReportesCarreras.Location = new System.Drawing.Point(14, 280);
-            this.dgvReportesCarreras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvReportesCarreras.Margin = new System.Windows.Forms.Padding(2);
             this.dgvReportesCarreras.Name = "dgvReportesCarreras";
             this.dgvReportesCarreras.RowHeadersWidth = 62;
             this.dgvReportesCarreras.RowTemplate.Height = 28;
@@ -66,9 +68,9 @@
             this.gbReportesCarreras.Controls.Add(this.btnReporteCarreras);
             this.gbReportesCarreras.Controls.Add(this.lblReportesCarreras);
             this.gbReportesCarreras.Location = new System.Drawing.Point(14, 41);
-            this.gbReportesCarreras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbReportesCarreras.Margin = new System.Windows.Forms.Padding(2);
             this.gbReportesCarreras.Name = "gbReportesCarreras";
-            this.gbReportesCarreras.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbReportesCarreras.Padding = new System.Windows.Forms.Padding(2);
             this.gbReportesCarreras.Size = new System.Drawing.Size(938, 183);
             this.gbReportesCarreras.TabIndex = 1;
             this.gbReportesCarreras.TabStop = false;
@@ -78,7 +80,7 @@
             // 
             this.cmbReportesCarreras.FormattingEnabled = true;
             this.cmbReportesCarreras.Location = new System.Drawing.Point(17, 62);
-            this.cmbReportesCarreras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbReportesCarreras.Margin = new System.Windows.Forms.Padding(2);
             this.cmbReportesCarreras.Name = "cmbReportesCarreras";
             this.cmbReportesCarreras.Size = new System.Drawing.Size(382, 44);
             this.cmbReportesCarreras.TabIndex = 6;
@@ -87,7 +89,7 @@
             // 
             this.rbParcialDos.AutoSize = true;
             this.rbParcialDos.Location = new System.Drawing.Point(685, 66);
-            this.rbParcialDos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbParcialDos.Margin = new System.Windows.Forms.Padding(2);
             this.rbParcialDos.Name = "rbParcialDos";
             this.rbParcialDos.Size = new System.Drawing.Size(138, 40);
             this.rbParcialDos.TabIndex = 5;
@@ -99,7 +101,7 @@
             // 
             this.rbParcialUno.AutoSize = true;
             this.rbParcialUno.Location = new System.Drawing.Point(513, 66);
-            this.rbParcialUno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbParcialUno.Margin = new System.Windows.Forms.Padding(2);
             this.rbParcialUno.Name = "rbParcialUno";
             this.rbParcialUno.Size = new System.Drawing.Size(134, 40);
             this.rbParcialUno.TabIndex = 4;
@@ -120,7 +122,7 @@
             // btnReporteCarreras
             // 
             this.btnReporteCarreras.Location = new System.Drawing.Point(698, 132);
-            this.btnReporteCarreras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReporteCarreras.Margin = new System.Windows.Forms.Padding(2);
             this.btnReporteCarreras.Name = "btnReporteCarreras";
             this.btnReporteCarreras.Size = new System.Drawing.Size(236, 47);
             this.btnReporteCarreras.TabIndex = 1;
@@ -169,7 +171,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1153, 659);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmReportesCarerra";
             this.Text = "frmReportesCarerra";
             this.Load += new System.EventHandler(this.frmReportesCarerra_Load);

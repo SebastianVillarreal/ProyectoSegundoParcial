@@ -54,9 +54,9 @@
             this.gbRG.Controls.Add(this.rbParcialUno);
             this.gbRG.Controls.Add(this.cmbGrupos);
             this.gbRG.Location = new System.Drawing.Point(22, 53);
-            this.gbRG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbRG.Margin = new System.Windows.Forms.Padding(2);
             this.gbRG.Name = "gbRG";
-            this.gbRG.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbRG.Padding = new System.Windows.Forms.Padding(2);
             this.gbRG.Size = new System.Drawing.Size(967, 170);
             this.gbRG.TabIndex = 0;
             this.gbRG.TabStop = false;
@@ -64,7 +64,7 @@
             // btnReporte
             // 
             this.btnReporte.Location = new System.Drawing.Point(646, 101);
-            this.btnReporte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReporte.Margin = new System.Windows.Forms.Padding(2);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(227, 47);
             this.btnReporte.TabIndex = 5;
@@ -96,7 +96,7 @@
             // 
             this.rbParcialDos.AutoSize = true;
             this.rbParcialDos.Location = new System.Drawing.Point(446, 74);
-            this.rbParcialDos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbParcialDos.Margin = new System.Windows.Forms.Padding(2);
             this.rbParcialDos.Name = "rbParcialDos";
             this.rbParcialDos.Size = new System.Drawing.Size(138, 40);
             this.rbParcialDos.TabIndex = 2;
@@ -108,7 +108,7 @@
             // 
             this.rbParcialUno.AutoSize = true;
             this.rbParcialUno.Location = new System.Drawing.Point(288, 74);
-            this.rbParcialUno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbParcialUno.Margin = new System.Windows.Forms.Padding(2);
             this.rbParcialUno.Name = "rbParcialUno";
             this.rbParcialUno.Size = new System.Drawing.Size(134, 40);
             this.rbParcialUno.TabIndex = 1;
@@ -120,7 +120,7 @@
             // 
             this.cmbGrupos.FormattingEnabled = true;
             this.cmbGrupos.Location = new System.Drawing.Point(8, 92);
-            this.cmbGrupos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbGrupos.Margin = new System.Windows.Forms.Padding(2);
             this.cmbGrupos.Name = "cmbGrupos";
             this.cmbGrupos.Size = new System.Drawing.Size(171, 44);
             this.cmbGrupos.TabIndex = 0;
@@ -129,9 +129,10 @@
             // 
             this.dgvReportesGrupos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvReportesGrupos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvReportesGrupos.BackgroundColor = System.Drawing.Color.AntiqueWhite;
             this.dgvReportesGrupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReportesGrupos.Location = new System.Drawing.Point(5, 260);
-            this.dgvReportesGrupos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvReportesGrupos.Margin = new System.Windows.Forms.Padding(2);
             this.dgvReportesGrupos.Name = "dgvReportesGrupos";
             this.dgvReportesGrupos.RowHeadersWidth = 62;
             this.dgvReportesGrupos.RowTemplate.Height = 28;
@@ -172,7 +173,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1114, 673);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmReportesGrupos";
             this.Text = "frmReportesGrupos";
             this.Load += new System.EventHandler(this.frmReportesGrupos_Load);

@@ -115,7 +115,7 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.ForestGreen;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dgvListaCarreras.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvListaCarreras.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListaCarreras.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvListaCarreras.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvListaCarreras.BackgroundColor = System.Drawing.Color.Linen;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -276,7 +276,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1924, 1051);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmCarreras";
             this.Text = "Carreras";
